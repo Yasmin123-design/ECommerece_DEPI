@@ -1,0 +1,264 @@
+﻿@model E_Commerece.ViewModels.QuickViewModel
+<style>
+    .add-review {
+        width: 35%;
+        padding-left: 20px;
+    }
+        .add-review h5 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+        .add-review textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: none;
+        }
+    .rating {
+        margin-bottom: 10px;
+    }
+        .rating .star {
+            cursor: pointer;
+            font-size: 24px;
+            color: #ddd;
+            transition: color 0.2s;
+        }
+            .rating .star:hover,
+            .rating .star.active {
+                color: #ffc107;
+            }
+    .add-review button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .add-review button:hover {
+            background-color: #0056b3;
+        }
+    .reviews-section,
+    .add-review {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="modal-header">
+    <h5 class="modal-title">@Model.Product.Name</h5>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+
+<div class="modal-body">
+    <div class="row d-flex align-items-start">
+        <!-- صورة المنتج -->
+        <div class="col-md-4 text-center">
+            <img src="/img/@Model.Product.Image" class="img-fluid rounded shadow-sm mb-3"
+                 style="width: 100%; height: 250px; object-fit:contain;">
+        </div>
+
+        <!-- تفاصيل المنتج -->
+        <div class="col-md-7 ms-4">
+            <h5 class="text-dark">@Model.Product.Name</h5>
+            <p class="text-muted">@Model.Product.Description</p>
+            <h4 class="text-success">السعر: @Model.Product.Price جنيه</h4>
+            <p><strong>التصنيف:</strong> @Model.Product.Category?.Name</p>
+
+
+            <div class="variations">
+    @foreach (var variation in Model.Variations)
+    {
+        <div class="mb-3">
+            <label class="form-label fw-bold">@variation.Name</label>
+                        <select class="form-select  variation-select" onchange="changeQuantity()">
+                            @foreach (var option in variation.VariationOptions)
+                            {
+                                var isSelected = Model.SelectedVariationOptions.Any(o => o.Id == option.Id) ? "selected" : null;
+                                <option value="@option.Id" selected="@isSelected">@option.Value</option>
+                            }
+            </select>
+        </div>
+    }
+</div>
+            <div class="quantity-container mt-3 ">
+                <label class="form-label fw-bold">الكمية المتاحة</label>
+                <p id="available-quantity" class="text-success fw-bold">@Model.SelectedProductItem?.Quantity</p>
+
+                <label class="form-label fw-bold mt-2">الكمية المراد شراؤها</label>
+                <div class="input-group justify-content-center" style="max-width: 200px;">
+                    <button class="btn btn-danger px-3 fw-bold" type="button" onclick="decreaseQuantity()" style="background-color: red; color: white;">−</button>
+                    <input type="text" id="quantity" class="form-control text-center mx-1 fw-bold border" value="1" min="1" readonly>
+                    <button class="btn btn-success px-3 fw-bold" type="button" onclick="increaseQuantity()" style="background-color: green; color: white;">+</button>
+                </div>
+                <p id="stockMessage" class="text-danger mt-2" style="display: none;">الكمية غير متاحة</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer d-flex justify-content-between">
+    <div>
+        <a  class="btn btn-primary" onclick="addToCart()"><i class="fas fa-shopping-cart"></i>Add To Cart</a>
+        <a href="/Product/AddToWishList/@Model.Product.Id" class="btn btn-primary"><i class="fas fa-heart"></i>Add To WishList</a>
+    </div>
+</div>
+
+<div class="reviews-container">
+    <div class="reviews-section">
+        <h5>Reviews</h5>
+        <div id="reviews-list">
+            @foreach(var review in Model.Product.Reviews)
+            {
+                <div class="review-item">
+                    <strong>@review.User.Email</strong>
+                    <p>@review.Comment</p>
+                    <span>
+                        @for (int i = 0; i < review.Rating; i++)
+                        {
+                            <i class="fa fa-star text-secondary"></i>                           
+                        }
+                        @for (int i = review.Rating; i < 5; i++)
+                        {
+                            <i class="fa fa-star text-warning"></i>
+                        }
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="add-review">
+        <h5>Leave a Review</h5>
+        <textarea id="review-text" class="form-control" placeholder="Write your review here..."></textarea>
+
+        <div class="rating">
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+        </div>
+
+        <input type="hidden" id="selected-rating" value="0">
+        <button id="submit-review" class="btn btn-primary">Submit Review</button>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var selectedRating = 0;
+
+        $(".star").click(function () {
+            selectedRating = $(this).data("value");
+            $("#selected-rating").val(selectedRating);
+            $(".star").removeClass("text-warning");
+            $(this).prevAll().addBack().addClass("text-warning");
+        });
+
+        $("#submit-review").click(function () {
+            var reviewText = $("#review-text").val();
+            var productId = @Model.Product.Id;
+
+            if (reviewText.trim() === "" || selectedRating === 0) {
+                alert("Please enter a review and select a rating.");
+                return;
+            }
+
+            $.ajax({
+                url: "/Product/AddReviewOnProduct",
+                type: "POST",
+                data: {
+                    productId: productId,
+                    comment: reviewText,
+                    rating: selectedRating
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $("#reviews-list").append(`
+                                <div class="review-item border-bottom pb-2 mb-2">
+                                        <strong>${response.userEmail}</strong>
+                                    <p>${reviewText}</p>
+                                    <span>⭐ ${selectedRating}</span>
+                                </div>
+                            `);
+                        $("#review-text").val("");
+                        $(".star").removeClass("text-warning");
+                        selectedRating = 0;
+                    } else {
+                        alert("Failed to add review.");
+                    }
+                }
+            });
+        });
+    });
+
+    function changeQuantity() {
+        let selectedOptions = [];
+
+        document.querySelectorAll('.variations select').forEach(select => {
+            selectedOptions.push(select.value);
+        });
+
+        fetch(`/Product/GetAvailableQuantity?productId=@Model.Product.Id&optionIds=${selectedOptions.join(',')}`)
+            .then(response => response.json())
+            .then(data => {
+
+                document.getElementById('available-quantity').innerText = data.quantity;
+                location.reload();
+            })
+            .catch(error => console.error('Error fetching quantity:', error));
+    }
+
+    function increaseQuantity()
+    {
+            var availableQuantity =parseInt( document.getElementById('available-quantity').innerText);
+        var quantityInput = document.getElementById('quantity');
+        var selectedQuantity = parseInt(quantityInput.value);
+        if (selectedQuantity < availableQuantity) {
+            quantityInput.value = selectedQuantity + 1
+            document.getElementById("stockMessage").style.display = "none";
+        }
+        else {
+            document.getElementById("stockMessage").style.display = "block";
+        }
+            
+    }
+
+    function decreaseQuantity() { 
+        var quantityInput = document.getElementById('quantity');
+        var selectedQuantity = parseInt(quantityInput.value);
+        if (selectedQuantity > 1) {
+            quantityInput.value = selectedQuantity - 1;
+            document.getElementById("stockMessage").style.display = "none";
+        }
+    }
+
+    function addToCart() { 
+        let selectedOptions = [];
+        var quantityInput = document.getElementById('quantity');
+        var selectedQuantity = parseInt(quantityInput.value);
+        // جمع جميع القيم المحددة لكل اختيار
+        document.querySelectorAll('.variations select').forEach(select => {
+            selectedOptions.push(select.value);
+        });
+        fetch(`/Product/AddToCart?productId=@Model.Product.Id&optionIds=${selectedOptions.join(',')}&SelectedQuantity=${selectedQuantity}`)
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message)
+                location.reload();
+            })
+            .catch(error => console.error('Error fetching quantity:', error));
+    }
+
+</script>

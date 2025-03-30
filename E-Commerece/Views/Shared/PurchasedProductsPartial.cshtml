@@ -1,0 +1,74 @@
+﻿
+<div class="table-container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>Orders as Customer</h2>
+        <button class="button btn-primary" onclick="viewMore('AllPurchasedProducts')">View More</button>
+    </div>
+    <table class="table" id="purchasedTable">
+        <thead>
+            <tr>
+                <th data-column="name">
+                    <div class="header-content">
+                        <span class="column-name">Items</span>
+                        <div class="sort-arrows">
+                            <span class="sort-up" onclick="sortTable('purchasedTable','name', 'asc')">
+                                <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span class="sort-down" onclick="sortTable('purchasedTable','name', 'desc')">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th data-column="orderdate">
+                    <div class="header-content">
+                        <span class="column-name">OrderDate</span>
+                        <div class="sort-arrows">
+                            <span class="sort-up" onclick="sortTable('purchasedTable','orderdate', 'asc')">
+                                <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span class="sort-down" onclick="sortTable('purchasedTable','orderdate', 'desc')">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th data-column="delieverydate">
+                    <div class="header-content">
+                        <span class="column-name">DeliveryDate</span>
+                        <div class="sort-arrows">
+                            <span class="sort-up" onclick="sortTable('purchasedTable','delieverydate', 'asc')">
+                                <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span class="sort-down" onclick="sortTable('purchasedTable','delieverydate', 'desc')">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th data-column="status">
+                    <div class="header-content">
+                        <span class="column-name">Status</span>
+
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>
+                        @foreach (var item in order.Items)
+                        {
+                            <span>@item.ProductItem.Product.Name</span> <br>
+                        }
+                    </td>
+                    <td>@order.OrderDate</td>
+                    <td>@order.ArrivalDate</td>
+                    <td class="@order.Status">@order.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

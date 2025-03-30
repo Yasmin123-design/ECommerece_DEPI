@@ -1,0 +1,150 @@
+﻿<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<style>
+    .empty-wishlist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 70vh; 
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px; 
+        margin: 40px auto; 
+    }
+
+        .empty-wishlist i {
+            font-size: 60px; 
+            color: #e74c3c;
+            margin-bottom: 20px; 
+        }
+
+        .empty-wishlist h2 {
+            font-size: 28px; 
+            color: #2c3e50;
+            margin-bottom: 10px; 
+        }
+
+        .empty-wishlist p {
+            font-size: 16px; 
+            color: #7f8c8d;
+            margin-bottom: 20px; 
+        }
+
+    .custom-btn.explore-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #3498db; 
+        border-radius: 5px; 
+        text-decoration: none; 
+        transition: background-color 0.3s ease;
+    }
+
+        .custom-btn.explore-btn:hover {
+            background-color: #2980b9; 
+        }
+</style>
+@model Wishlist
+@if (Model == null || Model.Products == null || !Model.Products.Any())
+{
+    <div class="empty-wishlist">
+        <i class="fas fa-heart-broken"></i>
+        <h2>Your Wishlist is Empty</h2>
+        <p>Looks like you haven't added any products yet. Start exploring and add your favorite items!</p>
+        <a href="/Product/Index" class="custom-btn explore-btn">Explore Products</a>
+    </div>
+}
+
+ 
+    else
+    {
+    <div class="product-grid">
+    @foreach (var item in Model.Products)
+    {
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/img/@item.Image" alt="@item.Name" />
+            </div>
+            <div class="product-info">
+                <h3 class="pull-right">@item.Price.ToString("c")</h3>
+                <h3>
+                    <a>@item.Name</a>
+                </h3>
+                <p>@item.Description</p>
+
+                <div class="action-buttons">
+                    <form action="Product/QuickView/@item.Id" method="get">
+                        <button class="custom-btn details-btn" type="submit">
+                            <i class="fas fa-eye"></i> Show Details
+                        </button>
+                    </form>
+                    <form action="Product/QuickView/@item.Id" method="post">
+                        <button class="custom-btn cart-btn" type="submit">
+                            <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                    </form>
+                    <button class="custom-btn cart-btn" onclick="deleteFromWishlist(@item.Id)" type="submit" style="background-color: red; color: white;">
+                        <i class="fas fa-trash"></i>
+                        Delete From Wishlist
+                    </button>
+
+
+                </div>
+
+            </div>
+        </div>
+    }
+    
+</div>
+}
+
+<script>
+    window.deleteFromWishlist = function (id) {
+        Swal.fire({
+            title: "هل أنت متأكد؟",
+            text: "لن تتمكن من التراجع بعد الحذف!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "نعم، احذف العنصر!",
+            cancelButtonText: "إلغاء"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteProductFromWishlist(id);
+                Swal.fire(
+                    "تم الحذف!",
+                    "تم حذف العنصر بنجاح.",
+                    "success"
+                );
+            }
+        });
+    };
+    window.deleteProductFromWishlist = function (id) {
+        fetch('/Product/DeleteFromWishlist', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Id: id
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                location.reload();
+                if (!data.success) {
+                    console.error("Failed to delete item: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting item:', error);
+            });
+    };
+</script>

@@ -1,0 +1,55 @@
+﻿<style>
+        .btnAdd {
+            padding:10px;
+            border-radius: 5px;
+        }
+</style>
+@model Product
+
+@{
+    ViewData["Title"] = "Add New Product";
+}
+
+<div class="create-product-container">
+    <h2>Add New Product</h2>
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="product-form" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Name" class="form-label">Product Name</label>
+            <input asp-for="Name" class="custom-select" placeholder="Enter product name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="custom-select" placeholder="Enter product description" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="form-label">Price</label>
+            <input asp-for="Price" class="custom-select" placeholder="Enter product price" type="number" step="0.01" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Product Image</label>
+            <input name="imageFile" class="custom-select" type="file" accept="image/*" />
+            <span  class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="CategoryId">اختر الفئة</label>
+            <select id="CategoryId" name="CategoryId" class="custom-select" required>
+                <option value="">اختر الفئة</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn-submit btn-primary btnAdd">Add Product</button>
+        </div>
+    </form>
+</div>

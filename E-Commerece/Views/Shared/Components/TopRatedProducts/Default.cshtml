@@ -1,0 +1,20 @@
+﻿
+@model List<dynamic>
+<!-- aside Widget -->
+<div class="aside">
+	<h3 class="aside-title">Top Rated</h3>
+	@foreach(var item in Model)
+	{
+		<div class="product-widget">
+			<div class="product-img">
+				<img src="./img/@item.Product.Image" style="width:50px;height:50px;object-fit:cover" alt="">
+			</div>
+			<div class="product-body">
+				<p class="product-category">@item.Product.Category.Name</p>
+				<h3 class="product-name"><a href="#">@item.Product.Name</a></h3>
+				<h4 class="product-price">@item.Product.Price</h4>
+			</div>
+		</div>
+	}
+</div>
+<!-- /aside Widget -->

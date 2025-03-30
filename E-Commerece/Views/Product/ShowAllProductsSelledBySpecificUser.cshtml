@@ -1,0 +1,206 @@
+﻿<style>
+    body{
+        padding:0;
+        margin:0;
+    }
+    .product-header {
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .btn-add-product {
+        background-color: #28a745; 
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-add-product i {
+            margin-right: 5px;
+        }
+
+        .btn-add-product:hover {
+            background-color: #218838;
+        }
+
+    .alert-info {
+        margin-bottom: 70px;
+    }
+    .product-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        margin-bottom: 50px;
+    }
+
+        .product-table th,
+        .product-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-table th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+
+        .product-table td {
+            vertical-align: top; 
+        }
+
+        .product-table .description-cell {
+            max-width: 300px;
+            word-wrap: break-word;
+        }
+
+        .product-table .product-image {
+            width: 80px; 
+            height: auto; 
+            border-radius: 5px; 
+        }
+
+    .status-pending {
+        color: #ffc107; 
+        font-weight: bold;
+    }
+
+    .status-approved {
+        color: #28a745;
+        font-weight: bold;
+    }
+    .action-icons {
+        display: flex;
+        gap: 10px; 
+    }
+        .action-icons a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+            .action-icons a:hover {
+                color: #0056b3;
+            }
+</style>
+@model List<Product>
+<div class="product-header">
+    <h2>Products</h2>
+    <a href="/Product/Create" class="btn-add-product">
+        <i class="fa fa-plus"></i> Add New Product
+    </a>
+</div>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info" role="alert">
+        No products available yet.
+    </div>
+}
+else
+{
+    <table class="product-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td class="description-cell">@product.Description</td>
+                    <td>@product.Price</td>
+                    <td>
+                        @if (!product.IsApproved)
+                        {
+                            <span class="status-pending">Pending</span>
+                        }
+                        else
+                        {
+                            <span class="status-approved">Approved</span>
+                        }
+                    </td>
+                    <td>
+                        <img src="/img/@product.Image" alt="@product.Name" class="product-image" />
+                    </td>
+                    <td>
+                        <div class="action-icons">
+                            <!-- أيقونة عرض التفاصيل -->
+                            <a href="/Product/ProductAddededBySellerDetails/@product.Id" title="Details">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <!-- أيقونة التحديث -->
+                            <a href="/Product/EditProductAddededBySeller/@product.Id" title="Edit">
+                                <i class="fa fa-edit"></i>
+                            </a>
+                            <a href="javascript:void(0);" onclick="deleteProductFromSelledProductsByUser(@product.Id)" class="text-danger">
+                                <i class="fa fa-trash"></i>
+                            </a>
+
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<script>
+    window.deleteProductFromSelledProductsByUser = function (id) {
+        Swal.fire({
+            title: "هل أنت متأكد؟",
+            text: "لن تتمكن من التراجع بعد الحذف!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "نعم، احذف العنصر!",
+            cancelButtonText: "إلغاء"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteSelledProduct(id);
+                Swal.fire(
+                    "تم الحذف!",
+                    "تم حذف العنصر بنجاح.",
+                    "success"
+                );
+            }
+        });
+    };
+
+    window.deleteSelledProduct = function (id) {
+        fetch('/Product/DeletePrdFromSelledPrds', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Id: id
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                location.reload();
+                if (!data.success) {
+                    console.error("Failed to delete item: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting item:', error);
+            });
+    };
+</script>

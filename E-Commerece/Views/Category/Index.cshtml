@@ -1,0 +1,27 @@
+﻿@model List<Category>
+
+<!-- SECTION -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<!-- shop -->
+			@foreach(var category in Model)
+			{
+				<div class="col-md-3 col-xs-6">
+					<div class="shop">
+					<div class="shop-img">
+						<img src="./img/shop01.png" alt="">
+					</div>
+					<div class="shop-body">
+						<h3>@category.Name<br>Collection</h3>
+						<a asp-action="@category.Name" asp-controller="Product" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+			</div>
+			}
+			<!-- /shop -->
+			</div>
+	</div>
+</div>

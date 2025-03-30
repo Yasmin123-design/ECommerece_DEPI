@@ -1,0 +1,51 @@
+﻿
+<style>
+    .center-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;  
+        margin-top: 50px;
+        margin-bottom: 50px; 
+    }
+    .alert {
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 20px; /* padding داخلي */
+        text-align: center; /* توسيط النص */
+    }
+
+        .alert:hover {
+            transform: translateY(-5px); /* تحريك الصندوق لأعلى عند المرور */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* زيادة الظل عند المرور */
+        }
+
+    h2 {
+        font-size: 2.5rem; /* حجم أكبر للعنوان */
+        font-weight: bold; /* نص سميك */
+        margin-bottom: 1rem; /* مسافة أسفل العنوان */
+    }
+
+    p {
+        font-size: 1.25rem; /* حجم متوسط للنص */
+        color: #555; /* لون نص أفتح */
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Order Shipped";
+}
+
+<div class="center-page">
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="alert alert-success p-4" role="alert">
+                    <h2 class="alert-heading">🎉 Success</h2>
+                    <p class="mb-0">You will receive it soon!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

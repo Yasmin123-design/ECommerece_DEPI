@@ -1,0 +1,6 @@
+﻿
+@model Wishlist
+@if (Model?.Products?.Any() == true)  // ✅ تحقق قبل الاستخدام
+{
+    <div class="qty">@Model.Products.Count()</div>
+}

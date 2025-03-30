@@ -1,0 +1,57 @@
+﻿<div class="table-container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>Sold Products</h2>
+        <button class="button btn-primary" onclick="viewMore('AllSoldProducts')">View More</button>
+    </div>
+    <table class="table" id="soldTable">
+        <thead>
+            <tr>
+                <th data-column="name">
+                    <div class="header-content">
+                        <span class="column-name">Product Name</span>
+                        <div class="sort-arrows">
+                            <span class="sort-up" onclick="sortTable('soldTable','name', 'asc')">
+                                <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span class="sort-down" onclick="sortTable('soldTable','name', 'desc')">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th data-column="price">
+                    <div class="header-content">
+                        <span class="column-name">Price</span>
+                        <div class="sort-arrows">
+                            <span class="sort-up" onclick="sortTable('soldTable','price', 'asc')">
+                                <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span class="sort-down" onclick="sortTable('soldTable','price', 'desc')">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </th>
+                <th data-column="status">
+                    <div class="header-content">
+                        <span class="column-name">Status</span>
+
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td class="@(product.IsApproved ? "approved" : "pending")">
+                        @(product.IsApproved ? "Approved" : "Pending")
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

@@ -1,0 +1,20 @@
+﻿@model List<Order>
+@if (Model == null)
+{
+    <div class="empty-wishlist">
+        <i class="fas fa-heart-broken"></i>
+        <h2>You Don't Make Order Until Now</h2>
+    </div>
+}
+else
+{
+        <div>
+        <partial name="PurchasedProductsPartial" model="Model" />
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn btn-primary" onclick="window.location.href='/Dashboard/DashBoard'">
+                Back To Dashboard
+            </button>
+        </div>
+    </div>
+}
+

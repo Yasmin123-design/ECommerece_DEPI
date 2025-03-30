@@ -1,0 +1,54 @@
+﻿@model Cart
+
+@if (Model != null && Model.CartItems != null && Model.CartItems.Any())
+{
+    <!-- Cart -->
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Your Cart</span>
+            <div class="qty">@Model.CartItems.Count()</div>
+        </a>
+        <div class="cart-dropdown">
+            <div class="cart-list">
+                @foreach (var item in Model.CartItems)
+                {
+                    <div class="product-widget">
+                        <div class="product-img">
+                            <img src="./img/@item.ProductItem.Product.Image" alt="@item.ProductItem.Product.Name" class="cart-product-image">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name"><a href="#">@item.ProductItem.Product.Name</a></h3>
+                            <h4 class="product-price"><span class="qty">@item.Quantity x</span>@item.ProductItem.Product.Price</h4>
+                        </div>
+                        <button class="delete"><i class="fa fa-close"></i></button>
+                    </div>
+                }
+            </div>
+            <div class="cart-summary">
+                <small>@Model.CartItems.Count() Item(s) selected</small>
+                <h5>SUBTOTAL: @Model.TotalPrice</h5>
+            </div>
+            <div class="cart-btns">
+                <a href="/Cart/Index">View Cart</a>
+                <a href="/Order/CheckOut">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- /Cart -->
+}
+else
+{
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-shopping-cart"></i>
+            <span>Your Cart</span>
+            <div class="qty">0</div>
+        </a>
+        <div class="cart-dropdown">
+            <div class="cart-list text-center">
+                <p>Your cart is empty!</p>
+            </div>
+        </div>
+    </div>
+}

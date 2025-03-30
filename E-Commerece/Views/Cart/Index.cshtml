@@ -1,0 +1,243 @@
+﻿<style>
+    .cart-container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    @@media (max-width: 768px) {
+        .cart-container {
+            width: 95%; 
+            padding: 15px;
+        }
+    }
+</style>
+@model Cart
+
+<div class="cart-container">
+    <h2>Shopping Cart</h2>
+
+    @if (Model?.CartItems?.Any() == true)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Product Name</th>
+                    <th>Options Selected</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.CartItems)
+                {
+                    <tr id="row-@item.Id">
+                        <td>
+                            <img src="~/img/@item.ProductItem.Product.Image" alt="@item.ProductItem.Product.Name" style="width: 50px; height: 50px; object-fit: cover;">
+                        </td>
+                        <td>@item.ProductItem.Product.Name</td>
+                        <td>@string.Join(" , ", item.ProductItem.VariationOptions.Select(o => o.Value))</td>
+
+                        <td>@item.ProductItem.Product.Price.ToString("C")</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm update-quantity" onclick="decrease(@item.Id, @item.ProductItem.Product.Price)">-</button>
+                            <span id="quantity-@item.Id">@item.Quantity</span>
+                            <button class="btn btn-success btn-sm update-quantity" onclick="increase(@item.Id, @item.ProductItem.Product.Price)">+</button>
+                        </td>
+                        <td id="total-@item.Id">@((item.ProductItem.Product.Price * item.Quantity).ToString("C"))</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm remove-item" onclick="deleteRow(@item.Id,@Model.Id)"><i class="fas fa-trash"></i>Remove</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="grand-total">
+            <h3>Total Price: <span id="grandTotal">@Model.TotalPrice.ToString("C")</span></h3>
+        </div>
+
+        <div class="footer-buttons">
+            <button class="btn btn-primary"
+                    style="background-color: #d9534f; border-color: #d43f3a;"
+                    onmouseover="this.style.backgroundColor='#c9302c'; this.style.borderColor='#ac2925';"
+                    onmouseout="this.style.backgroundColor='#d9534f'; this.style.borderColor='#d43f3a';"
+                    onclick="removeAll(@Model.Id)">
+                <i class="fas fa-trash"></i> Remove All
+            </button>
+            <button class="btn btn-primary" onclick="ckeckOut()"><i class="fas fa-shopping-cart"></i>Check Out</button>
+        </div>
+    }
+    else
+    {
+        <p>Your cart is empty.</p>
+    }
+</div>
+<script>
+
+    function decrease(id , price) { 
+        var quantitySpan = document.getElementById(`quantity-${id}`);
+        let quantity = parseInt(quantitySpan.innerText)
+        if (quantity > 1) {
+            quantity -= 1;
+
+            quantitySpan.innerText = quantity;
+            let newTotal = price * quantity;
+            document.getElementById(`total-${id}`).innerText = newTotal;
+
+            let grandTotalSpan = document.getElementById("grandTotal");
+            let grandTotal = parseFloat(grandTotalSpan.innerText.replace(/[^0-9.-]+/g, "")); 
+            grandTotal -= price;
+
+            grandTotalSpan.innerText = grandTotal.toLocaleString("en-US", { style: "currency", currency: "USD" });
+            updateQuantity(id, quantity, newTotal, grandTotal);
+            
+        }
+        
+
+    }
+
+    function increase(id, price) {
+        var quantitySpan = document.getElementById(`quantity-${id}`);
+        let quantity = parseInt(quantitySpan.innerText);
+
+        quantity += 1;
+        quantitySpan.innerText = quantity;
+
+        let newTotal = price * quantity;
+        document.getElementById(`total-${id}`).innerText = newTotal.toLocaleString("en-US", { style: "currency", currency: "USD" });
+
+        let grandTotalSpan = document.getElementById("grandTotal");
+        let grandTotal = parseFloat(grandTotalSpan.innerText.replace(/[^0-9.-]+/g, ""));
+        grandTotal += price;
+
+        grandTotalSpan.innerText = grandTotal.toLocaleString("en-US", { style: "currency", currency: "USD" });
+        updateQuantity(id, quantity, newTotal, grandTotal);
+        
+    }
+
+    function updateQuantity(id, quantity, total, grandTotal) {
+        fetch('/Cart/UpdateQuantity', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                Id: id,
+                Quantity: quantity,
+                GrandTotal: grandTotal
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                location.reload();
+                if (!data.success) {
+                    console.error("Failed to update quantity: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error updating quantity:', error);
+            });
+    };
+
+        window.deleteRow = function (id,cartId) {
+        Swal.fire({
+            title: "هل أنت متأكد؟",
+            text: "لن تتمكن من التراجع بعد الحذف!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "نعم، احذف العنصر!",
+            cancelButtonText: "إلغاء"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let totalDeleted = parseFloat(document.getElementById(`total-${id}`).innerText.replace(/[^0-9.-]+/g, ""));
+                console.log(totalDeleted);
+                let grandTotalDeleted = parseFloat(document.getElementById("grandTotal").innerText.replace(/[^0-9.-]+/g, ""));
+                console.log(grandTotalDeleted);
+                let newGrandTotal = grandTotalDeleted - totalDeleted;
+                console.log(newGrandTotal);
+                document.getElementById("grandTotal").innerText = newGrandTotal.toLocaleString("en-US", { style: "currency", currency: "USD" });
+
+                let dataRow = document.getElementById(`row-${id}`);
+                if (dataRow) {
+                    dataRow.remove();
+                }
+                deleteData(id, cartId, newGrandTotal);
+                Swal.fire(
+                    "تم الحذف!",
+                    "تم حذف العنصر بنجاح.",
+                    "success"
+                );
+            }
+        });
+    };
+
+    window.deleteData = function (id, cartId, newGrandTotal) {
+        fetch('/CartItem/DeleteCartItem', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                Id: id,
+                CartId: cartId,
+                GrandDeleted: newGrandTotal
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                location.reload();
+                if (!data.success) {
+                    console.error("Failed to delete item: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting item:', error);
+            });
+    };
+    window.removeAll = function(cartid) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "This will remove all items from your cart!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d33",
+                cancelButtonColor: "#3085d6",
+                confirmButtonText: "Yes, remove all!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch('/CartItem/DeleteAll', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                        CartId:cartid
+                    })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                Swal.fire("Deleted!", "All items have been removed.", "success").then(() => {
+                                    location.reload(); // تحديث الصفحة بعد الحذف
+                                });
+                            } else {
+                                Swal.fire("Error!", "Something went wrong.", "error");
+                            }
+                        })
+                        .catch(error => {
+                            console.error("Error deleting all items:", error);
+                            Swal.fire("Error!", "Something went wrong.", "error");
+                        });
+                }
+            });
+        }
+</script>

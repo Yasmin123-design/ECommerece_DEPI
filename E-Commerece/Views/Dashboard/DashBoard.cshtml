@@ -1,0 +1,93 @@
+﻿@model E_Commerece.ViewModels.DashBoardVM
+
+@if (Model == null || Model.PurchasedProducts == null || !Model.PurchasedProducts.Any())
+{
+    <div class="empty-wishlist">
+        <i class="fas fa-heart-broken"></i>
+        <h2>You Don't Make Order Until Now</h2>
+    </div>
+}
+else{
+    <partial name="PurchasedProductsPartial" model="Model.PurchasedProducts" />
+}
+
+@if (Model == null || Model.SoldchasedProducts == null || !Model.SoldchasedProducts.Any())
+{
+    <div class="empty-wishlist">
+        <i class="fas fa-heart-broken"></i>
+        <h2>You Don't Sell Products Until Now</h2>
+    </div>
+}
+
+
+else
+{
+    <partial name="SoldchasedProductsPartial" model="Model.SoldchasedProducts" />
+}
+
+
+@if (Model == null || Model.RequestProducts == null || !Model.RequestProducts.Any())
+{
+    <div class="empty-wishlist">
+        <i class="fas fa-heart-broken"></i>
+        <h2>No One Buy Your Products Until Now</h2>
+    </div>
+}
+
+ 
+else
+{
+    <partial name="RequestProductsPartial" model="Model.RequestProducts" />
+}
+
+
+<script>
+    function sortTable(tableId, column, order) {
+        let table = document.querySelector(`#${tableId} tbody`);
+        let rows = Array.from(table.rows);
+
+        rows.sort((rowA, rowB) => {
+            let cellA = rowA.querySelector(`td:nth-child(${getColumnIndex(tableId, column)})`).textContent.trim();
+            let cellB = rowB.querySelector(`td:nth-child(${getColumnIndex(tableId, column)})`).textContent.trim();
+
+            console.log("Before Parsing - cellA:", cellA, "cellB:", cellB);
+
+            if (column === 'price') {
+                cellA = parseDecimal(cellA); 
+                cellB = parseDecimal(cellB); 
+            }
+
+            console.log("After Parsing - cellA:", cellA, "cellB:", cellB); 
+
+            if (order === 'asc') {
+                return cellA > cellB ? 1 : -1;
+            } else {
+                return cellA < cellB ? 1 : -1;
+            }
+        });
+
+        rows.forEach(row => table.appendChild(row));
+    }
+
+    function getColumnIndex(tableId, columnName) {
+        let headers = document.querySelectorAll(`#${tableId} thead th`);
+        for (let i = 0; i < headers.length; i++) {
+            if (headers[i].dataset.column === columnName) {
+                return i + 1;
+            }
+        }
+        return -1;
+    }
+
+    function parseDecimal(value) {
+        let cleanedValue = value.replace(/[^0-9.]/g, ''); 
+        let number = parseFloat(cleanedValue); 
+        return isNaN(number) ? 0 : number; 
+    }
+
+    function viewMore(action) {
+        window.location.href = `/Dashboard/${action}`;
+    }
+</script>
+
+

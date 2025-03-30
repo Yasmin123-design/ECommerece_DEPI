@@ -1,0 +1,21 @@
+﻿
+<select id="CategorySelected" class="input-select" onchange="redirectToCategory()">
+    <option value="0" selected="@(ViewBag.SelectedCategoryId != null && ViewBag.SelectedCategoryId == 0 ? "selected" : null)">All</option>
+
+    @foreach (var category in Model)
+    {
+        <option value="@category.Id" selected="@(ViewBag.SelectedCategoryId != null && ViewBag.SelectedCategoryId == category.Id ? "selected" : null)">
+            @category.Name
+        </option>
+    }
+</select>
+
+<script>
+    function redirectToCategory() {
+        var categoryId = document.getElementById("CategorySelected").value;
+        window.location.href = '/Product/FilterByCategory?categoryId=' + categoryId;
+    }
+</script>
+
+
+

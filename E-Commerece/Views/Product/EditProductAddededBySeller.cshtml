@@ -1,0 +1,104 @@
+﻿@model Product
+
+<style>
+    .custom-form {
+        max-width: 800px; /* تحديد عرض النموذج */
+        margin: 5rem auto; /* مسافة من الأعلى والأسفل وتوسيط النموذج */
+        padding: 0 10px; /* مسافة من الجانبين */
+    }
+
+    .custom-select {
+        width: 100%; /* لجعل حقول الإدخال تأخذ العرض بالكامل */
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 1rem; /* مسافة بين الأزرار */
+        margin-top: 2rem; /* مسافة من الأعلى */
+    }
+</style>
+
+<form asp-action="EditProductAddededBySeller" asp-controller="Product" method="post" enctype="multipart/form-data" class="custom-form">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label>Product Name:</label>
+        <input type="text" asp-for="Name" class="custom-select" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label>Product Price:</label>
+        <input type="text" asp-for="Price" class="custom-select" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label>Category</label>
+        <select asp-for="CategoryId" class="custom-select">
+            @foreach (var category in ViewBag.Categories)
+            {
+                <option value="@category.Id" selected="@(category.Id == Model.CategoryId ? "selected" : null)">
+                    @category.Name
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label>Description</label>
+        <textarea asp-for="Description" rows="4" class="form-control"></textarea>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label>Current Image:</label>
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <img src="img/@Model.Image" alt="Product Image" class="img-fluid" width="200" />
+        }
+    </div>
+
+    <!-- رفع صورة جديدة -->
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label>Upload New Image:</label>
+        <input type="file" name="ProductImage" class="form-control-file" />
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <h3>Product Items</h3>
+        @for (int i = 0; i < Model.Items.Count; i++)
+        {
+            <input type="hidden" name="Items[@i].Id" value="@Model.Items[i].Id" />
+
+            <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label>Quantity</label>
+                <input name="Items[@i].Quantity" type="number" class="form-control" value="@Model.Items[i].Quantity" />
+            </div>
+
+            <h3>Variations</h3>
+            @foreach (var variation in ViewBag.Variation)
+            {
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label>@variation.Name</label>
+                    <select name="Items[@i].SelectedVariationOptionIds" class="custom-select" multiple="multiple">
+                        @foreach (var option in variation.VariationOptions)
+                        {
+                            var selectedOptions = ViewBag.SelectedVariationOptionIds[Model.Items[i].Id] as List<int> ?? new List<int>();
+                            bool isSelected = selectedOptions.Contains(option.Id);
+
+                            <option value="@option.Id" selected="@(isSelected ? "selected" : null)">
+                                @option.Value
+                            </option>
+                        }
+                    </select>
+                </div>
+            }
+        }
+    </div>
+
+    <div class="button-group">
+        <button type="submit" class="btn btn-primary">Update Product</button>
+        <a asp-controller="Product" asp-action="ShowAllProductsSelledBySpecificUser" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</form>

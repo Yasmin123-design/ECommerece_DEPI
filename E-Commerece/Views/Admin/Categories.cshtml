@@ -1,0 +1,162 @@
+﻿<style>
+    .categories-management {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .content-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .categories-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .categories-table th {
+            background-color: #343a40;
+            color: white;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .categories-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: middle;
+        }
+
+        .categories-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .categories-table tr:hover {
+            background-color: #f8f9fa;
+        }
+
+    .action-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .btn-primary {
+        background-color: #0d6efd;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+        }
+
+    .empty-state {
+        text-align: center;
+        padding: 40px 20px;
+        color: #6c757d;
+    }
+
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #adb5bd;
+        }
+
+        .empty-state a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+
+            .empty-state a:hover {
+                text-decoration: underline;
+            }
+
+    @@media (max-width: 768px) {
+        .header-section {
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+</style>
+@model List<Category>
+
+<div class="categories-management">
+    <div class="header-section">
+        <h2>Categories Management</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Add New Category
+        </a>
+    </div>
+
+    <div class="content-card">
+        @if (Model.Any())
+        {
+            <div class="table-wrapper">
+                <table class="categories-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+                                <td>@category.Name</td>
+                                <td>@(category.Description.Length > 100 ? category.Description.Substring(0, 100) + "..." : category.Description)</td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-primary">
+                                            <i class="bi bi-pencil"></i> Edit
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="bi bi-folder-x"></i>
+                <p>No categories found. Would you like to <a asp-action="Create">add a new category</a>?</p>
+            </div>
+        }
+    </div>
+</div>
+

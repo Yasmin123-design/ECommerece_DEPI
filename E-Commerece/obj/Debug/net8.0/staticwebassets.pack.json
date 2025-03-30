@@ -1,0 +1,641 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\E-Commerece.bundle.scp.css",
+      "PackagePath": "staticwebassets\\E-Commerece.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\css\\nouislider.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\slick.css",
+      "PackagePath": "staticwebassets\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\images\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\images\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\247380bb-da95-4193-8ab7-96db7680ef0d_cam3.jpeg",
+      "PackagePath": "staticwebassets\\img\\247380bb-da95-4193-8ab7-96db7680ef0d_cam3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\2cea29bd-aabd-450c-a39b-5c603ad87502_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\2cea29bd-aabd-450c-a39b-5c603ad87502_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\35f1f476-877c-458d-95c3-a9ecd305e412_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\35f1f476-877c-458d-95c3-a9ecd305e412_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\488a1feb-11cd-4b3d-a090-e3f4bef0553b_cam.jpeg",
+      "PackagePath": "staticwebassets\\img\\488a1feb-11cd-4b3d-a090-e3f4bef0553b_cam.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\4a959a38-0fbf-4708-8184-1cf6b802dac8_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\4a959a38-0fbf-4708-8184-1cf6b802dac8_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\671664e8-4f6d-4ba1-bb4f-2e17e00065c6_camera.jpeg",
+      "PackagePath": "staticwebassets\\img\\671664e8-4f6d-4ba1-bb4f-2e17e00065c6_camera.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\7072d3f0-2b5f-4702-8aaa-143feaa06699_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\7072d3f0-2b5f-4702-8aaa-143feaa06699_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\920f5655-a709-4350-89db-498ba9c53416_phone.jpg",
+      "PackagePath": "staticwebassets\\img\\920f5655-a709-4350-89db-498ba9c53416_phone.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\a5c236f0-1f4f-4934-9a3f-af60abe68d6e_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\a5c236f0-1f4f-4934-9a3f-af60abe68d6e_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\a7696dae-66ae-48de-a5a1-6565644cb6a0_cam2.jpg",
+      "PackagePath": "staticwebassets\\img\\a7696dae-66ae-48de-a5a1-6565644cb6a0_cam2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\api.jpg",
+      "PackagePath": "staticwebassets\\img\\api.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\c2cfd928-c876-405f-ba2a-12d8a3694e1e_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\c2cfd928-c876-405f-ba2a-12d8a3694e1e_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\dbb9201d-fa74-4b26-8093-39b7bd988f41_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\dbb9201d-fa74-4b26-8093-39b7bd988f41_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\e1.jpeg",
+      "PackagePath": "staticwebassets\\img\\e1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\e4a764b7-42e0-4adf-bb28-5c142acec5ed_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\e4a764b7-42e0-4adf-bb28-5c142acec5ed_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\fe483970-5658-4987-833f-9fe223e73486_lenovoimage.jpeg",
+      "PackagePath": "staticwebassets\\img\\fe483970-5658-4987-833f-9fe223e73486_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\hotdeal.png",
+      "PackagePath": "staticwebassets\\img\\hotdeal.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\i1.png",
+      "PackagePath": "staticwebassets\\img\\i1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\i2.jpeg",
+      "PackagePath": "staticwebassets\\img\\i2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\i3.jpg",
+      "PackagePath": "staticwebassets\\img\\i3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\im1.jpeg",
+      "PackagePath": "staticwebassets\\img\\im1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\p1.jpg",
+      "PackagePath": "staticwebassets\\img\\p1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\p2.jpg",
+      "PackagePath": "staticwebassets\\img\\p2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\p3.jpg",
+      "PackagePath": "staticwebassets\\img\\p3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\p4.jpeg",
+      "PackagePath": "staticwebassets\\img\\p4.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\p5.jpg",
+      "PackagePath": "staticwebassets\\img\\p5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic1.jpg",
+      "PackagePath": "staticwebassets\\img\\pic1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic10.png",
+      "PackagePath": "staticwebassets\\img\\pic10.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic11.png",
+      "PackagePath": "staticwebassets\\img\\pic11.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic12.png",
+      "PackagePath": "staticwebassets\\img\\pic12.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic13.jpg",
+      "PackagePath": "staticwebassets\\img\\pic13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic14.png",
+      "PackagePath": "staticwebassets\\img\\pic14.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic15.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic15.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic16.jpg",
+      "PackagePath": "staticwebassets\\img\\pic16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic17.jpg",
+      "PackagePath": "staticwebassets\\img\\pic17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic18.jpg",
+      "PackagePath": "staticwebassets\\img\\pic18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic19.jpg",
+      "PackagePath": "staticwebassets\\img\\pic19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic2.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic2.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic20.jpg",
+      "PackagePath": "staticwebassets\\img\\pic20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic21.jpg",
+      "PackagePath": "staticwebassets\\img\\pic21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic22.jpg",
+      "PackagePath": "staticwebassets\\img\\pic22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic23.jpg",
+      "PackagePath": "staticwebassets\\img\\pic23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic24.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic24.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic25.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic25.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic26.jpg",
+      "PackagePath": "staticwebassets\\img\\pic26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic27.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic27.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic28.png",
+      "PackagePath": "staticwebassets\\img\\pic28.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic3.jpg",
+      "PackagePath": "staticwebassets\\img\\pic3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic4.jpg",
+      "PackagePath": "staticwebassets\\img\\pic4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic5.jpg",
+      "PackagePath": "staticwebassets\\img\\pic5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic6.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic7.jpg",
+      "PackagePath": "staticwebassets\\img\\pic7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic8.jpeg",
+      "PackagePath": "staticwebassets\\img\\pic8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic9.jpg",
+      "PackagePath": "staticwebassets\\img\\pic9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product01.png",
+      "PackagePath": "staticwebassets\\img\\product01.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product02.png",
+      "PackagePath": "staticwebassets\\img\\product02.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product03.png",
+      "PackagePath": "staticwebassets\\img\\product03.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product04.png",
+      "PackagePath": "staticwebassets\\img\\product04.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product05.png",
+      "PackagePath": "staticwebassets\\img\\product05.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product06.png",
+      "PackagePath": "staticwebassets\\img\\product06.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product07.png",
+      "PackagePath": "staticwebassets\\img\\product07.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product08.png",
+      "PackagePath": "staticwebassets\\img\\product08.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\product09.png",
+      "PackagePath": "staticwebassets\\img\\product09.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\r.jpg",
+      "PackagePath": "staticwebassets\\img\\r.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\shop01.png",
+      "PackagePath": "staticwebassets\\img\\shop01.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\shop02.png",
+      "PackagePath": "staticwebassets\\img\\shop02.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\shop03.png",
+      "PackagePath": "staticwebassets\\img\\shop03.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\jquery.zoom.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.zoom.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\js\\nouislider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\screenshot\\Checkout.png",
+      "PackagePath": "staticwebassets\\screenshot\\Checkout.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\screenshot\\Index.png",
+      "PackagePath": "staticwebassets\\screenshot\\Index.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\screenshot\\Product.png",
+      "PackagePath": "staticwebassets\\screenshot\\Product.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\screenshot\\Regular.png",
+      "PackagePath": "staticwebassets\\screenshot\\Regular.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\screenshot\\Store.png",
+      "PackagePath": "staticwebassets\\screenshot\\Store.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.E-Commerece.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.E-Commerece.props",
+      "PackagePath": "build\\E-Commerece.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.E-Commerece.props",
+      "PackagePath": "buildMultiTargeting\\E-Commerece.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.E-Commerece.props",
+      "PackagePath": "buildTransitive\\E-Commerece.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

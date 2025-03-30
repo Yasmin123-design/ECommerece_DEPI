@@ -1,0 +1,37 @@
+﻿
+@model List<Product>
+<div class="product-grid">
+    @foreach (var item in Model)
+    {
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/img/@item.Image" alt="@item.Name" />
+            </div>
+            <div class="product-info">
+                <h3 class="pull-right">@item.Price.ToString("c")</h3>
+                <h3>
+                    <a>@item.Name</a>
+                </h3>
+                <p>@item.Description</p>
+
+                <div class="action-buttons">
+                    <form action="Product/QuickView/@item.Id" method="get">
+                        <button class="custom-btn details-btn" type="submit">
+                            <i class="fas fa-eye"></i> Show Details
+                        </button>
+                    </form>
+                    <form action="Product/QuickView/@item.Id" method="post">
+                        <button class="custom-btn cart-btn" type="submit">
+                            <i class="fas fa-shopping-cart"></i> Add To Cart
+                        </button>
+                    </form>
+                    <button class="custom-btn wishlist-btn" onclick="addToWishlist(@item.Id)">
+                        <i class="fas fa-heart"></i> Add To Wishlist
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
