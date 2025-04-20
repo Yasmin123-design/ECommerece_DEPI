@@ -7,15 +7,15 @@ namespace E_Commerece.Models
 {
     public class User : IdentityUser
     {
-        [Required]
+        [Required(ErrorMessage ="this field required")]
         [StringLength(50, ErrorMessage = "الاسم الأول لا يمكن أن يتجاوز 50 حرفًا.")]
         public string Fname { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "this field required")]
         [StringLength(50, ErrorMessage = "الاسم الأخير لا يمكن أن يتجاوز 50 حرفًا.")]
         public string Lname { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "this field required")]
         [StringLength(200, ErrorMessage = "العنوان لا يمكن أن يتجاوز 200 حرف.")]
         public string Address { get; set; } = string.Empty;
 

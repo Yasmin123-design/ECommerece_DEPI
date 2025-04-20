@@ -70,5 +70,28 @@ namespace E_Commerece.Services.Implementations
         public List<Product> GetLatestSoldProducts() => this._unitOfWork.Products.GetLatestSoldProducts();
 
         public List<Order> GetRequestedProducts() => this._unitOfWork.Products.GetRequestedProducts();
+
+        public List<Product> GetAllPenddingProuct() =>
+            this._unitOfWork.Products.GetAllPenddingProuct();
+
+        public void ApprovedProduct(int id)
+        {
+            this._unitOfWork.Products.ApprovedProduct(id);
+        }
+
+        public void ApprovedAllProducts()
+        {
+            this._unitOfWork.Products.ApprovedAllProducts();
+        }
+
+        public void RejectAllProducts()
+        {
+            this._unitOfWork.Products.RejectAllProducts();
+        }
+
+        public void RejectProduct(int id)
+        {
+            this._unitOfWork.Products.RejectProduct(id);
+        }
     }
 }

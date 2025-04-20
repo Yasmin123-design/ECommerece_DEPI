@@ -1,0 +1,85 @@
+﻿<style>
+    .category-form {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-title {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .form-control {
+        border-radius: 6px;
+        padding: 12px 15px;
+        border: 1px solid #ced4da;
+        transition: all 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
+        }
+
+    .btn-create {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 6px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+        .btn-create:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+    .form-groupAtrr {
+        margin-bottom: 25px;
+    }
+
+    textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+    }
+</style>
+
+<div class="category-form">
+    <h2 class="form-title">Create New Category</h2>
+    <form action="Admin/CreateCategory" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-groupAtrr">
+            <label class="form-label" for="Name">Category Name</label>
+            <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter category name" required>
+        </div>
+
+        <div class="form-groupAtrr">
+            <label class="form-label" for="Description">Description</label>
+            <textarea class="form-control" id="Description" name="Description"
+                      placeholder="Enter category description"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-create">
+            <i class="fas fa-plus-circle"></i> Create Category
+        </button>
+    </form>
+</div>

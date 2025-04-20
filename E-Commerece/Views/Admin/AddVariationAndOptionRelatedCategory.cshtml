@@ -1,0 +1,168 @@
+﻿@model E_Commerece.Models.Category
+
+<style>
+    .variation-form {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .form-title {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 25px;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .variation-group {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #e9ecef;
+    }
+
+    .variation-input {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: all 0.3s;
+    }
+
+        .variation-input:focus {
+            border-color: #4dabf7;
+            box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
+            outline: none;
+        }
+
+    .btn {
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: none;
+        font-size: 15px;
+    }
+
+    .btn-primary {
+        background-color: #4dabf7;
+        color: white;
+    }
+
+        .btn-primary:hover {
+            background-color: #339af0;
+            transform: translateY(-2px);
+        }
+
+    .btn-secondary {
+        background-color: #f1f3f5;
+        color: #495057;
+        margin-right: 10px;
+    }
+
+        .btn-secondary:hover {
+            background-color: #e9ecef;
+        }
+
+    .btn-submit {
+        background-color: #40c057;
+        color: white;
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+        .btn-submit:hover {
+            background-color: #37b24d;
+        }
+
+    .options-container {
+        margin-top: 15px;
+        padding-left: 20px;
+        border-left: 3px solid #dee2e6;
+    }
+
+        .options-container > div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .options-container input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+    .section-title {
+        color: #495057;
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+</style>
+
+<div class="variation-form">
+    <h3 class="form-title">إضافة Variation و Options للتصنيف</h3>
+    <form asp-action="AddVariationAndOptionRelatedCategory" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="text" name="categoryId" value="@Model.Id" hidden />
+
+        <div id="variations-container">
+            <h4 class="section-title">Variations</h4>
+            <button type="button" class="btn btn-primary" onclick="addVariation()">
+                <i class="fas fa-plus"></i> إضافة Variation
+            </button>
+        </div>
+
+        <button type="submit" class="btn btn-submit">
+            <i class="fas fa-save"></i> حفظ التغييرات
+        </button>
+    </form>
+</div>
+
+<script>
+    function addVariation() {
+        let container = document.getElementById("variations-container");
+        let index = container.getElementsByClassName("variation-group").length;
+
+        let html = `
+                <div class="variation-group">
+                    <input type="text" class="variation-input"
+                           name="variations[${index}].Name"
+                           placeholder="أدخل اسم Variation">
+
+                    <button type="button" class="btn btn-secondary"
+                            onclick="addVariationOption(${index})">
+                        <i class="fas fa-plus"></i> إضافة Options
+                    </button>
+
+                    <div id="options-container-${index}" class="options-container"></div>
+                </div>`;
+
+        container.insertAdjacentHTML('beforeend', html);
+    }
+
+    function addVariationOption(variationIndex) {
+        let container = document.getElementById(`options-container-${variationIndex}`);
+        let index = container.getElementsByTagName("input").length;
+
+        let html = `
+                <div>
+                    <input type="text" class="variation-input"
+                           name="variations[${variationIndex}].VariationOptions[${index}].Value"
+                           placeholder="أدخل اسم Option">
+                </div>`;
+
+        container.insertAdjacentHTML('beforeend', html);
+    }
+</script>

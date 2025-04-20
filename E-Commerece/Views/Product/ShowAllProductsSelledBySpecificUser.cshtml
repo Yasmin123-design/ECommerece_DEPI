@@ -1,8 +1,17 @@
-﻿<style>
-    body{
-        padding:0;
-        margin:0;
+﻿
+<style>
+    body {
+        padding: 0;
+        margin: 0;
     }
+
+    .product-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
     .product-header {
         margin-top: 70px;
         display: flex;
@@ -12,7 +21,7 @@
     }
 
     .btn-add-product {
-        background-color: #28a745; 
+        background-color: #28a745;
         color: white;
         padding: 10px 15px;
         border-radius: 5px;
@@ -34,11 +43,11 @@
     .alert-info {
         margin-bottom: 70px;
     }
+
     .product-table {
         width: 100%;
         border-collapse: collapse;
-        margin: 20px 0;
-        margin-bottom: 50px;
+        margin: 20px 0 50px 0;
     }
 
         .product-table th,
@@ -54,7 +63,7 @@
         }
 
         .product-table td {
-            vertical-align: top; 
+            vertical-align: top;
         }
 
         .product-table .description-cell {
@@ -63,13 +72,13 @@
         }
 
         .product-table .product-image {
-            width: 80px; 
-            height: auto; 
-            border-radius: 5px; 
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
         }
 
     .status-pending {
-        color: #ffc107; 
+        color: #ffc107;
         font-weight: bold;
     }
 
@@ -77,10 +86,12 @@
         color: #28a745;
         font-weight: bold;
     }
+
     .action-icons {
         display: flex;
-        gap: 10px; 
+        gap: 10px;
     }
+
         .action-icons a {
             color: #007bff;
             text-decoration: none;
@@ -92,73 +103,72 @@
             }
 </style>
 @model List<Product>
-<div class="product-header">
-    <h2>Products</h2>
-    <a href="/Product/Create" class="btn-add-product">
-        <i class="fa fa-plus"></i> Add New Product
-    </a>
-</div>
-
-@if (Model == null || !Model.Any())
-{
-    <div class="alert alert-info" role="alert">
-        No products available yet.
+<div class="product-container">
+    <div class="product-header">
+        <h2>Products</h2>
+        <a href="/Product/Create" class="btn-add-product">
+            <i class="fa fa-plus"></i> Add New Product
+        </a>
     </div>
-}
-else
-{
-    <table class="product-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Image</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var product in Model)
-            {
-                <tr>
-                    <td>@product.Name</td>
-                    <td class="description-cell">@product.Description</td>
-                    <td>@product.Price</td>
-                    <td>
-                        @if (!product.IsApproved)
-                        {
-                            <span class="status-pending">Pending</span>
-                        }
-                        else
-                        {
-                            <span class="status-approved">Approved</span>
-                        }
-                    </td>
-                    <td>
-                        <img src="/img/@product.Image" alt="@product.Name" class="product-image" />
-                    </td>
-                    <td>
-                        <div class="action-icons">
-                            <!-- أيقونة عرض التفاصيل -->
-                            <a href="/Product/ProductAddededBySellerDetails/@product.Id" title="Details">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <!-- أيقونة التحديث -->
-                            <a href="/Product/EditProductAddededBySeller/@product.Id" title="Edit">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a href="javascript:void(0);" onclick="deleteProductFromSelledProductsByUser(@product.Id)" class="text-danger">
-                                <i class="fa fa-trash"></i>
-                            </a>
 
-                        </div>
-                    </td>
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info" role="alert">
+            No products available yet.
+        </div>
+    }
+    else
+    {
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Image</th>
+                    <th>Actions</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td class="description-cell">@product.Description</td>
+                        <td>@product.Price</td>
+                        <td>
+                            @if (!product.IsApproved)
+                            {
+                                <span class="status-pending">Pending</span>
+                            }
+                            else
+                            {
+                                <span class="status-approved">Approved</span>
+                            }
+                        </td>
+                        <td>
+                            <img src="/img/@product.Image" alt="@product.Name" class="product-image" />
+                        </td>
+                        <td>
+                            <div class="action-icons">
+                                <a href="/Product/ProductAddededBySellerDetails/@product.Id" title="Details">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a href="/Product/EditProductAddededBySeller/@product.Id" title="Edit">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="javascript:void(0);" onclick="deleteProductFromSelledProductsByUser(@product.Id)" class="text-danger">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
 <script>
     window.deleteProductFromSelledProductsByUser = function (id) {
         Swal.fire({

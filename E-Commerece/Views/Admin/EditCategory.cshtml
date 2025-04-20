@@ -1,0 +1,427 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "تعديل الفئة";
+}
+
+<style>
+    :root {
+        --primary-color: #4e73df;
+        --secondary-color: #f8f9fc;
+        --text-color: #5a5c69;
+    }
+
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .main-content {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .category-header {
+        color: var(--primary-color);
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* أيقونات كبيرة ملونة */
+    .big-icon {
+        font-size: 1.8rem;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        transition: all 0.3s ease;
+    }
+
+    .icon-primary {
+        color: var(--primary-color);
+    }
+
+    .icon-secondary {
+        color: #6c757d;
+    }
+
+    .icon-success {
+        color: #1cc88a;
+    }
+
+    .icon-warning {
+        color: #f6c23e;
+    }
+
+    .icon-danger {
+        color: #e74a3b;
+    }
+
+    /* تأثيرات التحويم */
+    .icon-hover:hover {
+        transform: scale(1.2);
+        opacity: 0.9;
+    }
+
+    .btn-icon {
+        font-size: 1.2rem;
+        margin-right: 0.3rem;
+    }
+
+    .info-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .variation-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+        .variation-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+    .option-item {
+        transition: all 0.2s ease;
+    }
+
+        .option-item:hover {
+            background-color: #f8f9fa;
+        }
+
+    .btn-action {
+        border-radius: 20px;
+        padding: 1.5rem 2.5rem;
+        font-size: 0.85rem;
+        transition: all 0.2s ease;
+    }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+    .section-title {
+        color: #6c757d;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+</style>
+
+<div class="main-content">
+    <!-- عنوان الفئة مع أيقونة كبيرة -->
+    <div class="d-flex align-items-center mb-4">
+        <h2 class="category-header m-0">
+            <i class="fas fa-tag big-icon icon-primary icon-hover"></i>@Model.Name
+        </h2>
+    </div>
+
+    <!-- معلومات الفئة -->
+    <div class="info-card">
+        <h5 class="section-title">
+            <i class="fas fa-info-circle big-icon icon-secondary icon-hover"></i> معلومات الفئة
+        </h5>
+        <div class="mb-3">
+            <label class="fw-bold text-muted">الوصف:</label>
+            <p class="mt-2" style="color: var(--text-color); line-height: 1.6;">@Model.Description</p>
+        </div>
+    </div>
+
+    <!-- قسم الـ Variations -->
+    <div class="variations-section">
+        <h5 class="section-title">
+            <i class="fas fa-list-ul big-icon icon-secondary icon-hover"></i> الأنواع المتاحة
+        </h5>
+
+        @foreach (var variation in Model.Variations)
+        {
+            <div class="variation-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 style="color: var(--primary-color); font-weight: 600;">
+                        <i class="fas fa-tags icon-primary"></i> @variation.Name
+                    </h5>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary btn-action edit-variation" data-value="@variation.Name" data-id="@variation.Id">
+                            <i class="fas fa-edit btn-icon icon-primary"></i>تعديل
+                        </button>
+                        <button class="btn btn-outline-danger btn-action delete-variation" data-id="@variation.Id">
+                            <i class="fas fa-trash btn-icon icon-danger"></i>حذف
+                        </button>
+                    </div>
+                </div>
+
+                <!-- الـ Options -->
+                <div class="options-list">
+                    <h6 class="section-title mb-3">
+                        <i class="fas fa-cog big-icon icon-secondary icon-hover"></i> الخيارات المتاحة
+                    </h6>
+
+                    <ul class="list-unstyled">
+                        @foreach (var option in variation.VariationOptions)
+                        {
+                            <li class="option-item d-flex justify-content-between align-items-center p-3 mb-2 bg-light rounded">
+                                <span style="color: var(--text-color);">
+                                   @option.Value
+                                </span>
+                                <div>
+                                    <button class="btn btn-outline-warning btn-sm btn-action edit-option" data-value="@option.Value" data-id="@option.Id">
+                                        <i class="fas fa-pencil-alt icon-warning"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-sm btn-action delete-option" data-id="@option.Id">
+                                        <i class="fas fa-times icon-danger"></i>
+                                    </button>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                    <button class="btn btn-success btn-sm mt-5 add-option " style="margin-top:20px" data-variation-id="@variation.Id">
+                        <i class="fas fa-plus btn-icon icon-success"></i>إضافة خيار جديد
+                    </button>
+                </div>
+            </div>
+        }
+
+        <button id="add-variation" class="btn btn-primary mt-3">
+            <i class="fas fa-plus btn-icon icon-primary"></i>إضافة نوع جديد
+        </button>
+    </div>
+</div> 
+
+
+<!-- Modal لإضافة نوع جديد -->
+<div class="modal fade" id="addVariationModal" tabindex="-1" aria-labelledby="addVariationLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="variationForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addVariationLabel">إضافة نوع جديد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="CategoryId" value="@Model.Id" />
+                    <input type="hidden" name="Id" id="variationId" />
+                    <div class="mb-3">
+                        <label class="form-label">اسم النوع</label>
+                        <input id="enteredvariation" type="text" class="form-control" name="Name" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">حفظ</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id ="hideAddVariationForm">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal لإضافة خيار جديد -->
+<div class="modal fade" id="addOptionModal" tabindex="-1" aria-labelledby="addOptionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="optionForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addOptionLabel">إضافة خيار جديد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="Variationid" id="variationIdField" />
+                    <input type="hidden" name="categoryid" value="@Model.Id" />
+                    <input type="hidden" name="Id" id="variationOptionId" />
+                    <div class="mb-3">
+                        <label class="form-label">قيمة الخيار</label>
+                        <input type="text" id="entereoption" class="form-control" name="Value" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">حفظ</button>
+                    <button type="button" class="btn btn-secondary" id="hideAddOptionForm" data-bs-dismiss="modal">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        document.getElementById("hideAddVariationForm").addEventListener("click", function () {
+            $('#addVariationModal').modal('hide');
+        });
+
+        document.getElementById("hideAddOptionForm").addEventListener("click", function () {
+            $('#addOptionModal').modal('hide');
+        });
+
+
+        // حذف نوع (variation)
+        document.querySelectorAll(".delete-variation").forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                Swal.fire({
+                    title: 'هل أنت متأكد؟',
+                    text: "لن تتمكن من التراجع بعد الحذف!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'نعم، احذف!',
+                    cancelButtonText: 'إلغاء'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/DeleteVariation/${id}`, {
+                            method: 'POST'
+                        }).then(response => {
+                            if (response.ok) {
+                                Swal.fire('تم الحذف!', 'تم حذف النوع بنجاح.', 'success')
+                                    .then(() => location.reload());
+                            } else {
+                                Swal.fire('خطأ!', 'حدث خطأ أثناء الحذف.', 'error');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+        // تعديل نوع (variation)
+        document.querySelectorAll(".edit-variation").forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+                const name = this.getAttribute("data-value");
+                document.getElementById("enteredvariation").value = name;
+                document.getElementById("variationId").value = id;
+                $('#addVariationModal').modal('show');
+            });
+        });
+
+        // فتح Modal إضافة نوع
+        document.getElementById("add-variation").addEventListener("click", function () {
+            document.getElementById("variationForm").reset(); 
+            document.getElementById("variationId").value = '';
+            $('#addVariationModal').modal('show');
+        });
+
+        // إرسال نوع جديد
+        document.getElementById("variationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const id = formData.get("Id");
+
+            const url = id ? '/Admin/EditVariation' : '/Admin/AddVariation';
+
+            fetch(url, {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.success) {
+                        $('#addVariationModal').modal('hide');
+                        Swal.fire('تم الحفظ', result.message ?? '', 'success')
+                            .then(() => location.reload());
+                    } else {
+                        Swal.fire('خطأ', result.message ?? '', 'error');
+                    }
+                });
+        });
+
+
+
+        // حذف خيار
+        document.querySelectorAll(".delete-option").forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+
+                Swal.fire({
+                    title: 'هل أنت متأكد؟',
+                    text: "لن تتمكن من التراجع بعد الحذف!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'نعم، احذف!',
+                    cancelButtonText: 'إلغاء'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`/Admin/DeleteOption/${id}`, {
+                            method: 'POST'
+                        }).then(response => {
+                            if (response.ok) {
+                                Swal.fire('تم الحذف!', 'تم حذف الخيار بنجاح.', 'success')
+                                    .then(() => location.reload());
+                            } else {
+                                Swal.fire('خطأ!', 'حدث خطأ أثناء الحذف.', 'error');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+        // تعديل خيار
+        document.querySelectorAll(".edit-option").forEach(button => {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+                const name = this.getAttribute("data-value");
+                document.getElementById("entereoption").value = name;
+                document.getElementById("variationOptionId").value = id;
+                $('#addOptionModal').modal('show');
+            });
+        });
+
+        // إضافة خيار جديد
+        document.querySelectorAll(".add-option").forEach(button => {
+            button.addEventListener("click", function () {
+                const variationId = this.getAttribute("data-variation-id");
+
+                // خزنه في الحقل المخفي داخل المودال
+                document.getElementById("variationIdField").value = variationId;
+
+                // افتح المودال
+                $('#addOptionModal').modal('show');
+            });
+        });
+
+
+        document.getElementById("optionForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const id = formData.get("Id");
+
+            const url = id ? '/Admin/EditOption' : '/Admin/AddOption';
+
+            fetch(url, {
+                method: 'POST',
+                body: new URLSearchParams(formData)
+            })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.success) {
+                        $('#addVariationModal').modal('hide');
+                        Swal.fire('تم الحفظ', result.message ?? '', 'success')
+                            .then(() => location.reload());
+                    } else {
+                        Swal.fire('خطأ', result.message ?? '', 'error');
+                    }
+                });
+
+
+            
+        });
+    });
+</script>
+

@@ -22,6 +22,7 @@
 </style>
 
 <form asp-action="EditProductAddededBySeller" asp-controller="Product" method="post" enctype="multipart/form-data" class="custom-form">
+    <div asp-validation-summary="All" class="text-danger"></div>
     <input type="hidden" asp-for="Id" />
 
     <div class="form-group" style="margin-bottom: 1.5rem;">

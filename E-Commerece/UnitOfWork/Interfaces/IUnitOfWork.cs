@@ -14,6 +14,7 @@ namespace E_Commerece.UnitOfWork.Interfaces
         IProfileRepository Profile { get; }
         IVariationRepository Variations { get; }
 
+        IVariationOptionsRepository VariationOptions { get; }
         void Save();
     }
 }

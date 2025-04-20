@@ -113,7 +113,7 @@ namespace E_Commerece.Data.Repositories
         public List<object> GetProductsByCategoryIdJsonReturned(List<int> categoryIds)
         {
 			return _context.Products
-				 .Where(p => categoryIds.Contains(p.CategoryId))
+				 .Where(p => categoryIds.Contains(p.CategoryId) )
 				.Select(p => new
 				{
 					Id = p.Id,
@@ -232,5 +232,40 @@ namespace E_Commerece.Data.Repositories
              .OrderByDescending(o => o.OrderDate) 
              .ToList();
 
+        public List<Product> GetAllPenddingProuct() => this._context.Products.Include(x => x.Category).Include(x => x.Seller).Where(x => x.SellerId != null && x.ApprovalStatus == ProductStatus.Pendding).ToList();
+
+        public void ApprovedProduct(int id)
+        {
+            var product = GetProductById(id);
+            product.IsApproved = true;
+            product.ApprovalStatus = ProductStatus.Accept;
+        }
+
+        public void ApprovedAllProducts()
+        {
+            var products = GetAllPenddingProuct();
+            foreach(var product in products)
+            {
+                product.IsApproved = true;
+                product.ApprovalStatus = ProductStatus.Accept;
+            }
+        }
+
+        public void RejectAllProducts()
+        {
+            var products = GetAllPenddingProuct();
+            foreach(var product in products)
+            {
+                product.IsApproved = false;
+                product.ApprovalStatus = ProductStatus.Reject;
+            }
+        }
+
+        public void RejectProduct(int id)
+        {
+            var product = GetProductById(id);
+            product.IsApproved = false;
+            product.ApprovalStatus = ProductStatus.Reject;
+        }
     }
 }

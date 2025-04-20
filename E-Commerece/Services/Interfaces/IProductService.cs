@@ -33,6 +33,12 @@ namespace E_Commerece.Services.Interfaces
         List<Order> GetLatestPurchasedProducts();
         List<Product> GetLatestSoldProducts();
         List<Order> GetRequestedProducts();
+        List<Product> GetAllPenddingProuct();
+
+        void ApprovedProduct(int id);
+        void ApprovedAllProducts();
+        void RejectAllProducts();
+        void RejectProduct(int id);
 
     }
 }

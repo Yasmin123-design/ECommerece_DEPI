@@ -1,5 +1,6 @@
 ﻿using E_Commerece.Data.Interfaces;
 using E_Commerece.Data.Repositories;
+using E_Commerece.Migrations;
 using E_Commerece.Models;
 using E_Commerece.UnitOfWork.Interfaces;
 
@@ -26,6 +27,8 @@ namespace E_Commerece.UnitOfWork.Implementations
 
         public IVariationRepository Variations { get; }
 
+        public IVariationOptionsRepository VariationOptions { get; }
+
         public UnitOfWork(EcommereceContext context)
         {
             this._context = context;
@@ -38,6 +41,7 @@ namespace E_Commerece.UnitOfWork.Implementations
             Wishlist = new WishlistRepository(_context);
             Profile = new ProfileRepository(_context);
             Variations = new VariationRepository(_context);
+            VariationOptions = new VariationOptionsRepository(_context);
         }
 
         public void Dispose()

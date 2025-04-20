@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\E-Commerece.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\Image\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\Image\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\Images\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\Images\\ajax-loader.gif"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
@@ -73,12 +81,16 @@
       "PackagePath": "staticwebassets\\fonts\\slick.woff"
     },
     {
-      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\images\\ajax-loader.gif",
-      "PackagePath": "staticwebassets\\images\\ajax-loader.gif"
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\115e1dea-ee69-4960-b961-565ba3a117f6_pic2.jpg",
+      "PackagePath": "staticwebassets\\img\\115e1dea-ee69-4960-b961-565ba3a117f6_pic2.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\247380bb-da95-4193-8ab7-96db7680ef0d_cam3.jpeg",
       "PackagePath": "staticwebassets\\img\\247380bb-da95-4193-8ab7-96db7680ef0d_cam3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\248e9b7d-d2a9-45d3-8370-463550b01e33_pic2.jpg",
+      "PackagePath": "staticwebassets\\img\\248e9b7d-d2a9-45d3-8370-463550b01e33_pic2.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\2cea29bd-aabd-450c-a39b-5c603ad87502_lenovoimage.jpeg",
@@ -115,6 +127,10 @@
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\a7696dae-66ae-48de-a5a1-6565644cb6a0_cam2.jpg",
       "PackagePath": "staticwebassets\\img\\a7696dae-66ae-48de-a5a1-6565644cb6a0_cam2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\img\\ajax-loader.gif"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\api.jpg",

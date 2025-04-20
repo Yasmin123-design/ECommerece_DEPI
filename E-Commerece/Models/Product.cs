@@ -36,5 +36,10 @@ namespace E_Commerece.Models
 
         public List<Wishlist> Wishlists { get; set; } = new List<Wishlist>();
 
+        public ProductStatus ApprovalStatus { get; set; } = ProductStatus.Pendding;
+    }
+    public enum ProductStatus
+    {
+        Pendding , Accept , Reject
     }
 }

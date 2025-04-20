@@ -111,7 +111,7 @@
 <div class="categories-management">
     <div class="header-section">
         <h2>Categories Management</h2>
-        <a asp-action="Create" class="btn btn-primary">
+        <a href="/Admin/CreateCategory" class="btn btn-primary">
             <i class="bi bi-plus-circle"></i> Add New Category
         </a>
     </div>
@@ -136,12 +136,18 @@
                                 <td>@(category.Description.Length > 100 ? category.Description.Substring(0, 100) + "..." : category.Description)</td>
                                 <td>
                                     <div class="action-buttons">
-                                        <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-primary">
+                                        <a href="/Admin/EditCategory/@category.Id" class="btn btn-primary">
                                             <i class="bi bi-pencil"></i> Edit
                                         </a>
-                                        <a asp-action="Delete" asp-route-id="@category.Id" class="btn btn-danger">
+                                       
+                                        <button class="btn btn-danger" onclick="deleteCategory(@category.Id)">
                                             <i class="bi bi-trash"></i> Delete
+                                        </button>
+
+                                        <a href="/Admin/DetailsCategory/@category.Id" class="btn btn-info">
+                                            <i class="bi bi-eye"></i> View
                                         </a>
+
                                     </div>
                                 </td>
                             </tr>
@@ -160,3 +166,22 @@
     </div>
 </div>
 
+<script>
+    window.deleteCategory = function (id) {
+        Swal.fire({
+            title: "هل أنت متأكد؟",
+            text: "لن تتمكن من التراجع بعد الحذف!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "نعم، احذف العنصر!",
+            cancelButtonText: "إلغاء"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // إعادة التوجيه لحذف العنصر
+                window.location.href = `/Admin/DeleteCategory/${id}`;
+            }
+        });
+    }
+</script>

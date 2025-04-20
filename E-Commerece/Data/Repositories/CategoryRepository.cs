@@ -12,6 +12,21 @@ namespace E_Commerece.Data.Repositories
             this._context = context;
         }
 
-        public List<Category> GetAllCategories() => this._context.Categories.Include(x => x.Products).ToList();
+        public void Create(Category category)
+        {
+            this._context.Categories.Add(category);
+        }
+
+        public void Delete(Category category)
+        {
+            category.IsActive = false;
+        }
+
+        public List<Category> GetAllCategories() => this._context.Categories.Include(x => x.Products).Where(x => x.IsActive).ToList();
+
+        public Category GetCategory(int id) => this._context.Categories
+            .Include(x => x.Variations)
+            .ThenInclude(x => x.VariationOptions)
+            .SingleOrDefault(x => x.Id == id);
     }
 }

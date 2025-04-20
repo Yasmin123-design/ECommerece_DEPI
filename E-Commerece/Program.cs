@@ -28,6 +28,7 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IWishlistService, WishlistService>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<IVariationService, VariationService>();
+builder.Services.AddScoped<IVariationOptionsService, VariationOptionService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<EcommereceContext>().AddDefaultTokenProviders();
 builder.Services.AddDbContext<EcommereceContext>(optionbuilder =>
@@ -102,32 +103,63 @@ app.Use(async (context, next) =>
 			Console.WriteLine(path);
 
 
-            var excludedPaths = new List<string>
-            {
-                "/Account/Logout",
-                "/Product/QuickView",
+			var excludedPaths = new List<string>
+			{
+				"/Account/Logout",
+				"/Product/QuickView",
+				"/Product/AddReviewOnProduct",
+				"/Product/AddToWishlist",
+				"/Product/ShowUserInfo",
+				"/Account/Login",
+				"/Dashboard/DashBoard",
+				"/Product/ProductsStartWith",
+				"/Wishlist/Index",
+				"/Product/ShowAllProductsSelledBySpecificUser",
+				"/Cart/Index",
+				"/Order/CheckOut",
+				"/Profile/ShowUserInfo",
+				"/About/Index",
+				"/Product/Laptops",
+				"/Product/Accessories",
+				"/Product/Cameras",
+				"/Product/SmartPhones",
+				"/Store/Index",
+				"/Product/GetAllProducts",
+				"/Admin/Categories",
+				"/Product/Create",
+				"/Product/ProductAddededBySellerDetails",
+				"/Product/EditProductAddededBySeller",
+				"/Admin/CreateCategory",
+                "/Admin/EditCategory",
+                "/Admin/DeleteCategory",
+                "/Product/DeletePrdFromSelledPrds",
+                "/Product/AddVariationOptionsToSelledProductByUser",
                 "/Product/AddReviewOnProduct",
-                "/Product/AddToWishlist",
-                "/Product/ShowUserInfo",
-                "/Account/Login",
-                "/Dashboard/DashBoard",
-                "/Product/ProductsStartWith",
-                "/Wishlist/Index",
-                "/Product/ShowAllProductsSelledBySpecificUser",
-                "/Cart/Index",
-                "/Order/CheckOut",
-                "/Profile/ShowUserInfo",
-                "/About/Index",
-                "/Product/Laptops",
-                "/Product/Accessories",
-                "/Product/Cameras",
-                "/Product/SmartPhones",
-                "/Store/Index",
-                "/Product/GetAllProducts",
-                "/Admin/Categories",
-                "/Product/Create",
-                "/Product/ProductAddededBySellerDetails",
-                "/Product/EditProductAddededBySeller"
+                "/Product/AddToCart",
+                "/Product/DeleteFromWishlist",
+                "/CartItem/DeleteCartItem",
+                "/CartItem/DeleteAll",
+                "/Order/OrderDetails",
+                "/Order/Payment",
+                "/Order/CashOnDelivery",
+                "/Order/PayWithStripe",
+                "/Order/OrderConfirmation",
+                "/Order/ProcessOrderAfterPayment",
+                "/Order/PaymentFailed",
+                "/Admin/AddVariationAndOptionRelatedCategory",
+                "/Admin/DetailsCategory",
+                "/Admin/DeleteVariation",
+                "/Admin/EditVariation",
+                "/Admin/AddVariation",
+                "/Admin/DeleteOption",
+                "/Admin/EditOption",
+                "/Admin/AddOption",
+                "/Admin/PendingProducts",
+                "/Admin/Approve",
+                "/Admin/Reject",
+                "/Admin/ApproveAll",
+                "/Admin/RejectAll"
+
             };
 
             // استثناء المسارات من التوجيه

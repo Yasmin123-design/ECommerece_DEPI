@@ -2,6 +2,7 @@
 @model User
 
 <form asp-action="ShowUserInfo" method="post" class="user-form">
+    <div asp-validation-summary="All" class="text-danger"></div>
     <input type="hidden" asp-for="Id" />
     <h2 style="text-align:center">My Profile</h2>
     <div class="form-group">

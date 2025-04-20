@@ -11,6 +11,23 @@ namespace E_Commerece.Services.Implementations
         {
             this._unitOfWork = unitOfWork;
         }
+
+        public void Create(Category category)
+        {
+            this._unitOfWork.Categories.Create(category);
+        }
+
+        public void SaveChange()
+        {
+            this._unitOfWork.Save();
+        }
         public List<Category> GetAllCategories() => this._unitOfWork.Categories.GetAllCategories();
+
+        public Category GetCategory(int id) => this._unitOfWork.Categories.GetCategory(id);
+
+        public void Delete(Category category)
+        {
+            this._unitOfWork.Categories.Delete(category);
+        }
     }
 }

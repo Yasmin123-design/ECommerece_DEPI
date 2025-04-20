@@ -1,5 +1,4 @@
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\appsettings.json
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\E-Commerece.staticwebassets.runtime.json
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\E-Commerece.exe
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\E-Commerece.deps.json
@@ -257,3 +256,5 @@ C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\runt
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Facebook.dll
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\obj\Debug\net8.0\E-Commerece.sourcelink.json
+C:\Users\Lenovo\source\repos\MVC\E-CommereceSn\E-Commerece\bin\Debug\net8.0\appsettings.json

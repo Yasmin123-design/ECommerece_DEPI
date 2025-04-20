@@ -1,0 +1,222 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Pending Products Approval";
+}
+<style>
+    .pending-products-container {
+        padding: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .page-title {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+
+    .card {
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .pending-products-table {
+        margin-bottom: 0;
+    }
+
+        .pending-products-table thead th {
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            font-weight: 600;
+            color: #495057;
+            padding: 1rem;
+        }
+
+        .pending-products-table tbody td {
+            vertical-align: middle;
+            padding: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+    .product-thumbnail {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 1px solid #eee;
+    }
+
+    .no-image-placeholder {
+        width: 60px;
+        height: 60px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ccc;
+        border: 1px dashed #ddd;
+    }
+
+    .product-name {
+        font-weight: 500;
+        color: #2c3e50;
+    }
+
+    .product-description {
+        color: #666;
+        max-width: 250px;
+    }
+
+    .product-category {
+        color: #3498db;
+        font-weight: 500;
+    }
+
+    .seller-name {
+        color: #7f8c8d;
+    }
+
+    .action-buttons {
+        white-space: nowrap;
+    }
+
+    .approve-btn, .approveall-btn {
+        margin-right: 0.5rem;
+        min-width: 90px;
+    }
+
+    .reject-btn, .rejectall-btn {
+        min-width: 80px;
+    }
+
+    .btn-sm {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    tr:hover {
+        background-color: #f8f9fa;
+    }
+
+    .table-responsive {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+</style>
+@if (Model != null && Model.Any())
+{
+<div class="pending-products-container">
+    <h2 class="page-title">
+        <i class="fas fa-clock"></i> Pending Products Approval
+    </h2>
+    
+    <div style="display:flex;justify-content:center;margin-top:20px;margin-bottom:20px">
+        <button class="btn btn-success  approveall-btn">
+            <i class="fas fa-check"></i> Approve All
+        </button>
+        <button class="btn btn-danger  rejectall-btn">
+            <i class="fas fa-times"></i> Reject All
+        </button>
+    </div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover pending-products-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Seller</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        @foreach (var product in Model)
+                        {
+                            <tr id="@product.Id">
+                                <td class="product-image-cell">
+                                    @if (!string.IsNullOrEmpty(product.Image))
+                                    {
+                                        <img src="./img/@product.Image" alt="@product.Name" class="product-thumbnail" />
+                                    }
+                                    else
+                                    {
+                                        <div class="no-image-placeholder">
+                                            <i class="fas fa-image"></i>
+                                        </div>
+                                    }
+                                </td>
+                                <td class="product-name">@product.Name</td>
+                                <td class="product-description">
+                                    @if (!string.IsNullOrEmpty(product.Description))
+                                    {
+                                        @(product.Description.Length > 50 ? product.Description.Substring(0, 50) + "..." : product.Description)
+                                    }
+                                </td>
+                                <td class="product-category">@product.Category?.Name</td>
+                                <td class="seller-name">@product.Seller.NormalizedUserName</td>
+                                <td class="action-buttons">
+                                    <button class="btn btn-success  approve-btn" id="approvedbtn" data-id="@product.Id">
+                                        <i class="fas fa-check"></i> Approve
+                                    </button>
+                                    <button class="btn btn-danger  reject-btn" id="rejectedbtn" data-id="@product.Id">
+                                        <i class="fas fa-times"></i> Reject
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+}
+else
+{
+    <div class="alert alert-info text-center mt-5 mb-5 p-4 shadow-sm" style="border-radius: 10px; font-size: 1.2rem;">
+        <i class="fas fa-info-circle fa-2x mb-2" style="color: #17a2b8;"></i><br />
+        No pending products for approval at the moment.
+    </div>
+}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all approve buttons
+        const approveButtons = document.querySelectorAll(".approve-btn");
+
+        approveButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+                window.location.href = `/Admin/Approve/${id}`;
+            });
+        });
+
+        const approveAllButton = document.querySelector(".approveall-btn");
+
+        approveAllButton.addEventListener("click", function () {
+                window.location.href = "/Admin/ApproveAll";
+            });
+       
+
+        const rejectButtons = document.querySelectorAll(".reject-btn");
+        rejectButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const id = this.getAttribute("data-id");
+                window.location.href = `/Admin/Reject/${id}`;
+            });
+        });
+
+        const rejectAllButton = document.querySelectorAll(".rejectall-btn");
+        rejectAllButton.addEventListener("click", function () {
+            window.location.href = "/Admin/RejectAll";
+        });
+    });
+</script>
+
+
+

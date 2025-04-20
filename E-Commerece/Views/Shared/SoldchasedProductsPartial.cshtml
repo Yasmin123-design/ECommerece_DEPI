@@ -46,9 +46,21 @@
                 <tr>
                     <td>@product.Name</td>
                     <td>@product.Price.ToString("C")</td>
-                    <td class="@(product.IsApproved ? "approved" : "pending")">
-                        @(product.IsApproved ? "Approved" : "Pending")
+                    <td>
+                        @if (product.ApprovalStatus == ProductStatus.Accept)
+                        {
+                            <span style="color:green">Approved</span>
+                        }
+                        else if (product.ApprovalStatus == ProductStatus.Pendding)
+                        {
+                            <span style="color:orange">Pending</span>
+                        }
+                        else if (product.ApprovalStatus == ProductStatus.Reject)
+                        {
+                            <span style="color:red">Rejected</span>
+                        }
                     </td>
+
                 </tr>
             }
         </tbody>

@@ -6,6 +6,7 @@ namespace E_Commerece.Data.Interfaces
 {
     public interface IProductRepository
     {
+        List<Product> GetAllPenddingProuct();
         List<Product> GetAllProducts();
         List<Product> FilteredProductByCategoryId(int categoryid);
         Product GetProductById(int id);
@@ -35,5 +36,11 @@ namespace E_Commerece.Data.Interfaces
         List<Order> GetLatestPurchasedProducts();
         List<Product> GetLatestSoldProducts();
         List<Order> GetRequestedProducts();
+
+        void ApprovedProduct(int id);
+
+        void ApprovedAllProducts();
+        void RejectAllProducts();
+        void RejectProduct(int id);
     }
 }
