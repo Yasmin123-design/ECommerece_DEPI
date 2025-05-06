@@ -24,7 +24,9 @@
     ViewBag.Title = "Add Variation Options";
     Layout = "_Layout";
 }
-
+@{
+    bool isAdmin = ViewBag.IsAdmin == true;
+}
 <div class="container mt-5 mb-5 form-footer">
     <h2>Add Variation Options</h2>
     <form asp-action="AddVariationOptionsToSelledProductByUser" method="post">
@@ -50,7 +52,10 @@
 
         <div class="button-group">
             <button type="submit" class="btn btn-primary">Add Product Item</button>
-            <a asp-controller="Product" asp-action="ShowAllProductsSelledBySpecificUser" class="btn btn-secondary">Back to Dashboard</a>
+            @if (!isAdmin)
+            {
+                <a asp-controller="Product" asp-action="ShowAllProductsSelledBySpecificUser" class="btn btn-secondary">Back to Dashboard</a>
+            }
         </div>
     </form>
 </div>

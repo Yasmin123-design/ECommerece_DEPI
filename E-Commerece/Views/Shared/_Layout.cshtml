@@ -60,7 +60,11 @@
 
 				</ul>
 				<ul class="header-links pull-right">
-					<li><a href="/About/Index"><i class="fa fa-globe"></i> About Us</a></li>
+
+					@if (!User.IsInRole("Admin"))
+					{
+						<li><a href="/About/Index"><i class="fa fa-globe"></i> About Us</a></li>
+					}
 					<li><a asp-action="Login" asp-controller="Account"><i class="fa fa-sign-in"></i>Sign In</a></li>
 
 					@if (User?.Identity?.IsAuthenticated == true && User.IsInRole("User"))
@@ -148,7 +152,6 @@
 						</div>
 					</div>
 					}
-
 					else if (User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin"))
 				{
 						<button id="menuadmin-toggle" style="margin-top: 20px; cursor: pointer; display: none;">
@@ -172,7 +175,7 @@
 								</a>
 							</div>
 							<div>
-									<a href="/Admin/Products" style="display:flex;gap:5px">
+									<a href="/Admin/AllPrdsToManage" style="display:flex;gap:5px">
 									<i class="fa fa-cube"></i> <span>Products</span>
 								</a>
 							</div>
@@ -186,6 +189,12 @@
 									<i class="fa fa-chart-line"></i> <span>Analytics</span>
 								</a>
 							</div>
+								<div>
+									<a href="/Admin/Orderes" style="display:flex;gap:5px">
+										<i class="fas fa-box"></i>
+										<span>Orders</span>
+									</a>
+								</div>
 							</div>
 							</div>
 							}
@@ -207,7 +216,7 @@
 			<!-- responsive-nav -->
 			<div id="responsive-nav">
 				<!-- NAV -->
-				<ul class="main-nav nav navbar-nav " style="display:flex !important">
+				<ul class="main-nav nav navbar-nav ">
 					@if (!User.IsInRole("Admin"))
 					{
 						<li class="active"><a href="#">Home</a></li>
@@ -231,6 +240,43 @@
 	<!-- /NAVIGATION -->
 
             @RenderBody()
+
+
+	<!-- NEWSLETTER -->
+	<div id="newsletter" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="newsletter">
+						<p>Sign Up for the <strong>NEWSLETTER</strong></p>
+						<form>
+							<input class="input" type="email" placeholder="Enter Your Email">
+							<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+						</form>
+						<ul class="newsletter-follow">
+							<li>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-pinterest"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /NEWSLETTER -->
 
 	<!-- FOOTER -->
 	@if (!User.IsInRole("Admin"))
@@ -337,6 +383,8 @@
 	<script src="/js/nouislider.min.js"></script>
 	<script src="/js/jquery.zoom.min.js"></script>
 	<script src="~/js/main.js" asp-append-version="true"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 
 	<script>

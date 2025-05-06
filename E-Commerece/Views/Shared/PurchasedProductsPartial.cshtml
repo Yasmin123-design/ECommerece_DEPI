@@ -1,4 +1,20 @@
-﻿
+﻿<style>
+    .Pendding {
+        color:orange;
+    }
+
+    .Shipped {
+        color:blue;
+    }
+
+    .Delivered {
+        color:green;
+    }
+
+    .Cancelled {
+        color:red;
+    }
+</style>
 <div class="table-container">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <h2>Orders as Customer</h2>
@@ -66,7 +82,7 @@
                     </td>
                     <td>@order.OrderDate</td>
                     <td>@order.ArrivalDate</td>
-                    <td class="@order.Status">@order.Status</td>
+                    <td style="font-weight:bold" class="@order.Status">@order.Status</td>
                 </tr>
             }
         </tbody>

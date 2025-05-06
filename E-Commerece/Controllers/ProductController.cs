@@ -41,8 +41,16 @@ namespace E_Commerece.Controllers
         }
         public IActionResult GetAllProducts()
         {
-            var products = _productService.GetAllProductsJsonReturned();
-            return Json(products);
+            if (User.IsInRole("Admin"))
+            {
+                ViewBag.IsAdmin = true;
+            }
+            else
+            {
+                ViewBag.IsAdmin = false;
+            }
+                var products = _productService.GetAllProductsJsonReturned();
+            return Json(new { products });
         }
 
         [Authorize(Roles = "User")]
@@ -77,18 +85,29 @@ namespace E_Commerece.Controllers
             ViewBag.SelectedCategoryId = categoryId;
             return View(products);
         }
+
+        [AllowAnonymous]
         public IActionResult FilterByCategoryReturnedJson(string categoryIds)
         {
+            bool isAdmin = User.IsInRole("Admin");
+
+            
+
             if (string.IsNullOrEmpty(categoryIds))
             {
-                // في حالة عدم تحديد أي تصنيف، نرجع كل المنتجات
-                var allProducts = _productService.GetAllProducts();
-                return Json(allProducts);
+                var products = _productService.GetAllProducts();
+                return Json(new { isAdmin, products });
             }
-            var categoryIdsList = categoryIds.Split(',').Select(int.Parse).ToList();
-            var filteredProducts = _productService.GetProductsByCategoryIdJsonReturned(categoryIdsList);
+            else
+            {
+                var categoryIdsList = categoryIds.Split(',').Select(int.Parse).ToList();
+                var products = isAdmin
+                    ? _productService.GetProductsByCategoryIdJsonReturnedForAdmin(categoryIdsList)
+                    : _productService.GetProductsByCategoryIdJsonReturnedForUser(categoryIdsList);
+                return Json(new { isAdmin, products });
+            }
 
-            return Json(filteredProducts);
+            
         }
 
         public IActionResult Cameras()
@@ -138,7 +157,7 @@ namespace E_Commerece.Controllers
         {
             var selectedOptionIds = optionIds.Split(',').Select(int.Parse).ToList();
             int quantity = this._productService.GetAvailableQuantity(productId, selectedOptionIds);
-            return Json(new { quantity });
+            return Json(new {quantity});
         }
 
         [Authorize(Roles = "User")]
@@ -259,8 +278,15 @@ namespace E_Commerece.Controllers
                   
                     model.Image = uniqueFileName;
 
-                    _productService.CreateSelledProductByUser(model);
-                    _productService.SeveChanges();
+                    if (User.IsInRole("User"))
+                    {
+                        _productService.CreateSelledProductByUser(model);
+                    }
+                    if (User.IsInRole("Admin"))
+                    {
+                        _productService.CreateProductByAdmin(model);
+                    }
+                        _productService.SeveChanges();
 
                     return RedirectToAction("AddVariationOptionsToSelledProductByUser", new { ProductId = model.Id, CategoryId = model.CategoryId });
                 }
@@ -279,6 +305,14 @@ namespace E_Commerece.Controllers
         public IActionResult AddVariationOptionsToSelledProductByUser(int ProductId, int CategoryId)
         {
             var variations = _variationService.GetVariationByCategoryId(CategoryId);
+            if (User.IsInRole("Admin"))
+            {
+                ViewBag.IsAdmin = true;
+            }
+            else
+            {
+                ViewBag.IsAdmin = false;
+            }
             ViewBag.ProductID = ProductId;
             return View(variations);
         }
@@ -286,6 +320,14 @@ namespace E_Commerece.Controllers
         [HttpPost]
         public IActionResult AddVariationOptionsToSelledProductByUser(int ProductId, List<int> SelectedOptions, int Quantity)
         {
+            if (User.IsInRole("Admin"))
+            {
+                ViewBag.IsAdmin = true;
+            }
+            else
+            {
+                ViewBag.IsAdmin = false;
+            }
             var variations = _variationService.GetVariationByCategoryId(_productService.GetCategoryIdByProductId(ProductId));
             try
             {
@@ -293,7 +335,7 @@ namespace E_Commerece.Controllers
             {
                 ModelState.AddModelError("", "Please select at least one variation option.");
                 ViewBag.ProductID = ProductId;
-                return View(variations); 
+                    return View(variations); 
             }
 
             _productitemService.AddProductItem(ProductId, Quantity, SelectedOptions);

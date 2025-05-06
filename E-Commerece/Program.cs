@@ -111,7 +111,8 @@ app.Use(async (context, next) =>
 				"/Product/AddToWishlist",
 				"/Product/ShowUserInfo",
 				"/Account/Login",
-				"/Dashboard/DashBoard",
+                "/Account/GoogleResponse",
+                "/Dashboard/DashBoard",
 				"/Product/ProductsStartWith",
 				"/Wishlist/Index",
 				"/Product/ShowAllProductsSelledBySpecificUser",
@@ -136,6 +137,7 @@ app.Use(async (context, next) =>
                 "/Product/AddVariationOptionsToSelledProductByUser",
                 "/Product/AddReviewOnProduct",
                 "/Product/AddToCart",
+				"/Product/Index",
                 "/Product/DeleteFromWishlist",
                 "/CartItem/DeleteCartItem",
                 "/CartItem/DeleteAll",
@@ -158,7 +160,22 @@ app.Use(async (context, next) =>
                 "/Admin/Approve",
                 "/Admin/Reject",
                 "/Admin/ApproveAll",
-                "/Admin/RejectAll"
+                "/Admin/RejectAll",
+                "/Admin/Analytics",
+                "/Admin/Orderes",
+				"/Dashboard/AllRequestOrders",
+				"/Dashboard/AllSoldProducts",
+				"/Dashboard/AllPurchasedProducts",
+                "/Admin/AcceptOrder",
+                "/Admin/rejectOrder",
+                "/Admin/MarkAsDelievered",
+				"/Admin/AllPrdsToManage",
+                "/Product/FilterByCategoryReturnedJson",
+                "/Admin/DeleteProduct",
+                "/Admin/EditProduct",
+                "/Admin/DeletedPrdItem",
+                "/Admin/AddNewPrdItem",
+                "/Product/GetAvailableQuantity"
 
             };
 
@@ -168,7 +185,7 @@ app.Use(async (context, next) =>
                 await next();
                 return;
             }
-            if (roles.Contains("Admin") && !context.Request.Path.StartsWithSegments("/Account/Admin"))
+            else if (roles.Contains("Admin") && !context.Request.Path.StartsWithSegments("/Account/Admin"))
 			{
 				context.Response.Redirect("/Account/Admin");
 				return;

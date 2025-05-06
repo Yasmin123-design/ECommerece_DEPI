@@ -26,6 +26,18 @@ namespace E_Commerece.Data.Repositories
             _context.ProductItems.Add(productItem);
         }
 
+        public void DeletePrdItem(ProductItem item)
+        {
+            _context.ProductItems.Remove(item);
+        }
+
+        public ProductItem GetProductItemById(int id) => _context.ProductItems.FirstOrDefault(x => x.Id == id);
+
         public ProductItem GetProductItemByProductId(int productid) => _context.ProductItems.Where(x => x.ProductId == productid).FirstOrDefault();
+
+        public void UpdatePrdItem(ProductItem oldPrdItem, ProductItem newPrdItem)
+        {
+            oldPrdItem.Quantity = newPrdItem.Quantity;
+        }
     }
 }

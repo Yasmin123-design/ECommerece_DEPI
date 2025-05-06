@@ -1,0 +1,219 @@
+﻿
+@model List<Order>
+@using E_Commerece.Models
+@{
+    ViewData["Title"] = "إدارة الطلبات";
+}
+<style>
+    .orders-container {
+        padding: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .orders-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    .orders-table thead th {
+        background-color: #4e73df;
+        color: white;
+        padding: 15px;
+        text-align: right;
+        font-weight: 600;
+    }
+    
+    .orders-table tbody td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        vertical-align: middle;
+    }
+    
+    .orders-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .orders-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    .orders-table tbody tr:hover {
+        background-color: #f1f5ff;
+    }
+    
+    .order-status {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    
+    .status-pending {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+    
+    .product-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .product-list li {
+        padding: 5px 0;
+        border-bottom: 1px dashed #eee;
+    }
+    
+    .product-list li:last-child {
+        border-bottom: none;
+    }
+    
+    .action-buttons .btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        margin-left: 5px;
+        border-radius: 4px;
+    }
+    
+    .customer-info {
+        font-weight: 500;
+    }
+    
+    .order-date {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+    
+    .total-price {
+        font-weight: 600;
+        color: #2e59d9;
+    }
+    
+    .table-responsive {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    #Shipped {
+        color:blue;
+    }
+
+    #Delivered {
+        color:green;
+    }
+
+    #Cancelled {
+        color:red;
+    }
+    
+</style>
+
+<div class="orders-container">
+    <h2 class="mb-4">إدارة الطلبات</h2>
+    
+    <div class="table-responsive">
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>الإجراء</th>
+                    <th>الحالة</th>
+                    <th>المجموع</th>
+                    <th>العنوان</th>
+                    <th>العميل</th>
+                    <th>المنتجات</th>
+                    <th>تاريخ الطلب</th>
+                    <th>رقم الطلب</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        @if (order.Status == Status.Shipped)
+                        {
+                            <td>
+                                <a href="#" class="btn btn-success" onclick="MarkAsDelievered(@order.Id)">
+                                    <i class="fas fa-check-circle" style="color: green;"></i> Mark as Delivered
+                                </a>
+                            </td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                        @if(@order.Status == Status.Pendding)
+                        {
+                        <td class="action-buttons" id="@order.Id">
+                            <a href="#" class="btn btn-success" onclick="acceptOrder(@order.Id)">
+                                <i class="fas fa-check"></i> قبول
+                            </a>
+                            <a href="#" class="btn btn-danger" onclick="rejectOrder(@order.Id)">
+                                <i class="fas fa-times"></i> رفض
+                            </a>
+                        </td>
+                        }
+                        else{
+                            <td>
+
+                            </td>
+                        }
+                        <td>
+                            <span id="@order.Status" class="order-status status-pending">@order.Status</span>
+                        </td>
+                        <td class="total-price">@order.TotalPrice.ToString("C")</td>
+                        <td>@order.Street</td>
+                        <td class="customer-info">
+                            @order.FirstName @order.LastName<br>
+                            <small>@order.PhoneNumber</small>
+                        </td>
+                        <td>
+                            <ul class="product-list">
+                                @foreach (var item in order.Items)
+                                {
+                                    <li>@item.ProductItem.Product.Name (×@item.Quantity)</li>
+                                }
+                            </ul>
+                        </td>
+                        <td class="order-date">@order.OrderDate.ToString("yyyy/MM/dd HH:mm")</td>
+                        <td>#@order.Id</td>
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    function acceptOrder(id) {
+        $.get("/Admin/AcceptOrder/" + id, function (res) {
+            if (res.redirectUrl) {
+                window.location.href = res.redirectUrl;
+            }
+        });
+    }
+
+
+    function rejectOrder(id) {
+        $.get("/Admin/rejectOrder/" + id, function (res) {
+            if (res.redirectUrl) {
+                window.location.href = res.redirectUrl;
+            }
+        });
+
+    }
+    function MarkAsDelievered(id) {
+        $.get("/Admin/MarkAsDelievered/" + id, function (res) {
+            if (res.redirectUrl) {
+                window.location.href = res.redirectUrl;
+            }
+        });
+    }
+</script>

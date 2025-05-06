@@ -13,7 +13,8 @@ namespace E_Commerece.Controllers
 		public IActionResult Index()
 		{
 			var products = this._productService.GetAllProducts();
-			return View(products);
+            ViewBag.IsAdmin = false;
+            return View(products);
 		}
 	}
 }

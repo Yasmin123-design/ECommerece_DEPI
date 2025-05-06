@@ -2698,8 +2698,8 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #fff;
-    border-top: 1px solid #eee;
-    margin-top: 40px;
+/*    border-top: 1px solid #eee;
+    margin-top: 40px;*/
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 

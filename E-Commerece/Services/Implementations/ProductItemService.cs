@@ -19,11 +19,23 @@ namespace E_Commerece.Services.Implementations
             this._unitOfWork.ProductItems.AddProductItem(productId, quantity,variationOptions);
         }
 
+        public void DeletePrdItem(ProductItem item)
+        {
+            this._unitOfWork.ProductItems.DeletePrdItem(item);
+        }
+
+        public ProductItem GetProductItemById(int id) => this._unitOfWork.ProductItems.GetProductItemById(id);
+
         public ProductItem GetProductItemByProductId(int productid) => this._unitOfWork.ProductItems.GetProductItemByProductId(productid);
 
         public void SeveChanges()
         {
             this._unitOfWork.Save();
+        }
+
+        public void UpdatePrdItem(ProductItem oldPrdItem, ProductItem newPrdItem)
+        {
+            this._unitOfWork.ProductItems.UpdatePrdItem(oldPrdItem, newPrdItem);
         }
     }
 }

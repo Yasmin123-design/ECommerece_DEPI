@@ -12,17 +12,26 @@ namespace E_Commerece.Services.Implementations
 		{
 			this._unitOfWork = unitOfWork;
 		}
+
+		public List<Order> AllOrderes() => this._unitOfWork.Orders.AllOrderes();
+
 		public void CreateOrder(CheckOutVM model)
 		{
 			this._unitOfWork.Orders.CreateOrder(model);
 
 		}
 
-		public Order GetLatestOrder() => this._unitOfWork.Orders.GetLatestOrder();
+		public OrderDetailsVM GetCartOrderDetails() => this._unitOfWork.Orders.GetCartOrderDetails();
+
+        public Order GetLatestOrder() => this._unitOfWork.Orders.GetLatestOrder();
 
 		public Order GetOrderById(int orderid) => this._unitOfWork.Orders.GetOrderById(orderid);
 
-		public List<OrderItem> GetOrderItemsByOrderId(int orderid) => this._unitOfWork.Orders.GetOrderItemsByOrderId(orderid);
+		public int GetOrderCount() => this._unitOfWork.Orders.GetOrderCount();
+
+        public List<OrderItem> GetOrderItemsByOrderId(int orderid) => this._unitOfWork.Orders.GetOrderItemsByOrderId(orderid);
+
+        public List<SalePerMonthVM> SalesPerMonth() => this._unitOfWork.Orders.SalesPerMonth();
 
         public void SaveChange()
 		{

@@ -14,7 +14,14 @@ namespace E_Commerece.Data.Repositories
 		{
 			this._context = context;
 		}
-        public void CreateOrder(CheckOutVM model)
+
+        public List<Order> AllOrderes() => this._context.Orders
+            .Include(x => x.Items)
+            .ThenInclude(x => x.ProductItem)
+            .ThenInclude(x => x.Product)
+            .ToList();
+
+		public void CreateOrder(CheckOutVM model)
         {
             var userId = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
@@ -37,10 +44,12 @@ namespace E_Commerece.Data.Repositories
 
             var existingOrder = _context.Orders
                 .Include(o => o.Items)
-                .FirstOrDefault(o => o.UserId == userId && o.Status == Status.Preparing);
+                .FirstOrDefault(o => o.UserId == userId && o.Status == Status.Pendding);
 
             decimal totalPrice = 0;
 
+
+            // total price added
             foreach (var item in cartItems)
             {
                 var product = _context.ProductItems
@@ -70,11 +79,11 @@ namespace E_Commerece.Data.Repositories
                     }
                     else
                     {
-                        existingItem.Quantity = item.Quantity;
+                        existingItem.Quantity += item.Quantity;
                     }
                 }
 
-                existingOrder.TotalPrice = totalPrice; // ✅ تحديث السعر الإجمالي
+                existingOrder.TotalPrice += totalPrice; // ✅ تحديث السعر الإجمالي
             }
             else
             {
@@ -84,7 +93,7 @@ namespace E_Commerece.Data.Repositories
                     UserId = userId,
                     OrderDate = DateTime.Now,
                     ArrivalDate = DateTime.Now.AddDays(14),
-                    Status = Status.Preparing,
+                    Status = Status.Pendding,
                     TotalPrice = totalPrice,
                     Items = cartItems.Select(item => new OrderItem
                     {
@@ -98,10 +107,40 @@ namespace E_Commerece.Data.Repositories
                     Street = model.Street,
                     PhoneNumber = model.PhoneNumber
                 };
-
+                Console.WriteLine((int)existingOrder.Status);
                 _context.Orders.Add(existingOrder);
             }
 
+        }
+
+        public OrderDetailsVM GetCartOrderDetails()
+        {
+            var userId = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+                throw new Exception("User not found");
+
+            var cart = _context.Carts.FirstOrDefault(x => x.UserId == userId);
+            if (cart == null)
+                throw new Exception("Cart not found");
+
+            var cartItems = _context.CartItems
+                .Include(x => x.ProductItem)
+                .ThenInclude(x => x.Product)
+                .Where(x => x.CartId == cart.Id)
+                .ToList();
+
+            var total = cartItems.Sum(item => item.Quantity * item.ProductItem.Product.Price);
+
+            return new OrderDetailsVM
+            {
+                Items = cartItems.Select(item => new OrderItemVM
+                {
+                    ProductItem = item.ProductItem,
+                    Quantity = item.Quantity
+                }).ToList(),
+                TotalPrice = total
+            };
         }
 
         public Order GetLatestOrder()
@@ -118,8 +157,29 @@ namespace E_Commerece.Data.Repositories
 
         public Order GetOrderById(int orderid) => _context.Orders.Where(x => x.Id == orderid).FirstOrDefault();
 
+        public int GetOrderCount() => this._context.Orders.Count();
+
         public List<OrderItem> GetOrderItemsByOrderId(int orderid) => 
             _context.OrderItems.Include(x => x.ProductItem)
             .ThenInclude(x => x.Product).Where(x => x.OrderId == orderid).ToList();
+        public List<SalePerMonthVM> SalesPerMonth()
+        {
+            return _context.Orders
+                .GroupBy(x => x.OrderDate.Month)
+                .Select(x => new
+                {
+                    MonthNumber = x.Key,
+                    TotalPrice = x.Sum(o => o.TotalPrice)
+                })
+                .AsEnumerable() // هنا التحويل بيتم قبل استخدام GetMonthName
+                .Select(x => new SalePerMonthVM
+                {
+                    Month = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(x.MonthNumber),
+                    TotalPrice = x.TotalPrice
+                })
+                .ToList();
+        }
+
+
     }
 }

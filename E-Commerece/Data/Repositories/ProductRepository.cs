@@ -34,20 +34,20 @@ namespace E_Commerece.Data.Repositories
         {
             if (categoryid == 0 || !_context.Categories.Any(c => c.Id == categoryid))
             {
-                return _context.Products.Include(x => x.Category).ToList(); // إرجاع كل المنتجات
+                return _context.Products.Include(x => x.Category).Where(x => x.ApprovalStatus == ProductStatus.Accept).ToList(); // إرجاع كل المنتجات
             }
             else
             {
-                return _context.Products.Include(x => x.Category).Where(x => x.CategoryId == categoryid).ToList();
+                return _context.Products.Include(x => x.Category).Where(x => x.CategoryId == categoryid && x.ApprovalStatus == ProductStatus.Accept).ToList();
             }
 
         }
 
-        public List<Product> GetAccessoriesProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Accessories").ToList();
+        public List<Product> GetAccessoriesProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Accessories" && p.ApprovalStatus == ProductStatus.Accept).ToList();
 
-        public List<Product> GetAllProducts() => _context.Products.Include(p => p.Category).Where(x => x.IsApproved).ToList();
+        public List<Product> GetAllProducts() => _context.Products.Include(p => p.Category).Where(x => x.ApprovalStatus == ProductStatus.Accept).ToList();
 
-        public List<Product> GetAllProductsStartWith(string query) => _context.Products.Where(p => p.Name.StartsWith(query)).ToList();
+        public List<Product> GetAllProductsStartWith(string query) => _context.Products.Where(p => p.Name.StartsWith(query) && p.ApprovalStatus == ProductStatus.Accept).ToList();
 
         public int GetAvailableQuantity(int productId, List<int> optionIds)
         {
@@ -75,9 +75,9 @@ namespace E_Commerece.Data.Repositories
             );
             return selectedProductItem;
         }
-        public List<Product> GetCameraProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Cameras").ToList();
+        public List<Product> GetCameraProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Cameras" && p.ApprovalStatus == ProductStatus.Accept).ToList();
 
-        public List<Product> GetLaptopsProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Laptops").ToList();
+        public List<Product> GetLaptopsProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Laptops" && p.ApprovalStatus == ProductStatus.Accept).ToList();
 
         public Product GetProductById(int id) =>
      _context.Products
@@ -87,10 +87,11 @@ namespace E_Commerece.Data.Repositories
          .Include(p => p.Items)
              .ThenInclude(pi => pi.VariationOptions)
                  .ThenInclude(vo => vo.Variation)
+            .ThenInclude(x => x.Category)
          .FirstOrDefault(p => p.Id == id);
 
 
-        public List<Product> GetSmartPhoneProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Smartphones").ToList();
+        public List<Product> GetSmartPhoneProducts() => _context.Products.Include(p => p.Category).Where(p => p.Category.Name == "Smartphones" && p.ApprovalStatus == ProductStatus.Accept).ToList();
 
 
         public List<object> GetProductsByPage(int pageNumber)
@@ -110,10 +111,10 @@ namespace E_Commerece.Data.Repositories
                            .ToList<object>(); // تحويل القائمة إلى `List<object>` لاستخدامها مع JSON
         }
 
-        public List<object> GetProductsByCategoryIdJsonReturned(List<int> categoryIds)
+        public List<object> GetProductsByCategoryIdJsonReturnedForUser(List<int> categoryIds)
         {
-			return _context.Products
-				 .Where(p => categoryIds.Contains(p.CategoryId) )
+			return this._context.Products
+				 .Where(p => categoryIds.Contains(p.CategoryId) && p.ApprovalStatus == ProductStatus.Accept )
 				.Select(p => new
 				{
 					Id = p.Id,
@@ -124,9 +125,23 @@ namespace E_Commerece.Data.Repositories
 				}).ToList<object>();
 		}
 
-		public List<object> GetAllProductsJsonReturned()
+        public List<object> GetProductsByCategoryIdJsonReturnedForAdmin(List<int> categoryIds)
+        {
+            return this._context.Products
+                 .Where(p => categoryIds.Contains(p.CategoryId) && p.ApprovalStatus == ProductStatus.Accept && p.SellerId == null)
+                .Select(p => new
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Price = p.Price,
+                    Image = p.Image,
+                    Category = p.Category.Name
+                }).ToList<object>();
+        }
+        public List<object> GetAllProductsJsonReturned()
 		{
 			return _context.Products
+                           .Where(x => x.ApprovalStatus == ProductStatus.Accept)
 						   .Include(x => x.Category)
 						   .Select(p => new
 						   {
@@ -141,7 +156,7 @@ namespace E_Commerece.Data.Repositories
 
 		public List<object> GetTopRatedProducts()
 		{
-            return this._context.Products.Where(p => p.Reviews.Any()).Select(p => new
+            return this._context.Products.Where(p => p.Reviews.Any() && p.ApprovalStatus == ProductStatus.Accept).Select(p => new
             {
                 Product = p,
                 AverageRating = p.Reviews.Average(r => r.Rating)
@@ -196,9 +211,17 @@ namespace E_Commerece.Data.Repositories
             if (product == null) return;
             product.SellerId = userid;
             product.IsApproved = false;
+            product.ApprovalStatus = ProductStatus.Pendding;
             _context.Products.Add(product);
         }
-
+        public void CreateProductByAdmin(Product product)
+        {
+            if (product == null) return;
+            product.SellerId = null;
+            product.IsApproved = true;
+            product.ApprovalStatus = ProductStatus.Accept;
+            _context.Products.Add(product);
+        }
         public int GetCategoryIdByProductId(int productId)
         {
             var product = GetProductById(productId);
@@ -223,14 +246,15 @@ namespace E_Commerece.Data.Repositories
         public List<Product> GetLatestSoldProducts() =>
             _context.Products.Where(x => x.SellerId == userid)
             .ToList();
-        public List<Order> GetRequestedProducts() =>
-         _context.Orders
-             .Include(o => o.Items)
-             .ThenInclude(i => i.ProductItem)
-             .ThenInclude(p => p.Product)
-             .Where(o => o.Items.Any(i => i.ProductItem.Product.SellerId == userid)) 
-             .OrderByDescending(o => o.OrderDate) 
-             .ToList();
+        public List<OrderItem> GetRequestedItemsForSeller() =>
+     _context.OrderItems
+         .Include(i => i.ProductItem)
+             .ThenInclude(pi => pi.Product)
+         .Include(i => i.Order)
+         .Where(i => i.ProductItem.Product.SellerId == userid)
+         .OrderByDescending(i => i.Order.OrderDate)
+         .ToList();
+
 
         public List<Product> GetAllPenddingProuct() => this._context.Products.Include(x => x.Category).Include(x => x.Seller).Where(x => x.SellerId != null && x.ApprovalStatus == ProductStatus.Pendding).ToList();
 
@@ -266,6 +290,22 @@ namespace E_Commerece.Data.Repositories
             var product = GetProductById(id);
             product.IsApproved = false;
             product.ApprovalStatus = ProductStatus.Reject;
+        }
+
+        public int GetProductCount() => this._context.Products.Where(x => x.SellerId == null).Count();
+
+        public List<Product> AllPrdsToManage() => this._context.Products.Include(x => x.Category).Where(x => x.SellerId == null).ToList();
+
+        public void DeletedProduct(Product product)
+        {
+            this._context.Products.Remove(product);
+        }
+
+        public void UpdateProduct(Product oldPrd, Product newPrd)
+        {
+            oldPrd.Price = newPrd.Price;
+            oldPrd.Name = newPrd.Name;
+            oldPrd.Description = newPrd.Description;
         }
     }
 }

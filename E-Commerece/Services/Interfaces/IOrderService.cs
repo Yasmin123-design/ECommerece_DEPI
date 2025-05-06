@@ -9,6 +9,13 @@ namespace E_Commerece.Services.Interfaces
         Order GetLatestOrder();
         Order GetOrderById(int orderid);
         List<OrderItem> GetOrderItemsByOrderId(int orderid);
+        int GetOrderCount();
+        List<SalePerMonthVM> SalesPerMonth();
+		List<Order> AllOrderes();
+
+        OrderDetailsVM GetCartOrderDetails();
+
+  
         void SaveChange();
 	}
 }

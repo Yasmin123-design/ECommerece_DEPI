@@ -22,7 +22,7 @@ namespace E_Commerece.Models
         [Required]
         public string UserId { get; set; }
 
-        public Status Status { get; set; } = Status.Preparing;
+        public Status Status { get; set; } = Status.Pendding;
 
         // بيانات المستخدم 
         [Required(ErrorMessage = "الاسم الأول مطلوب.")]
@@ -53,7 +53,7 @@ namespace E_Commerece.Models
 
     public enum Status
     {
-        Preparing, Shipped, Delivered, Cancelled
+        Pendding, Shipped, Delivered, Cancelled
     }
 
 }

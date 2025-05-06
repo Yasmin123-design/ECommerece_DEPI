@@ -12,18 +12,9 @@ namespace E_Commerece.Services.Implementations
         {
             this._unitOfWork = unitOfWork;
         }
-        public void SeveChanges()
-        {
-            _unitOfWork.Save();
-        }
         public bool  AddCartItem(int productid, ProductItem productItem, int quantity) => this._unitOfWork.CartItems.AddCartItem(productid, productItem, quantity);
 
         public CartItem GetCartItem(int itemid) => this._unitOfWork.CartItems.GetCartItem(itemid);
-
-        public void SaveChange()
-        {
-            this._unitOfWork.Save();
-        }
 
         public void RemoveCartItem(int id)
         {
@@ -34,5 +25,12 @@ namespace E_Commerece.Services.Implementations
         {
             this._unitOfWork.CartItems.RemoveAllItemsRelatedByCart(cartid);
         }
-    }
+
+
+
+		public void SeveChanges()
+		{
+            _unitOfWork.Save();
+        }
+	}
 }

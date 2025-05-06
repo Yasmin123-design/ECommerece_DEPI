@@ -20,8 +20,10 @@ namespace E_Commerece.Models
         public DbSet<Variation> Variations { get; set; }
         public DbSet<VariationOption> VariationOptions { get; set; }
         public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<NewsletterSubscribers> NewsletterSubscribers { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
             if (!optionsBuilder.IsConfigured)

@@ -29,5 +29,7 @@ namespace E_Commerece.Services.Implementations
         {
             this._unitOfWork.Categories.Delete(category);
         }
+
+        public int GetCategoryCount() => this._unitOfWork.Categories.GetCategoryCount();
     }
 }

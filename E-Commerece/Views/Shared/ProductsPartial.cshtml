@@ -1,0 +1,326 @@
+﻿<style>
+    .product-img img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .product-btns a {
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .grid-view .col-md-4 {
+        width: 33.333%;
+        float: left;
+    }
+
+    .list-view .col-md-4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .list-view .product {
+        display: flex;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .list-view .product-img img {
+        width: 150px;
+        height: auto;
+        margin-right: 15px;
+    }
+
+    .list-view .product-body {
+        flex: 1;
+    }
+
+    .custom-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+</style>
+@model List<Product>
+@{
+    bool isAdmin = ViewBag.IsAdmin == true;
+}
+<!-- SECTION -->
+<div class="section">
+    <!-- custom container -->
+    <div class="custom-container">
+        <!-- row -->
+        <div class="row">
+            <!-- ASIDE -->
+            <div id="aside" class="col-md-3">
+                <!-- aside Widget -->
+                <div class="aside">
+                    <h3 class="aside-title">Categories</h3>
+                    <div class="checkbox-filter">
+                        @foreach (var category in Model.Select(p => p.Category).Distinct())
+                        {
+                            <div class="input-checkbox">
+                                <input type="checkbox" id="category-@category.Id" onchange="filterProductsByCategory()">
+                                <label for="category-@category.Id">
+                                    <span></span>
+                                    @category.Name
+                                    <small>(@category.Products.Count())</small>
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <!-- /aside Widget -->
+                <!-- aside Widget -->
+                @await Component.InvokeAsync("TopRatedProducts")
+                <!-- /aside Widget -->
+            </div>
+            <!-- /ASIDE -->
+            <!-- STORE -->
+            <div id="store" class="col-md-9">
+                <!-- store top filter -->
+                <div class="store-filter clearfix">
+                    <div class="store-sort">
+                        <label>
+                            Sort By:
+                            <select class="input-select">
+                                <option value="0">Popular</option>
+                                <option value="1">Position</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Show:
+                            <select class="input-select">
+                                <option value="0">20</option>
+                                <option value="1">50</option>
+                            </select>
+                        </label>
+                    </div>
+                    <ul class="store-grid">
+                        <li class="active" data-view="grid"><i class="fa fa-th"></i></li>
+                        <li data-view="list"><i class="fa fa-th-list"></i></li>
+                    </ul>
+                </div>
+                <!-- /store top filter -->
+                <!-- store products -->
+                <div class="row" id="product-list">
+                    @foreach (var product in Model)
+                    {
+                        <div class="col-md-4 col-xs-6">
+                            <div class="product">
+                                <div class="product-img">
+                                    <img src="./img/@product.Image" alt="@product.Name">
+                                </div>
+                                <div class="product-body">
+                                    <p class="product-category">@product.Category.Name</p>
+                                    <h3 class="product-name"><a href="#">@product.Name</a></h3>
+                                    <h4 class="product-price">$@product.Price</h4>
+                                    <div class="product-btns">
+                                        @if (isAdmin)
+                                        {
+                                            <a asp-controller="Admin" asp-action="EditProduct" asp-route-id="@product.Id" class="quick-view">
+                                                <i class="fa fa-edit"></i>
+                                            </a>
+                                            <a onclick="deleteProduct(@product.Id)" class="quick-view">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+
+                                        }
+                                        else
+                                        {
+                                            <a asp-controller="Product" asp-action="QuickView" asp-route-id="@product.Id" class="quick-view">
+                                                <i class="fa fa-heart"></i>
+                                            </a>
+                                            <a asp-controller="Product" asp-action="QuickView" asp-route-id="@product.Id" class="quick-view">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <a asp-controller="Product" asp-action="QuickView" asp-route-id="@product.Id" class="quick-view">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <!-- /store products -->
+            </div>
+            <!-- /STORE -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /custom container -->
+</div>
+<!-- /SECTION -->
+
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".store-pagination a", function (e) {
+            e.preventDefault();
+            let page = $(this).data("page");
+            loadProducts(page);
+            $(".store-pagination li").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    });
+
+    function loadProducts(page) {
+        $.ajax({
+            url: "/Product/GetProductsByPage",
+            type: "GET",
+            data: { pageNumber: page },
+            success: function (data) {
+                displayProducts(data);
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        $(".store-grid li").click(function () {
+            // إزالة الـ active من جميع الأزرار وإضافته للزر المضغوط
+            $(".store-grid li").removeClass("active");
+            $(this).addClass("active");
+
+            // التحقق من نوع العرض المطلوب
+            var viewType = $(this).data("view");
+            var productList = $("#product-list");
+
+            if (viewType === "list") {
+                productList.addClass("list-view").removeClass("grid-view");
+            } else {
+                productList.addClass("grid-view").removeClass("list-view");
+            }
+        });
+    });
+
+    function filterProductsByCategory() {
+        let selectedCategories = Array.from(document.querySelectorAll('.input-checkbox input:checked'))
+            .map(checkbox => checkbox.id.replace("category-", ""));
+
+        let url = selectedCategories.length > 0
+            ? `/Product/FilterByCategoryReturnedJson?categoryIds=${selectedCategories.join(",")}`
+            : "/Product/GetAllProducts";
+
+        console.log(url);
+        fetch(url, {
+            credentials: "include"
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); 
+                let productList = document.getElementById("product-list");
+                productList.innerHTML = ""; 
+
+                if (data.products.length === 0) {
+                    productList.innerHTML = "<p>No products found</p>";
+                } else {
+                   
+                    let isAdmin = data.isAdmin;
+                    displayProducts(data.products, isAdmin);
+                }
+            })
+            .catch(error => console.error("Error fetching products:", error));
+    }
+
+    function displayProducts(products, isAdmin) {
+        let productList = document.getElementById("product-list");
+        products.forEach(product => {
+            let adminButtons = `
+                <a href="/Admin/EditProduct/${product.id}" class="quick-view">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a onclick="deleteProduct(${product.id})" class="quick-view">
+                    <i class="fa fa-trash"></i>
+                </a>
+            `;
+
+            let userButtons = `
+                <a href="/Product/QuickView/${product.id}" class="quick-view">
+                    <i class="fa fa-heart"></i>
+                </a>
+                <a href="/Product/QuickView/${product.id}" class="quick-view">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+                <a href="/Product/QuickView/${product.id}" class="quick-view">
+                    <i class="fa fa-eye"></i>
+                </a>
+            `;
+            productList.innerHTML += `
+            <div class="col-md-4 col-xs-6">
+                <div class="product">
+                    <div class="product-img">
+                        <img src="./img/${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-body">
+                        <p class="product-category">${product.category}</p>
+                        <h3 class="product-name"><a href="#">${product.name}</a></h3>
+                        <h4 class="product-price">$${product.price}</h4>
+                        <div class="product-btns">
+                            ${isAdmin ? adminButtons : userButtons}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+    }
+
+    function deleteProduct(id,event) {
+        if (event) event.preventDefault();
+        console.log("yasmin");
+        alert("وصلنا هنا، ID: " + id); 
+        console.log("وصلنا دالة deleteProduct");
+
+        Swal.fire({
+            title: "هل أنت متأكد؟",
+            text: "لن تتمكن من التراجع بعد الحذف!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "نعم، احذف العنصر!",
+            cancelButtonText: "إلغاء"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteItem(id); 
+            }
+        });
+    };
+
+    function deleteItem(id) {
+        fetch('/Admin/DeleteProduct', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ Id:id })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire(
+                        "تم الحذف!",
+                        "تم حذف العنصر بنجاح.",
+                        "success"
+                    ).then(() => {
+                        location.reload();
+                    });
+                } else {
+                    Swal.fire("خطأ", "فشل في حذف المنتج: " + data.message, "error");
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting item:', error);
+                Swal.fire("خطأ", "حدث خطأ أثناء الحذف", "error");
+            });
+    }
+
+</script>

@@ -1,4 +1,5 @@
 ﻿using E_Commerece.Models;
+using Microsoft.CodeAnalysis.Options;
 
 namespace E_Commerece.Data.Interfaces
 {
@@ -11,5 +12,6 @@ namespace E_Commerece.Data.Interfaces
         void CreateVariationOption(VariationOption variationOption);
         VariationOption GetByValueAndVariation(string Value, int Variationid);
         void EditVariationOption(string value, int optionid);
+        void UpdateVariationOption(VariationOption existingOption, VariationOption option);
     }
 }

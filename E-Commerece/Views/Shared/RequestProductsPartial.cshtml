@@ -19,6 +19,19 @@
                             </div>
                         </div>
                     </th>
+                <th data-column="productname">
+                    <div class="header-content">
+                        <span class="column-name">Product</span>
+                        <div class="sort-arrows">
+                            <span class="sort-up" onclick="sortTable('requestedTable','customername', 'asc')">
+                                <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span class="sort-down" onclick="sortTable('requestedTable','customername', 'desc')">
+                                <i class="fas fa-arrow-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </th>
                     <th data-column="phonenumber">
                         <div class="header-content">
                             <span class="column-name">PhoneNumber</span>
@@ -79,15 +92,16 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var order in Model)
+                @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@order.FirstName @order.LastName</td>
-                        <td>@order.PhoneNumber</td>
-                        <td>@order.TotalPrice.ToString("C")</td>
-                        <td>@order.OrderDate</td>
-                        <td>@order.ArrivalDate</td>
-                        <td>@order.Status</td>
+                        <td>@item.Order.FirstName @item.Order.LastName</td>
+                    <td>@item.ProductItem.Product.Name</td>
+                    <td>@item.Order.PhoneNumber</td>
+                    <td>@item.Order.TotalPrice.ToString("C")</td>
+                    <td>@item.Order.OrderDate</td>
+                    <td>@item.Order.ArrivalDate</td>
+                    <td>@item.Order.Status</td>
                     </tr>
                 }
             </tbody>

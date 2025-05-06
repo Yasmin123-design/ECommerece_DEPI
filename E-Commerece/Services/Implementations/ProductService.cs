@@ -18,9 +18,6 @@ namespace E_Commerece.Services.Implementations
         {
             this._unitOfWork.Products.AddReviewOnProduct(productId, comment, rating);
         }
-
-        public List<Product> FilteredProductByCategoryId(int categoryid) => this._unitOfWork.Products.FilteredProductByCategoryId(categoryid);
-
         public List<Product> GetAccessoriesProducts() => this._unitOfWork.Products.GetAccessoriesProducts();
 
         public List<Product> GetAllProducts() => this._unitOfWork.Products.GetAllProducts();
@@ -44,7 +41,7 @@ namespace E_Commerece.Services.Implementations
 
         public List<object> GetProductsByPage(int pageNumber) => this._unitOfWork.Products.GetProductsByPage(pageNumber);
 
-        public List<object> GetProductsByCategoryIdJsonReturned(List<int> categoryIds) => this._unitOfWork.Products.GetProductsByCategoryIdJsonReturned(categoryIds);
+        public List<object> GetProductsByCategoryIdJsonReturnedForUser(List<int> categoryIds) => this._unitOfWork.Products.GetProductsByCategoryIdJsonReturnedForUser(categoryIds);
 
         public List<object> GetAllProductsJsonReturned() => this._unitOfWork.Products.GetAllProductsJsonReturned();
 
@@ -69,7 +66,7 @@ namespace E_Commerece.Services.Implementations
 
         public List<Product> GetLatestSoldProducts() => this._unitOfWork.Products.GetLatestSoldProducts();
 
-        public List<Order> GetRequestedProducts() => this._unitOfWork.Products.GetRequestedProducts();
+        public List<OrderItem> GetRequestedItemsForSeller() => this._unitOfWork.Products.GetRequestedItemsForSeller();
 
         public List<Product> GetAllPenddingProuct() =>
             this._unitOfWork.Products.GetAllPenddingProuct();
@@ -92,6 +89,29 @@ namespace E_Commerece.Services.Implementations
         public void RejectProduct(int id)
         {
             this._unitOfWork.Products.RejectProduct(id);
+        }
+
+        public int GetProductCount() => this._unitOfWork.Products.GetProductCount();
+
+        public List<Product> AllPrdsToManage() => this._unitOfWork.Products.AllPrdsToManage();
+
+        public List<Product> FilteredProductByCategoryId(int categoryid) => this._unitOfWork.Products.FilteredProductByCategoryId(categoryid);
+
+        public List<object> GetProductsByCategoryIdJsonReturnedForAdmin(List<int> categoryIds) => this._unitOfWork.Products.GetProductsByCategoryIdJsonReturnedForAdmin(categoryIds);
+
+        public void CreateProductByAdmin(Product product)
+        {
+            this._unitOfWork.Products.CreateProductByAdmin(product);
+        }
+
+        public void DeletedProduct(Product product)
+        {
+            this._unitOfWork.Products.DeletedProduct(product);
+        }
+
+        public void UpdateProduct(Product oldPrd, Product newPrd)
+        {
+            this._unitOfWork.Products.UpdateProduct(oldPrd, newPrd);
         }
     }
 }

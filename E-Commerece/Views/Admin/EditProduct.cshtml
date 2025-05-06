@@ -1,0 +1,847 @@
+﻿@model Product
+<div class="product-edit-container">
+    <div class="edit-header">
+        <h1 class="edit-title">
+            <i class="fas fa-edit"></i>
+            تعديل المنتج: <span class="product-name">@Model.Name</span>
+        </h1>
+        <div class="header-actions">
+            <a asp-action="AllPrdsToManage" class="btn btn-back">
+                <i class="fas fa-arrow-right"></i> رجوع
+            </a>
+        </div>
+    </div>
+
+    <form asp-action="EditProduct" method="post" class="edit-form" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CategoryId" value="@Model.Category.Id"/>
+        <div class="form-grid">
+            <!-- معلومات المنتج -->
+            <div class="product-info-section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>المعلومات الأساسية</h3>
+                    </div>
+                    <div class="section-body">
+
+
+                        <div class="form-group">
+                            <label asp-for="Image" class="form-label">
+                                <i class="fas fa-image"></i> صورة المنتج
+                            </label>
+
+                            <!-- عرض الصورة الحالية إذا كانت موجودة -->
+                            @if (!string.IsNullOrEmpty(Model.Image))
+                            {
+                                <div class="current-image-container">
+                                    <img src="~/img/@Model.Image" alt="صورة المنتج الحالية" class="current-image" />
+                                </div>
+                            }
+
+                            <!-- حقل رفع الصورة الجديدة -->
+                            <div class="image-upload-container">
+                                <input type="file" id="imageUpload" name="imageFile" accept="image/*" class="image-upload-input" />
+                                <label for="imageUpload" class="image-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>اختر صورة جديدة</span>
+                                </label>
+                                <input type="hidden" asp-for="Image" />
+                                <span asp-validation-for="Image" class="form-error"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="Name" class="form-label">
+                                <i class="fas fa-tag"></i> اسم المنتج
+                            </label>
+                            <input asp-for="Name" class="form-input" placeholder="أدخل اسم المنتج" />
+                            <span asp-validation-for="Name" class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Description" class="form-label">
+                                <i class="fas fa-align-left"></i> الوصف
+                            </label>
+                            <textarea asp-for="Description" class="form-textarea" rows="4" placeholder="وصف المنتج..."></textarea>
+                            <span asp-validation-for="Description" class="form-error"></span>
+                        </div>
+
+                      
+
+                        <div class="form-group">
+                            <label asp-for="Price" class="form-label">
+                                <i class="fas fa-dollar-sign"></i> السعر
+                            </label>
+                            <div class="input-with-icon">
+                                <span class="currency">EGP</span>
+                                <input asp-for="Price" class="form-input" type="number" step="0.01" />
+                            </div>
+                            <span asp-validation-for="Price" class="form-error"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الخيارات المتغيرة -->
+            <div class="variations-section">
+                <div class="section-card">
+                    <div class="section-header">
+                        <i class="fas fa-list-ol"></i>
+                        <h3>المتغيرات والكميات</h3>
+                        <button type="button" onclick="openModel()" class="btn btn-add">
+                            <i class="fas fa-plus"></i> إضافة متغير
+                        </button>
+                    </div>
+                    <div class="section-body">
+                        @for (int i = 0; i < Model.Items.Count; i++)
+                        {
+                            <div class="variation-item" id="@Model.Items[i].Id">
+                                <div class="variation-header">
+                                    <span class="variation-number">المتغير #@(i+1)</span>
+                                    <button type="button" class="btn btn-remove" onclick="deletePrdItem(@Model.Items[i].Id)">
+                                        <i class="fas fa-times"></i> حذف
+                                    </button>
+                                </div>
+                                
+                                <input type="hidden" asp-for="@Model.Items[i].Id" />
+                                <input type="hidden" asp-for="@Model.Items[i].ProductId" />
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Items[i].Quantity" class="form-label">الكمية المتاحة</label>
+                                        <input asp-for="@Model.Items[i].Quantity" class="form-input" type="number" />
+                                    </div>
+                                </div>
+
+                                <div class="options-group">
+                                    <h4 class="options-title">
+                                        <i class="fas fa-cog"></i> خصائص المتغير
+                                    </h4>
+                                    
+                                    @for (int j = 0; j < Model.Items[i].VariationOptions.Count; j++)
+                                    {
+                                        <div class="option-item">
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Id" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Name" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.CategoryId" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Id" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.CategoryId" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].VariationId" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Category" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Category.Id" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Category.Name" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Category.Description" />
+                                            <input type="hidden" asp-for="@Model.Items[i].VariationOptions[j].Variation.Name" />
+                                            <div class="option-content">
+                                                <label class="option-label">@Model.Items[i].VariationOptions[j].Variation.Name</label>
+                                                <input asp-for="@Model.Items[i].VariationOptions[j].Value" 
+                                                       class="form-input" 
+                                                       placeholder="القيمة..." />
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-save">
+                <i class="fas fa-save"></i> حفظ التغييرات
+            </button>
+        </div>
+    </form>
+</div>
+
+
+<div id="overlay" class="overlay" style="display:none;"></div>
+
+<div id="addVariationModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeModel()">×</button>
+        <h2>إضافة متغير جديد</h2>
+
+        <div class="form-group">
+            <label for="newQuantity">الكمية:</label>
+            <input type="number" id="newQuantity" class="form-input" placeholder="أدخل الكمية" min="1">
+        </div>
+
+        @foreach (var variation in ViewBag.Variations)
+        {
+            <div class="form-group">
+                <label>@variation.Name</label>
+                <select class="form-select variation-option" data-variation-id="@variation.Id">
+                    <option value="">اختر قيمة</option>
+                    @foreach (var option in variation.VariationOptions)
+                    {
+                        <option value="@option.Id">@option.Value</option>
+                    }
+                </select>
+            </div>
+        }
+
+        <div class="modal-actions">
+            <button type="button" onclick="closeModel()" class="btn btn-reset">
+                إلغاء
+            </button>
+            <button onclick="saveVariation(@Model.Id)" class="btn btn-save">
+                <i class="fas fa-save"></i> حفظ
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    :root {
+        --primary: #4361ee;
+        --secondary: #3f37c9;
+        --success: #4cc9f0;
+        --danger: #f72585;
+        --warning: #f8961e;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --gray: #6c757d;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --transition: all 0.3s ease;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fb;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .product-edit-container {
+        max-width: 1400px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+    }
+
+    .edit-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .edit-title {
+        font-size: 1.8rem;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .edit-title i {
+        color: var(--primary);
+    }
+
+    .product-name {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    @@media (min-width: 992px) {
+        .form-grid {
+            grid-template-columns: 1fr 1.5fr;
+        }
+    }
+
+    .section-card {
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        overflow: hidden;
+        height: 100%;
+        transition: var(--transition);
+    }
+
+    .section-card:hover {
+        box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    }
+
+    .section-header {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .section-header h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .section-body {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .form-input, .form-textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: var(--transition);
+    }
+
+    .form-input:focus, .form-textarea:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+        outline: none;
+    }
+
+    .form-textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .form-error {
+        color: var(--danger);
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+        display: block;
+    }
+
+    .variation-item {
+        background: #f9fafc;
+        border-radius: var(--border-radius);
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid #e9ecef;
+    }
+
+    .variation-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px dashed #dee2e6;
+    }
+
+    .variation-number {
+        font-weight: 500;
+        color: var(--dark);
+    }
+
+    .options-group {
+        margin-top: 1.5rem;
+    }
+
+    .options-title {
+        font-size: 1rem;
+        color: var(--gray);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .option-item {
+        margin-bottom: 1rem;
+    }
+
+    .option-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--gray);
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.65rem 1.25rem;
+        border-radius: var(--border-radius);
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+    }
+
+    .btn i {
+        font-size: 0.9em;
+    }
+
+    .btn-back {
+        background: #e9ecef;
+        color: var(--dark);
+    }
+
+    .btn-back:hover {
+        background: #dee2e6;
+    }
+
+    .btn-add {
+        background: var(--success);
+        color: white;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-add:hover {
+        background: #3aa8d8;
+    }
+
+    .btn-remove {
+        background: #ffeef2;
+        color: var(--danger);
+        padding: 0.35rem 0.65rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-remove:hover {
+        background: #fdd8e4;
+    }
+
+    .btn-save {
+        background: var(--primary);
+        color: white;
+        padding: 0.75rem 2rem;
+    }
+
+    .btn-save:hover {
+        background: var(--secondary);
+        transform: translateY(-2px);
+    }
+
+    .btn-reset {
+        background: #e9ecef;
+        color: var(--gray);
+        margin-right: 0.75rem;
+    }
+
+    .btn-reset:hover {
+        background: #dee2e6;
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #eee;
+    }
+
+    .input-with-icon {
+        position: relative;
+    }
+
+    .currency {
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--gray);
+    }
+
+    .input-with-icon .form-input {
+        padding-left: 3rem;
+    }
+
+    /* أنماط الصورة */
+    .current-image-container {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .current-image {
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: var(--border-radius);
+        border: 1px solid #eee;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .view-image-link {
+        display: inline-block;
+        color: var(--primary);
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+        .view-image-link:hover {
+            text-decoration: underline;
+        }
+
+    .image-upload-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .image-upload-input {
+        display: none;
+    }
+
+    .image-upload-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        background-color: #f8f9fa;
+        border: 1px dashed #adb5bd;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: var(--transition);
+        text-align: center;
+        justify-content: center;
+    }
+
+        .image-upload-label:hover {
+            background-color: #e9ecef;
+            border-color: var(--primary);
+        }
+
+        .image-upload-label i {
+            color: var(--primary);
+        }
+
+    .image-preview {
+        max-width: 200px;
+        max-height: 200px;
+        display: none;
+        margin-top: 0.5rem;
+        border-radius: var(--border-radius);
+        border: 1px solid #eee;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        display: none;
+        backdrop-filter: blur(3px);
+    }
+
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border-radius: 12px;
+        z-index: 1001;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        display: none;
+        animation: modalFadeIn 0.3s ease-out;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    @@keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -60%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .modal-content {
+        padding: 25px;
+        position: relative;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 24px;
+        color: #777;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: none;
+        border: none;
+        padding: 5px;
+    }
+
+    .close-button:hover {
+        color: #f44336;
+        transform: rotate(90deg);
+    }
+
+    .modal h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2c3e50;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .modal .form-group {
+        margin-bottom: 20px;
+    }
+
+    .modal .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #555;
+    }
+
+    .modal .form-input,
+    .modal .form-select {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: all 0.3s;
+        background-color: #f9f9f9;
+    }
+
+    .modal .form-input:focus,
+    .modal .form-select:focus {
+        border-color: #4361ee;
+        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        outline: none;
+        background-color: white;
+    }
+
+    /* أزرار المودال */
+    .modal-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 25px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+    }
+
+    .modal .btn {
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.2s;
+    }
+
+    .modal .btn-save {
+        background-color: #4361ee;
+        color: white;
+    }
+
+    .modal .btn-save:hover {
+        background-color: #3a56d4;
+        transform: translateY(-2px);
+    }
+
+    .modal .btn-reset {
+        background-color: #f5f5f5;
+        color: #555;
+    }
+
+    .modal .btn-reset:hover {
+        background-color: #e9e9e9;
+    }
+
+    /* تأثيرات الصفحة عند فتح المودال */
+    body.modal-open {
+        overflow: hidden;
+    }
+
+    body.modal-open .product-edit-container {
+        filter: blur(2px);
+        pointer-events: none;
+        user-select: none;
+    }
+
+    @@media (max-width: 576px) {
+        .modal {
+            width: 95%;
+            padding: 15px;
+        }
+        
+        .modal-content {
+            padding: 20px 15px;
+        }
+        
+        .modal h2 {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+
+<script>
+    function deletePrdItem(id) {
+        Swal.fire({
+            title: "هل أنت متأكد؟",
+            text: "لن تتمكن من التراجع بعد الحذف!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "نعم، احذف العنصر!",
+            cancelButtonText: "إلغاء"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                ItemDeleted(id);
+            }
+        });
+    }
+    function ItemDeleted(id)
+    {
+        fetch(`/Admin/DeletedPrdItem/${id}`, {
+            method: 'POST',
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire(
+                        "تم الحذف!",
+                        "تم حذف العنصر بنجاح.",
+                        "success"
+                    ).then(() => {
+                        location.reload();
+                    });
+                } else {
+                    Swal.fire("خطأ", "فشل في حذف المنتج: " + data.message, "error");
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting item:', error);
+                Swal.fire("خطأ", "حدث خطأ أثناء الحذف", "error");
+            });
+    }
+
+    function openModel() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('addVariationModal').style.display = 'block';
+    }
+
+    function closeModel() {
+        var overlay = document.getElementById('overlay');
+        var modal = document.getElementById('addVariationModal');
+
+        if (overlay) {
+            overlay.style.display = 'none';
+        }
+        if (modal) {
+            modal.style.display = 'none';
+        }
+
+        // ممكن تمسحي القيم كمان لو عايزة تنظفي
+        var quantityInput = document.getElementById('newQuantity');
+        if (quantityInput) {
+            quantityInput.value = '';
+        }
+
+        var selects = document.querySelectorAll('.variation-option');
+        selects.forEach(function (select) {
+            select.selectedIndex = 0;
+        });
+    }
+
+
+    function saveVariation(id) {
+        // أول حاجة نجيب الكمية
+        var quantity = document.getElementById('newQuantity').value;
+
+        // بعدين نجيب كل الـ selects اللي اختار منهم
+        var variationOptions = document.querySelectorAll('.variation-option');
+
+        var selectedOptions = [];
+
+        variationOptions.forEach(function (select) {
+            var variationId = select.getAttribute('data-variation-id');
+            var selectedOptionId = select.value;
+
+            // نتأكد إن في اختيار
+            if (selectedOptionId) {
+                selectedOptions.push({
+                    variationId: variationId,
+                    optionId: selectedOptionId
+                });
+            }
+        });
+        var data = {
+            ProductId:id,
+            Quantity: quantity,
+            SelectedOptions: selectedOptions
+        };
+
+        fetch('/Admin/AddNewPrdItem', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('فشل في حفظ البيانات');
+                }
+            })
+            .then(data => {
+                console.log('تم الحفظ بنجاح', data);
+                closeModel();
+                location.reload();
+            })
+            .catch(error => {
+                console.error('خطأ:', error);
+            });
+
+    }
+
+</script>
+

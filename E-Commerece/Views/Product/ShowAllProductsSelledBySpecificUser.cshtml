@@ -138,13 +138,17 @@
                         <td class="description-cell">@product.Description</td>
                         <td>@product.Price</td>
                         <td>
-                            @if (!product.IsApproved)
+                            @if (product.ApprovalStatus == ProductStatus.Pendding)
                             {
                                 <span class="status-pending">Pending</span>
                             }
-                            else
+                            @if(product.ApprovalStatus == ProductStatus.Accept)
                             {
-                                <span class="status-approved">Approved</span>
+                                <span class="status-approved">Accept</span>
+                            }
+                            @if(product.ApprovalStatus == ProductStatus.Reject)
+                            {
+                                <span style="color:red"><strong>Reject</strong></span>
                             }
                         </td>
                         <td>

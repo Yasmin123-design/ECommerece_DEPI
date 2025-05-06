@@ -6,5 +6,8 @@ namespace E_Commerece.Data.Interfaces
     {
         ProductItem GetProductItemByProductId(int productid);
         void AddProductItem(int productId, int quantity , List<int> variationOptions);
+        ProductItem GetProductItemById(int id);
+        void UpdatePrdItem(ProductItem oldPrdItem, ProductItem newPrdItem);
+        void DeletePrdItem(ProductItem item);
     }
 }

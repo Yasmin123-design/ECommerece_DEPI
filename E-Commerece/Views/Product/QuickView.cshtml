@@ -156,6 +156,11 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        changeQuantity(); // أول تحميل يعمل الفحص على طول
+    });
+
+
     $(document).ready(function () {
         var selectedRating = 0;
 
@@ -213,9 +218,8 @@
         fetch(`/Product/GetAvailableQuantity?productId=@Model.Product.Id&optionIds=${selectedOptions.join(',')}`)
             .then(response => response.json())
             .then(data => {
-
+                console.log(data.quantity);
                 document.getElementById('available-quantity').innerText = data.quantity;
-                location.reload();
             })
             .catch(error => console.error('Error fetching quantity:', error));
     }

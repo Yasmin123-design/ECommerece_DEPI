@@ -29,6 +29,7 @@ namespace E_Commerece.UnitOfWork.Implementations
 
         public IVariationOptionsRepository VariationOptions { get; }
 
+        public IUserRepository Users { get; }
         public UnitOfWork(EcommereceContext context)
         {
             this._context = context;
@@ -42,6 +43,7 @@ namespace E_Commerece.UnitOfWork.Implementations
             Profile = new ProfileRepository(_context);
             Variations = new VariationRepository(_context);
             VariationOptions = new VariationOptionsRepository(_context);
+            Users = new UserRepository(_context);
         }
 
         public void Dispose()

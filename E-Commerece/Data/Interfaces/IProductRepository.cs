@@ -21,7 +21,8 @@ namespace E_Commerece.Data.Interfaces
         int GetAvailableQuantity(int productId, List<int> optionIds);
         ProductItem CheckAddProductToCart(int productId, List<int> optionIds);
 		List<object> GetProductsByPage(int pageNumber);
-		List<object> GetProductsByCategoryIdJsonReturned(List<int> categoryIds);
+		List<object> GetProductsByCategoryIdJsonReturnedForUser(List<int> categoryIds);
+        List<object> GetProductsByCategoryIdJsonReturnedForAdmin(List<int> categoryIds);
         List<object> GetAllProductsJsonReturned();
         List<object> GetTopRatedProducts();
         bool? AddProductToWishlist(int productid);
@@ -35,12 +36,18 @@ namespace E_Commerece.Data.Interfaces
 
         List<Order> GetLatestPurchasedProducts();
         List<Product> GetLatestSoldProducts();
-        List<Order> GetRequestedProducts();
+        List<OrderItem> GetRequestedItemsForSeller();
 
         void ApprovedProduct(int id);
 
         void ApprovedAllProducts();
         void RejectAllProducts();
         void RejectProduct(int id);
+
+        int GetProductCount();
+        List<Product> AllPrdsToManage();
+        void CreateProductByAdmin(Product product);
+        void DeletedProduct(Product product);
+        void UpdateProduct(Product oldPrd, Product newPrd);
     }
 }

@@ -20,6 +20,7 @@ namespace E_Commerece.Services.Interfaces
 		Task<bool> ResetPasswordAsync(RestPasswordVM model);
 
 		Task<string> GetUserRoleAsync(string email);
+        int GetUserCount();
 
     }
 }

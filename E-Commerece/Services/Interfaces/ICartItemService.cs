@@ -7,7 +7,6 @@ namespace E_Commerece.Services.Interfaces
         void SeveChanges();
         bool AddCartItem(int productid, ProductItem productItem, int quantity);
         CartItem GetCartItem(int itemid);
-        void SaveChange();
         void RemoveCartItem(int id);
         void RemoveAllItemsRelatedByCart(int cartid);
     }

@@ -1,5 +1,6 @@
 ﻿using E_Commerece.Models;
 using E_Commerece.Services.Interfaces;
+using E_Commerece.UnitOfWork.Interfaces;
 using E_Commerece.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -9,21 +10,40 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.DotNet.Scaffolding.Shared;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using System.Security.Claims;
+using System.Text.RegularExpressions;
 
 namespace E_Commerece.Services.Implementations
 {
 	public class UserService : IUserService
 	{
-		private readonly IHttpContextAccessor _httpContextAccessor;
+        private string GenerateSafeUsername(string name)
+        {
+            // نشيل كل الحروف الغير مسموح بيها ونخلي الاسم lowercase
+            var cleaned = Regex.Replace(name ?? "", @"[^a-zA-Z0-9]", "").ToLower();
+
+            // لو الاسم بقى فاضي أو قصير جدًا، نضيف عليه حاجة تضمن التفرد
+            if (string.IsNullOrEmpty(cleaned) || cleaned.Length < 3)
+            {
+                cleaned = "user_" + Guid.NewGuid().ToString("N").Substring(0, 6);
+            }
+
+            return cleaned;
+        }
+
+
+        private readonly IHttpContextAccessor _httpContextAccessor;
 		private readonly UserManager<User> User;
 		private readonly SignInManager<User> Sign;
 		private readonly IEmailService _emailService;
         private readonly IConfiguration _configuration;
+
+        private readonly IUnitOfWork _unitOfWork;
         public UserService(UserManager<User> user ,
 			SignInManager<User> sign ,
 			IHttpContextAccessor httpContextAccessor , 
 			IEmailService emailService , 
-			IConfiguration configuration
+			IConfiguration configuration,
+			IUnitOfWork unitOfWork
 			)
 		{
 			this.User = user;
@@ -31,6 +51,7 @@ namespace E_Commerece.Services.Implementations
 			this._httpContextAccessor = httpContextAccessor;
 			this._emailService = emailService;
 			this._configuration = configuration;
+			this._unitOfWork = unitOfWork;
 		}
 
 		public AuthenticationProperties ChallengeFacebookLoginAsync(string url)
@@ -98,29 +119,43 @@ namespace E_Commerece.Services.Implementations
 			return result;
 		}
 
-		public async Task<IdentityResult> SaveDataComeFromGoogleOrFaceBook(string username, string email , string provider , string providerKey)
-		{
-			var user = new User
-			{
-				UserName = username,
-				Email = email
-			};
+        public async Task<IdentityResult> SaveDataComeFromGoogleOrFaceBook(string username, string email, string provider, string providerKey)
+        {
+            // التحقق إذا المستخدم موجود فعلاً بناءً على الإيميل
+            var existingUser = await User.FindByEmailAsync(email);
 
-			// إنشاء المستخدم بدون كلمة مرور
-			var result = await User.CreateAsync(user);
-			if (!result.Succeeded)
-				return result;
+            if (existingUser != null)
+            {
+                // إذا كان موجود، نقوم بتسجيل دخوله مباشرة
+                await Sign.SignInAsync(existingUser, isPersistent: false);
+                return IdentityResult.Success;
+            }
 
-			// ربط المستخدم بطريقة تسجيل الدخول الخارجية
-			var loginInfo = new UserLoginInfo(provider, providerKey, provider);
-			await User.AddLoginAsync(user, loginInfo);
+            // إنشاء المستخدم الجديد
+            var user = new User
+            {
+                UserName = GenerateSafeUsername(username),  // يمكن التعديل هنا لو عايزة تضمن أن الـ username ما فيهش مسافات أو مشاكل تانية
+                Email = email
+            };
 
-			// ✅ إضافة المستخدم إلى الدور "User"
-			await User.AddToRoleAsync(user, "User");
+            // إنشاء الحساب الجديد بدون كلمة مرور
+            var result = await User.CreateAsync(user);
+            if (!result.Succeeded)
+                return result;
 
-			return result;
+            // ربط المستخدم بطريقة تسجيل الدخول الخارجية
+            var loginInfo = new UserLoginInfo(provider, providerKey, provider);
+            await User.AddLoginAsync(user, loginInfo);
 
-		}
+            // إضافة المستخدم إلى الدور "User"
+            await User.AddToRoleAsync(user, "User");
+
+            // تسجيل الدخول للمستخدم الجديد بعد إنشائه
+            await Sign.SignInAsync(user, isPersistent: false);
+
+            return result;
+        }
+
 
         public async Task<bool> SendPasswordResetEmailAsync(string email)
         {
@@ -128,7 +163,7 @@ namespace E_Commerece.Services.Implementations
             if (user == null) return false;
 
             var token = await User.GeneratePasswordResetTokenAsync(user);
-            var resetLink = $"http://localhost:5006/Account/Account/ResetPassword?token={Uri.EscapeDataString(token)}&email={email}";
+            var resetLink = $"http://localhost:5006/Account/ResetPassword?token={Uri.EscapeDataString(token)}&email={email}";
 
             await _emailService.SendEmailAsync(email, "Reset Password", $"Click <a href='{resetLink}'>here</a> to reset your password.");
             return true;
@@ -154,5 +189,7 @@ namespace E_Commerece.Services.Implementations
             var roles = await User.GetRolesAsync(user);
             return roles.FirstOrDefault(); // نفترض أن المستخدم لديه دور واحد فقط
         }
+
+		public int GetUserCount() => this._unitOfWork.Users.GetUserCount();
     }
 }

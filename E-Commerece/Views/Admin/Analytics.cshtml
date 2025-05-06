@@ -1,0 +1,252 @@
+﻿@{
+    ViewData["Title"] = "لوحة التحليلات";
+}
+
+<!-- إضافة Font Awesome للأيقونات -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+    .analytics-dashboard {
+        padding: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .stat-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important;
+        }
+
+        .stat-card .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin: 0 auto 15px;
+    }
+
+    .chart-container {
+        position: relative;
+        height: 450px;
+        min-height: 450px;
+        margin: 20px 0;
+    }
+
+    .stat-value {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        color: #6c757d;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .chart-card {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+        .chart-card .card-header {
+            background: white;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 20px 25px;
+        }
+
+    .chart-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 5px;
+    }
+
+    .chart-subtitle {
+        font-size: 0.95rem;
+        color: #6c757d;
+    }
+
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .col-xl-3, .col-md-6, .col-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+</style>
+
+<div class="analytics-dashboard">
+    <div class="row g-4">
+        <!-- بطاقة المستخدمين -->
+        <div class="col-xl-3 col-md-6">
+            <div class="stat-card">
+                <div class="card-body">
+                    <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h5 class="stat-label">إجمالي المستخدمين</h5>
+                    <h2 class="stat-value text-primary">@ViewBag.TotalUsers</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- بطاقة الطلبات -->
+        <div class="col-xl-3 col-md-6">
+            <div class="stat-card">
+                <div class="card-body">
+                    <div class="stat-icon bg-success bg-opacity-10 text-success">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h5 class="stat-label">إجمالي الطلبات</h5>
+                    <h2 class="stat-value text-success">@ViewBag.TotalOrders</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- بطاقة الفئات -->
+        <div class="col-xl-3 col-md-6">
+            <div class="stat-card">
+                <div class="card-body">
+                    <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h5 class="stat-label">إجمالي الفئات</h5>
+                    <h2 class="stat-value text-warning">@ViewBag.TotalCategories</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- بطاقة المنتجات -->
+        <div class="col-xl-3 col-md-6">
+            <div class="stat-card">
+                <div class="card-body">
+                    <div class="stat-icon bg-danger bg-opacity-10 text-danger">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h5 class="stat-label">إجمالي المنتجات</h5>
+                    <h2 class="stat-value text-danger">@ViewBag.TotalProducts</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الرسم البياني للمبيعات -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="chart-card">
+                <div class="card-header">
+                    <h4 class="chart-title">نظرة عامة على المبيعات</h4>
+                    <p class="chart-subtitle">المبيعات الشهرية</p>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const salesData = @Html.Raw(Json.Serialize(ViewBag.SalesPerMonth));
+
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+                datasets: [{
+                    label: 'المبيعات',
+                    data: salesData,
+                    backgroundColor: 'rgba(78, 115, 223, 0.1)',
+                    borderColor: 'rgba(78, 115, 223, 1)',
+                    pointBackgroundColor: 'rgba(78, 115, 223, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(78, 115, 223, 1)',
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgb(255,255,255)',
+                        bodyColor: '#858796',
+                        titleMarginBottom: 10,
+                        titleColor: '#6e707e',
+                        titleFontSize: 14,
+                        borderColor: '#dddfeb',
+                        borderWidth: 1,
+                        xPadding: 15,
+                        yPadding: 15,
+                        displayColors: false,
+                        intersect: false,
+                        mode: 'index',
+                        caretPadding: 10,
+                        rtl: true,
+                        callbacks: {
+                            label: function (context) {
+                                return 'المبيعات: ' + context.parsed.y;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            callback: function (value) {
+                                return value;
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false,
+                            drawBorder: false
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>

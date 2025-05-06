@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\fonts\\slick.woff"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\016e462b-82c7-4163-9884-6c83afa7f4d9_lap2.jpg",
+      "PackagePath": "staticwebassets\\img\\016e462b-82c7-4163-9884-6c83afa7f4d9_lap2.jpg"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\115e1dea-ee69-4960-b961-565ba3a117f6_pic2.jpg",
       "PackagePath": "staticwebassets\\img\\115e1dea-ee69-4960-b961-565ba3a117f6_pic2.jpg"
     },
@@ -91,6 +95,10 @@
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\248e9b7d-d2a9-45d3-8370-463550b01e33_pic2.jpg",
       "PackagePath": "staticwebassets\\img\\248e9b7d-d2a9-45d3-8370-463550b01e33_pic2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\24da404f-8e09-4274-81da-a58321884a75_lap.jpg",
+      "PackagePath": "staticwebassets\\img\\24da404f-8e09-4274-81da-a58321884a75_lap.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\2cea29bd-aabd-450c-a39b-5c603ad87502_lenovoimage.jpeg",
@@ -113,8 +121,16 @@
       "PackagePath": "staticwebassets\\img\\671664e8-4f6d-4ba1-bb4f-2e17e00065c6_camera.jpeg"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\6dd2c6b4-aa6a-46cf-a3ad-7aae698e4642.jpg",
+      "PackagePath": "staticwebassets\\img\\6dd2c6b4-aa6a-46cf-a3ad-7aae698e4642.jpg"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\7072d3f0-2b5f-4702-8aaa-143feaa06699_lenovoimage.jpeg",
       "PackagePath": "staticwebassets\\img\\7072d3f0-2b5f-4702-8aaa-143feaa06699_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\79f80dfa-9d5e-410d-859b-2c666d60eecb_tel.jpg",
+      "PackagePath": "staticwebassets\\img\\79f80dfa-9d5e-410d-859b-2c666d60eecb_tel.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\920f5655-a709-4350-89db-498ba9c53416_phone.jpg",
@@ -137,6 +153,10 @@
       "PackagePath": "staticwebassets\\img\\api.jpg"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\b08c9022-c150-46c9-b488-4cc9d971e69f.jpg",
+      "PackagePath": "staticwebassets\\img\\b08c9022-c150-46c9-b488-4cc9d971e69f.jpg"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\c2cfd928-c876-405f-ba2a-12d8a3694e1e_lenovoimage.jpeg",
       "PackagePath": "staticwebassets\\img\\c2cfd928-c876-405f-ba2a-12d8a3694e1e_lenovoimage.jpeg"
     },
@@ -151,6 +171,14 @@
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\e4a764b7-42e0-4adf-bb28-5c142acec5ed_lenovoimage.jpeg",
       "PackagePath": "staticwebassets\\img\\e4a764b7-42e0-4adf-bb28-5c142acec5ed_lenovoimage.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\f607732a-7b51-40a4-834d-f4b60af5981d_lap3.jpg",
+      "PackagePath": "staticwebassets\\img\\f607732a-7b51-40a4-834d-f4b60af5981d_lap3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\f6e87d5c-4e8c-4029-aa10-5a3985a903be_camera.jpg",
+      "PackagePath": "staticwebassets\\img\\f6e87d5c-4e8c-4029-aa10-5a3985a903be_camera.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\fe483970-5658-4987-833f-9fe223e73486_lenovoimage.jpeg",
@@ -177,8 +205,32 @@
       "PackagePath": "staticwebassets\\img\\im1.jpeg"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\land1.jpg",
+      "PackagePath": "staticwebassets\\img\\land1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\land2.jpg",
+      "PackagePath": "staticwebassets\\img\\land2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\land3.jpg",
+      "PackagePath": "staticwebassets\\img\\land3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\land4.jpg",
+      "PackagePath": "staticwebassets\\img\\land4.jpg"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\mm.avif",
+      "PackagePath": "staticwebassets\\img\\mm.avif"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\mm1.jpg",
+      "PackagePath": "staticwebassets\\img\\mm1.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\p1.jpg",
@@ -247,10 +299,6 @@
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic2.jpeg",
       "PackagePath": "staticwebassets\\img\\pic2.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic20.jpg",
-      "PackagePath": "staticwebassets\\img\\pic20.jpg"
     },
     {
       "Id": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\img\\pic21.jpg",

@@ -28,5 +28,7 @@ namespace E_Commerece.Data.Repositories
             .Include(x => x.Variations)
             .ThenInclude(x => x.VariationOptions)
             .SingleOrDefault(x => x.Id == id);
+
+        public int GetCategoryCount() => this._context.Categories.Count();
     }
 }

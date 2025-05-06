@@ -1,5 +1,6 @@
 ﻿using E_Commerece.Models;
 using E_Commerece.Services.Interfaces;
+using E_Commerece.UnitOfWork.Interfaces;
 using E_Commerece.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,15 +13,28 @@ namespace E_Commerece.Controllers
 		private readonly IVariationService _variationService;
 		private readonly IVariationOptionsService _variationOptionsService;
 		private readonly IProductService _productService;
+		private readonly IOrderService _orderService;
+		private readonly IUserService _userService;
+		private readonly IProductItemService _productItemService;
+		private readonly IUnitOfWork _unitOfWork;
 		public AdminController(ICategoryService categoryService
-			,IVariationService variationService
-			,IVariationOptionsService variationOptionsService
-			,IProductService productService)
+			, IVariationService variationService
+			, IVariationOptionsService variationOptionsService
+			, IProductService productService
+			, IUserService userService
+			, IOrderService orderService
+			, IProductItemService productItemService
+			, IUnitOfWork unitOfWork
+			)
 		{
 			this._categoryService = categoryService;
 			this._variationService = variationService;
 			this._variationOptionsService = variationOptionsService;
 			this._productService = productService;
+			this._userService = userService;
+			this._orderService = orderService;
+			this._productItemService = productItemService;
+			this._unitOfWork = unitOfWork;
 		}
 		public IActionResult Categories()
 		{
@@ -221,6 +235,171 @@ namespace E_Commerece.Controllers
 			_productService.RejectProduct(id);
 			_productService.SeveChanges();
             return RedirectToAction("PendingProducts");
+        }
+
+		public IActionResult Analytics()
+		{
+            ViewBag.TotalUsers = _userService.GetUserCount();
+            ViewBag.TotalOrders = _orderService.GetOrderCount();
+			ViewBag.TotalCategories = _categoryService.GetCategoryCount();
+			ViewBag.TotalProducts = _productService.GetProductCount();
+		    var  SalesPerMonth = _orderService.SalesPerMonth();
+            // مصفوفة تمثل الشهور كلها
+            string[] allMonths = new[] { "january", "february", "march", "april", "may", "june",
+                             "july", "august", "september", "october", "november", "december" };
+            var monthlySales = new List<decimal>();
+
+            foreach (var month in allMonths)
+            {
+                var sale = SalesPerMonth.FirstOrDefault(s => s.Month.ToLower() == month);
+                monthlySales.Add(sale != null ? sale.TotalPrice : 0);
+            }
+			ViewBag.SalesPerMonth = monthlySales;
+
+            return View();
+        }
+
+		public IActionResult Orderes()
+		{
+			var orders = _orderService.AllOrderes();
+			return View(orders);
+		}
+		public IActionResult AcceptOrder(int id)
+		{
+			var order = _orderService.GetOrderById(id);
+			order.Status = Status.Shipped;
+			_orderService.SaveChange();
+            return Json(new { redirectUrl = Url.Action("Orderes", "Admin") });
+			
+        }
+
+		public IActionResult rejectOrder(int id)
+		{
+            var order = _orderService.GetOrderById(id);
+            order.Status = Status.Cancelled;
+            _orderService.SaveChange();
+            return Json(new { redirectUrl = Url.Action("Orderes", "Admin") });
+        }
+		public IActionResult MarkAsDelievered(int id)
+		{
+            var order = _orderService.GetOrderById(id);
+            order.Status = Status.Delivered;
+            _orderService.SaveChange();
+            return Json(new { redirectUrl = Url.Action("Orderes", "Admin") });
+        }
+
+        public IActionResult AllPrdsToManage()
+        {
+            var products = _productService.AllPrdsToManage();
+            ViewBag.IsAdmin = true;
+            return View(products);
+        }
+
+		public IActionResult DeleteProduct([FromBody]DeletePrdVM prd)
+		{
+			var product = _productService.GetProductById(prd.Id);
+			_productService.DeletedProduct(product);
+			_productService.SeveChanges();
+            return Json(new { success = true });
+        }
+		public IActionResult EditProduct(int id)
+		{
+			var product = _productService.GetProductById(id);
+            var variations = _variationService.GetVariationByCategoryId(product.CategoryId);
+            ViewBag.Variations = variations;
+            return View(product);
+		}
+        [HttpPost]
+        public IActionResult EditProduct(Product model, IFormFile imageFile)
+        {
+            if (imageFile == null && !string.IsNullOrEmpty(model.Image))
+            {
+                // إزالة الخطأ لو موجود على الـ Image
+                ModelState.Remove("imageFile");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+			var existingProduct = _productService.GetProductById(model.Id);
+
+            if (existingProduct == null)
+            {
+                return NotFound();
+            }
+            if (imageFile != null && imageFile.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img");
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    imageFile.CopyTo(fileStream);
+                }
+
+                if (!string.IsNullOrEmpty(existingProduct.Image))
+                {
+                    var oldImagePath = Path.Combine(uploadsFolder, existingProduct.Image);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+				existingProduct.Image = uniqueFileName;
+            }
+            else
+            {
+				existingProduct.Image = model.Image;
+            }
+
+            _productService.UpdateProduct(existingProduct, model);
+
+            for (int i = 0; i < model.Items.Count; i++)
+            {
+                var item = model.Items[i];
+				var existingItem = _productItemService.GetProductItemById(item.Id);
+                if (existingItem != null)
+                {
+					_productItemService.UpdatePrdItem(existingItem, item);
+
+                    for (int j = 0; j < item.VariationOptions.Count; j++)
+                    {
+                        var option = item.VariationOptions[j];
+						var existingOption = _variationOptionsService.GetVariationOptionById(option.Id);
+                        if (existingOption != null)
+                        {
+							_variationOptionsService.UpdateVariationOption(existingOption, option);
+                        }
+                    }
+                }
+            }
+			_unitOfWork.Save();
+            ViewBag.IsAdmin = true;
+            return RedirectToAction("AllPrdsToManage");
+        }
+
+		public IActionResult DeletedPrdItem(int id)
+		{
+			var prditem = _productItemService.GetProductItemById(id);
+			_productItemService.DeletePrdItem(prditem);
+			_productItemService.SeveChanges();
+            return Json(new { success = true });
+        }
+
+		public IActionResult AddNewPrdItem([FromBody]SaveVariationRequestVM model)
+		{
+            if (model == null || model.SelectedOptions == null || !model.SelectedOptions.Any())
+            {
+                return BadRequest("البيانات غير مكتملة");
+            }
+            List<int> optionIds = model.SelectedOptions.Select(x => x.OptionId).ToList();
+			_productItemService.AddProductItem(model.ProductId, model.Quantity, optionIds);
+			_productItemService.SeveChanges();
+            return Json(new { success = true });
         }
     }
 }

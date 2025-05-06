@@ -65,7 +65,7 @@ namespace E_Commerece.Controllers
 
             if (userRole == "Admin")
             {
-                return RedirectToAction("Admin");  
+                return RedirectToAction("Categories", "Admin");
             }
             else
             {

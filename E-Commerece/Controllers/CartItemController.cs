@@ -22,7 +22,7 @@ namespace E_Commerece.Controllers
             {
                 cart.TotalPrice = request.GrandDeleted;
             }
-            this._cartItemService.SaveChange();
+            this._cartItemService.SeveChanges();
             return Json(new { success = true });
         }
         public IActionResult DeleteAll([FromBody]CartRequest request)
@@ -30,7 +30,7 @@ namespace E_Commerece.Controllers
             var cart = this._cartService.GetCartById(request.CartId);
             this._cartItemService.RemoveAllItemsRelatedByCart(request.CartId);
             cart.TotalPrice = 0;
-            this._cartItemService.SaveChange();
+            this._cartItemService.SeveChanges();
             return Json(new { success = true });
         }
     }

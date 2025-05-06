@@ -96,6 +96,23 @@ namespace E_Commerece.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("E_Commerece.Models.NewsletterSubscribers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsletterSubscribers");
+                });
+
             modelBuilder.Entity("E_Commerece.Models.Order", b =>
                 {
                     b.Property<int>("Id")

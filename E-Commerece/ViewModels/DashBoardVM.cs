@@ -8,6 +8,6 @@ namespace E_Commerece.ViewModels
     {
         public List<Order> PurchasedProducts { get; set; }
         public List<Product> SoldchasedProducts { get; set; }
-        public List<Order> RequestProducts { get; set; }
+        public List<OrderItem> RequestProducts { get; set; }
     }
 }

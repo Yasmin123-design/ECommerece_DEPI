@@ -10,5 +10,11 @@ namespace E_Commerece.Data.Interfaces
 		Order GetOrderById(int orderid);
 
 		List<OrderItem> GetOrderItemsByOrderId(int orderid);
-	}
+
+		int GetOrderCount();
+		List<SalePerMonthVM> SalesPerMonth();
+		List<Order> AllOrderes();
+		OrderDetailsVM GetCartOrderDetails();
+
+    }
 }

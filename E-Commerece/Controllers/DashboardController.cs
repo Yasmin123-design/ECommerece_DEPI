@@ -15,7 +15,7 @@ namespace E_Commerece.Controllers
         {
             var purchasedProducts = _productService.GetLatestPurchasedProducts().Take(5).ToList();
             var soldProducts = _productService.GetLatestSoldProducts().Take(5).ToList();
-            var requestedProducts = _productService.GetRequestedProducts().Take(5).ToList();
+            var requestedProducts = _productService.GetRequestedItemsForSeller().Take(5).ToList();
 
             var model = new DashBoardVM
             {
@@ -33,7 +33,7 @@ namespace E_Commerece.Controllers
         }
         public IActionResult AllRequestOrders()
         {
-            var allrequestorders = _productService.GetRequestedProducts();
+            var allrequestorders = _productService.GetRequestedItemsForSeller();
             return View(allrequestorders);
         }
    

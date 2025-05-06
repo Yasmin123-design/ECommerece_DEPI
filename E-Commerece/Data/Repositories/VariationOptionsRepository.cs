@@ -43,5 +43,10 @@ namespace E_Commerece.Data.Repositories
         public VariationOption GetVariationOptionById(int variationoptionid) => this._context.VariationOptions.Where(x => x.Id == variationoptionid).FirstOrDefault();
 
         public List<VariationOption> GetVariationOptionsByVariationId(int variationid) => this._context.VariationOptions.Where(x => x.VariationId == variationid).ToList();
+
+        public void UpdateVariationOption(VariationOption existingOption, VariationOption option)
+        {
+            existingOption.Value = option.Value;
+        }
     }
 }

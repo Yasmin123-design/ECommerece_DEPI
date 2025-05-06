@@ -35,9 +35,9 @@ namespace E_Commerece.Controllers
 		}
 		public IActionResult OrderDetails()
 		{
-			var order = _orderService.GetLatestOrder();
-			return View(order);
-		}
+            var cartOrder = _orderService.GetCartOrderDetails();
+            return View(cartOrder);
+        }
 
 		public IActionResult Payment(PaymentVM model)
 		{
@@ -55,7 +55,7 @@ namespace E_Commerece.Controllers
             var order = _orderService.GetOrderById(orderId);
             if (order == null) return;
 
-            order.Status = E_Commerece.Models.Status.Shipped;
+            //order.Status = E_Commerece.Models.Status.Shipped;
 
             var orderItems = _orderService.GetOrderItemsByOrderId(order.Id);
             foreach (var item in orderItems)

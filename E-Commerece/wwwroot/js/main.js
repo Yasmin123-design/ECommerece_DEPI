@@ -1,4 +1,59 @@
-﻿(function($) {
+﻿(function ($) {
+	$(document).ready(function () {
+		$(".store-grid li").click(function () {
+			// إزالة الـ active من جميع الأزرار وإضافته للزر المضغوط
+			$(".store-grid li").removeClass("active");
+			$(this).addClass("active");
+
+			// التحقق من نوع العرض المطلوب
+			var viewType = $(this).data("view");
+			var productList = $("#product-list");
+
+			if (viewType === "list") {
+				productList.addClass("list-view").removeClass("grid-view");
+			} else {
+				productList.addClass("grid-view").removeClass("list-view");
+			}
+		});
+	});
+
+
+	function displayProducts(data) {
+		$("#product-list").html(""); // تفريغ القائمة الحالية
+		data.forEach(product => {
+			$("#product-list").append(
+				`
+                                <div class="col-md-4 col-xs-6">
+                                    <div class="product">
+                                        <div class="product-img">
+                                            <img src="./img/${product.image}" alt="${product.name}">
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-category">${product.category}</p>
+                                            <h3 class="product-name"><a href="#">${product.name}</a></h3>
+                                            <h4 class="product-price">$${product.price}</h4>
+                                                    <div class="product-btns">
+                                                            <a href="/Product/QuickView/${product.id}"  class="quick-view">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                            <a href="/Product/QuickView/${product.id}" class="quick-view">
+                                                        <i class="fa fa-shopping-cart"></i>
+                                                    </a>
+                                                            <a href="/Product/QuickView/${product.id}" class="quick-view">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                `
+			);
+		});
+	}
+
+
+
 	"use strict"
 
 	// Mobile Nav toggle
@@ -179,4 +234,5 @@ function addToWishlist(productId) {
 		}
 	});
 }
+
 

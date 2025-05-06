@@ -72,29 +72,38 @@
         <div class="section-title text-center">
             <h3 class="title">Your Order</h3>
         </div>
+
         <div class="order-summary">
             <div class="order-col">
                 <div><strong>PRODUCT</strong></div>
                 <div><strong>TOTAL</strong></div>
             </div>
+
             <div class="order-products">
                 @foreach (var product in Model.Items)
                 {
+                    var price = product.ProductItem.Product.Price;
+                    var quantity = product.Quantity;
+                    var total = price * quantity;
+
                     <div class="order-col">
-                        <div>@product.ProductItem.Product.Name</div>
-                        <div>@product.Quantity * @product.ProductItem.Product.Price</div>
+                        <div>@product.ProductItem.Product.Name × @quantity</div>
+                        <div>@total.ToString("0.00") LE</div>
                     </div>
                 }
             </div>
+
             <div class="order-col">
                 <div>Shipping</div>
                 <div><strong>FREE</strong></div>
             </div>
+
             <div class="order-col">
                 <div><strong>TOTAL</strong></div>
-                <div><strong class="order-total">@Model.TotalPrice</strong></div>
+                <div><strong class="order-total">@Model.TotalPrice.ToString("0.00") LE</strong></div>
             </div>
         </div>
+
         <a href="/Order/Payment" class="primary-btn order-submit">Place order</a>
     </div>
 </div>

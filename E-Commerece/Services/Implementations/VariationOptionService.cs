@@ -43,5 +43,10 @@ namespace E_Commerece.Services.Implementations
         {
             this._unitOfWork.Save();
         }
+
+        public void UpdateVariationOption(VariationOption existingOption, VariationOption option)
+        {
+            this._unitOfWork.VariationOptions.UpdateVariationOption(existingOption, option);
+        }
     }
 }

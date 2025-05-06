@@ -1,0 +1,1489 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\productservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\productservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\categoryservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\categoryservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\profileservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\profileservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\orderservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\cartservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\cartservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\productitemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\productitemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\productitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\productitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\servicestests\\cartitemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\servicestests\\cartitemservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\storecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\icartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\icartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\ecommerce.tests\\ecommerce.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{64B18D74-2604-40F3-9130-FA93F9A38532}|ECommerce.Tests\\ECommerce.Tests.csproj|solutionrelative:ecommerce.tests\\ecommerce.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\newslettersubscribersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\newslettersubscribersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\inewslettersubscribersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\inewslettersubscribersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\newslettersubscribers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\newslettersubscribers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\ecommerececontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\ecommerececontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\Desktop\\electro-master\\checkout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\productitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\productitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\selectedoptionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\selectedoptionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\admin\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\admin\\editproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\product\\quickview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\product\\quickview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\savevariationrequestvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\savevariationrequestvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\variation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\variation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\variationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\variationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\iproductitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\iproductitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\iproductitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\iproductitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\shared\\productspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\shared\\productspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\admin\\allprdstomanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\admin\\allprdstomanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\variationoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\variationoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\unitofwork\\implementations\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\unitofwork\\implementations\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\implementations\\variationoptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\implementations\\variationoptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\ivariationoptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\ivariationoptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\variationoptionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\variationoptionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\ivariationoptionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\ivariationoptionsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\deleteprdvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\deleteprdvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\product\\filterbycategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\product\\filterbycategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\product\\addvariationoptionstoselledproductbyuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\product\\addvariationoptionstoselledproductbyuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\store\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\store\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\shared\\purchasedproductspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\shared\\purchasedproductspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\AppData\\Local\\Temp\\b22792e9-7a6b-4714-a49c-042a9c5419cf_E-CommereceSn Final.zip.9cf\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\filterrequestvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\filterrequestvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\shared\\productpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\shared\\productpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\wwwroot\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\wwwroot\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\shared\\requestproductspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\shared\\requestproductspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\admin\\pendingproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\admin\\pendingproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\dashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\dashboardvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\product\\showallproductsselledbyspecificuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\product\\showallproductsselledbyspecificuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\admin\\orderes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\admin\\orderes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\order\\orderdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\order\\orderdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\orderitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\orderitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\orderdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\orderdetailsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\views\\admin\\analytics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\views\\admin\\analytics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\viewmodels\\salepermonthvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\viewmodels\\salepermonthvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\unitofwork\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\unitofwork\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\data\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\data\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\e-commerece.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\e-commerece.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\migrations\\20250421222447_edit status for order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\migrations\\20250421222447_edit status for order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|c:\\users\\lenovo\\source\\repos\\mvc\\e-commerecesn\\e-commerece\\migrations\\20250503201259_addnewslettersubscribers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F06CC901-6AB2-445F-A300-A526E287F0B0}|E-Commerece\\E-Commerece.csproj|solutionrelative:e-commerece\\migrations\\20250503201259_addnewslettersubscribers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Program.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Program.cs",
+              "RelativeToolTip": "E-Commerece\\Program.cs",
+              "ViewState": "AQIAANIAAAAAAAAAAAAiwN8AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T20:19:58.736Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\ProductServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\ProductServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\ProductServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\ProductServiceTests.cs",
+              "ViewState": "AQIAAPwBAAAAAAAAAAAAwBYCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T03:05:18.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfileServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\ProfileServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\ProfileServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\ProfileServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\ProfileServiceTests.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAQwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T02:37:26.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\OrderServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\OrderServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\OrderServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\OrderServiceTests.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAQwCYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T02:06:28.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\CategoryServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\CategoryServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\CategoryServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\CategoryServiceTests.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAmwG8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T01:32:54.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\ProductService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\ProductService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\ProductService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\ProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:41:33.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\Product.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T22:20:52.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\CartServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\CartServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\CartServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\CartServiceTests.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABYAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T01:01:25.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductItemServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\ProductItemServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\ProductItemServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\ProductItemServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\ProductItemServiceTests.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAAAGMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T02:27:55.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\ProductItemService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\ProductItemService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\ProductItemService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\ProductItemService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T23:59:05.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CartItemServiceTests.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\CartItemServiceTests.cs",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ServicesTests\\CartItemServiceTests.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ServicesTests\\CartItemServiceTests.cs",
+              "RelativeToolTip": "ECommerce.Tests\\ServicesTests\\CartItemServiceTests.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAuwD4AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:39:35.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\OrderService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\OrderService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\OrderService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\OrderService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAwA0AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:29:03.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StoreController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\StoreController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\StoreController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\StoreController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\StoreController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAhwA4AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T16:00:33.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAALkBAAAAAAAAAAAIwH4BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:47:03.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\CartRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\CartRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:17:28.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\CategoryService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\CategoryService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\CategoryService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:43:10.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAD4vx4AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T22:04:41.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T22:02:54.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\CartItemController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\CartItemController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:46:11.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAAwFIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T22:44:05.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ICartItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\ICartItemService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\ICartItemService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\ICartItemService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\ICartItemService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:41:46.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CartItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\CartItemService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\CartItemService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\CartItemService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\CartItemService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:26:08.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\CartItem.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\CartItem.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:13:47.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "E-Commerece\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAIUBAAAAAAAAAAAmwBoBAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:06:28.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ECommerce.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ECommerce.Tests.csproj",
+              "RelativeDocumentMoniker": "ECommerce.Tests\\ECommerce.Tests.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\ECommerce.Tests\\ECommerce.Tests.csproj",
+              "RelativeToolTip": "ECommerce.Tests\\ECommerce.Tests.csproj",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-04T22:31:48.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NewsletterSubscribersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\NewsletterSubscribersRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\NewsletterSubscribersRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\NewsletterSubscribersRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\NewsletterSubscribersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T02:14:40.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "E-Commerece\\wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "E-Commerece\\wwwroot\\css\\style.css",
+              "ViewState": "AQIAAH0KAAAAAAAAAAAlwIkKAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-03T20:16:33.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\UserService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:25:50.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "INewsletterSubscribersRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\INewsletterSubscribersRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\INewsletterSubscribersRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\INewsletterSubscribersRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\INewsletterSubscribersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T02:14:10.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "20250503201259_AddNewsletterSubscribers.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Migrations\\20250503201259_AddNewsletterSubscribers.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Migrations\\20250503201259_AddNewsletterSubscribers.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Migrations\\20250503201259_AddNewsletterSubscribers.cs",
+              "RelativeToolTip": "E-Commerece\\Migrations\\20250503201259_AddNewsletterSubscribers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:12:59.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "NewsletterSubscribers.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\NewsletterSubscribers.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\NewsletterSubscribers.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\NewsletterSubscribers.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\NewsletterSubscribers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:10:26.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "checkout.html",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\electro-master\\checkout.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Desktop\\electro-master\\checkout.html",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\electro-master\\checkout.html",
+              "RelativeToolTip": "..\\..\\..\\..\\Desktop\\electro-master\\checkout.html",
+              "ViewState": "AQIAAKQAAAAAAAAAAABRwIQBAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-03T20:06:11.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EditProduct.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\EditProduct.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Admin\\EditProduct.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\EditProduct.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Admin\\EditProduct.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T22:22:30.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T18:34:22.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EcommereceContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\EcommereceContext.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\EcommereceContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\EcommereceContext.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\EcommereceContext.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAwwBYAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T20:11:01.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SelectedOptionVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\SelectedOptionVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\SelectedOptionVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\SelectedOptionVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\SelectedOptionVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:09:24.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProductItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\ProductItemRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\ProductItemRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\ProductItemRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\ProductItemRepository.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAgwB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T23:58:03.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\About\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\About\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\About\\Index.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\About\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIABAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-26T19:20:51.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "QuickView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\QuickView.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Product\\QuickView.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\QuickView.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Product\\QuickView.cshtml",
+              "ViewState": "AQIAAJEAAAAAAAAAAEBVwKIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-26T16:51:47.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAswFkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:21:54.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SaveVariationRequestVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\SaveVariationRequestVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\SaveVariationRequestVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\SaveVariationRequestVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\SaveVariationRequestVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T16:09:52.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ProductItem.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\ProductItem.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\ProductItem.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\ProductItem.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\ProductItem.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T01:11:48.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IProductItemService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IProductItemService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\IProductItemService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IProductItemService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\IProductItemService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAsAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T23:58:57.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "VariationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\VariationRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\VariationRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\VariationRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\VariationRepository.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:56:22.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Variation.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\Variation.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\Variation.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\Variation.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\Variation.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:48:01.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IProductItemRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IProductItemRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\IProductItemRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IProductItemRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\IProductItemRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T23:57:30.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AQIAAOEAAAAAAAAAAEBVwL8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T23:06:06.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ProductsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\ProductsPartial.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Shared\\ProductsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\ProductsPartial.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Shared\\ProductsPartial.cshtml",
+              "ViewState": "AQIAACABAAAAAAAAAEBVwDEBAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T15:33:07.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AllPrdsToManage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\AllPrdsToManage.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Admin\\AllPrdsToManage.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\AllPrdsToManage.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Admin\\AllPrdsToManage.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T16:09:03.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "VariationOption.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\VariationOption.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\VariationOption.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\VariationOption.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\VariationOption.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:52:35.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\UnitOfWork\\Implementations\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\UnitOfWork\\Implementations\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\UnitOfWork\\Implementations\\UnitOfWork.cs",
+              "RelativeToolTip": "E-Commerece\\UnitOfWork\\Implementations\\UnitOfWork.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAiwC0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:27:50.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IVariationOptionsService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IVariationOptionsService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\IVariationOptionsService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IVariationOptionsService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\IVariationOptionsService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwAwAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:09:54.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "VariationOptionService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\VariationOptionService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Implementations\\VariationOptionService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Implementations\\VariationOptionService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Implementations\\VariationOptionService.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAIBQwDAAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:10:01.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "VariationOptionsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\VariationOptionsRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\VariationOptionsRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\VariationOptionsRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\VariationOptionsRepository.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAswDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:09:24.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IVariationOptionsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IVariationOptionsRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\IVariationOptionsRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IVariationOptionsRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\IVariationOptionsRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA5wA4AAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:06:56.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAA/wDIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:08:00.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAcwDAAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:40:05.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "DeletePrdVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\DeletePrdVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\DeletePrdVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\DeletePrdVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\DeletePrdVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T23:24:01.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "FilterByCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\FilterByCategory.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Product\\FilterByCategory.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\FilterByCategory.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Product\\FilterByCategory.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T21:17:54.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "AddVariationOptionsToSelledProductByUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\AddVariationOptionsToSelledProductByUser.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Product\\AddVariationOptionsToSelledProductByUser.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\AddVariationOptionsToSelledProductByUser.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Product\\AddVariationOptionsToSelledProductByUser.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAIBJwDkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T21:06:17.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Store\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Store\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T15:31:36.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\b22792e9-7a6b-4714-a49c-042a9c5419cf_E-CommereceSn Final.zip.9cf\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\b22792e9-7a6b-4714-a49c-042a9c5419cf_E-CommereceSn Final.zip.9cf\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\b22792e9-7a6b-4714-a49c-042a9c5419cf_E-CommereceSn Final.zip.9cf\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\b22792e9-7a6b-4714-a49c-042a9c5419cf_E-CommereceSn Final.zip.9cf\\E-CommereceSn\\E-Commerece\\Views\\Store\\Index.cshtml [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T19:21:27.422Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "PurchasedProductsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\PurchasedProductsPartial.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Shared\\PurchasedProductsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\PurchasedProductsPartial.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Shared\\PurchasedProductsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-21T22:15:12.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "FilterRequestVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\FilterRequestVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\FilterRequestVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\FilterRequestVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\FilterRequestVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:09:58.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ProductPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\ProductPartial.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Shared\\ProductPartial.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\ProductPartial.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Shared\\ProductPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T15:47:42.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\main.js",
+              "RelativeDocumentMoniker": "E-Commerece\\wwwroot\\js\\main.js",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\wwwroot\\js\\main.js",
+              "RelativeToolTip": "E-Commerece\\wwwroot\\js\\main.js",
+              "ViewState": "AQIAANAAAAAAAAAAAAAmwOwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-24T15:51:36.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "PendingProducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\PendingProducts.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Admin\\PendingProducts.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\PendingProducts.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Admin\\PendingProducts.cshtml",
+              "ViewState": "AQIAALEAAAAAAAAAAIBJwNUAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T22:49:49.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "ForgotPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T14:57:35.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\OrderRepository.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAlwFUAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:16:02.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "RequestProductsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\RequestProductsPartial.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Shared\\RequestProductsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Shared\\RequestProductsPartial.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Shared\\RequestProductsPartial.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAIBJwF8AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-24T01:03:59.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "DashBoardVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\DashBoardVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\DashBoardVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\DashBoardVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\DashBoardVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T01:13:39.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\OrderItem.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\OrderItem.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T01:10:24.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Models\\Order.cs",
+              "RelativeToolTip": "E-Commerece\\Models\\Order.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T23:02:31.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "ShowAllProductsSelledBySpecificUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\ShowAllProductsSelledBySpecificUser.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Product\\ShowAllProductsSelledBySpecificUser.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Product\\ShowAllProductsSelledBySpecificUser.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Product\\ShowAllProductsSelledBySpecificUser.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwJYAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T17:59:56.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Orderes.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\Orderes.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Admin\\Orderes.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\Orderes.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Admin\\Orderes.cshtml",
+              "ViewState": "AQIAAMUAAAAAAAAAAIBJwM8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T23:35:06.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\IOrderService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA3wBEAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:28:56.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:07:39.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "OrderDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Order\\OrderDetails.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Order\\OrderDetails.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Order\\OrderDetails.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Order\\OrderDetails.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-21T23:26:34.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "OrderItemVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\OrderItemVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\OrderItemVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\OrderItemVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\OrderItemVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T23:35:15.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "OrderDetailsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\OrderDetailsVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\OrderDetailsVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\OrderDetailsVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\OrderDetailsVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T23:34:43.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "20250421222447_edit status for order.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Migrations\\20250421222447_edit status for order.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Migrations\\20250421222447_edit status for order.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Migrations\\20250421222447_edit status for order.cs",
+              "RelativeToolTip": "E-Commerece\\Migrations\\20250421222447_edit status for order.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T22:24:47.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Analytics.cshtml",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\Analytics.cshtml",
+              "RelativeDocumentMoniker": "E-Commerece\\Views\\Admin\\Analytics.cshtml",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Views\\Admin\\Analytics.cshtml",
+              "RelativeToolTip": "E-Commerece\\Views\\Admin\\Analytics.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAK8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-20T20:18:30.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "SalePerMonthVM.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\SalePerMonthVM.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\ViewModels\\SalePerMonthVM.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\ViewModels\\SalePerMonthVM.cs",
+              "RelativeToolTip": "E-Commerece\\ViewModels\\SalePerMonthVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T21:44:14.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\UnitOfWork\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\UnitOfWork\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\UnitOfWork\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "E-Commerece\\UnitOfWork\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wBEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:27:30.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwBQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:16:50.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAwwBYAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:25:24.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Services\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Services\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "E-Commerece\\Services\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:43:03.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:08:26.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwB8AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:15:39.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "E-Commerece\\Data\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\Data\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "E-Commerece\\Data\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T19:10:06.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "E-Commerece.csproj",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\E-Commerece.csproj",
+              "RelativeDocumentMoniker": "E-Commerece\\E-Commerece.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\MVC\\E-CommereceSn\\E-Commerece\\E-Commerece.csproj",
+              "RelativeToolTip": "E-Commerece\\E-Commerece.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-20T17:53:46.73Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

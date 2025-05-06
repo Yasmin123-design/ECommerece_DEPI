@@ -8,5 +8,7 @@ namespace E_Commerece.Data.Interfaces
         Category GetCategory(int id);
         void Create(Category category);
         void Delete(Category category);
+
+        int GetCategoryCount();
     }
 }
