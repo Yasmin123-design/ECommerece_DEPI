@@ -16,6 +16,7 @@ namespace E_Commerece.UnitOfWork.Interfaces
 
         IVariationOptionsRepository VariationOptions { get; }
         IUserRepository Users { get; }
+        INewsletterSubscribersRepository NewsletterSubscribers { get; }
         void Save();
     }
 }

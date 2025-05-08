@@ -30,7 +30,10 @@ namespace E_Commerece.UnitOfWork.Implementations
         public IVariationOptionsRepository VariationOptions { get; }
 
         public IUserRepository Users { get; }
-        public UnitOfWork(EcommereceContext context)
+
+		public INewsletterSubscribersRepository NewsletterSubscribers { get; }
+
+		public UnitOfWork(EcommereceContext context)
         {
             this._context = context;
             Products = new ProductRepository(_context);
@@ -44,6 +47,7 @@ namespace E_Commerece.UnitOfWork.Implementations
             Variations = new VariationRepository(_context);
             VariationOptions = new VariationOptionsRepository(_context);
             Users = new UserRepository(_context);
+            NewsletterSubscribers = new NewsletterSubscribersRepository(_context);
         }
 
         public void Dispose()

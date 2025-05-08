@@ -4,11 +4,7 @@ using E_Commerece.UnitOfWork.Interfaces;
 using E_Commerece.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.Facebook;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.DotNet.Scaffolding.Shared;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using System.Security.Claims;
 using System.Text.RegularExpressions;
 
@@ -105,9 +101,16 @@ namespace E_Commerece.Services.Implementations
 			if (result.Succeeded)
 			{
                 // جلب قائمة الإيميلات الإدارية من appsettings.json
-                var adminEmails = _configuration.GetSection("AdminSettings:AdminEmails").Get<List<string>>();
+                //var adminEmails = _configuration.GetSection("AdminSettings:AdminEmails").Get<List<string>>();
 
-                if (adminEmails != null && adminEmails.Contains(register.Email))
+				var adminEmails = _configuration
+	.GetSection("AdminSettings:AdminEmails")
+	.Value?
+	.Split(',', StringSplitOptions.RemoveEmptyEntries)
+	.Select(e => e.Trim())
+	.ToList();
+
+				if (adminEmails != null && adminEmails.Contains(register.Email))
                 {
                     await User.AddToRoleAsync(user, "Admin");
                 }

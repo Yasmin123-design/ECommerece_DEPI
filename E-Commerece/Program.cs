@@ -29,6 +29,7 @@ builder.Services.AddScoped<IWishlistService, WishlistService>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<IVariationService, VariationService>();
 builder.Services.AddScoped<IVariationOptionsService, VariationOptionService>();
+builder.Services.AddScoped<INewsletterSubscribersService,NewsletterSubscribersService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<EcommereceContext>().AddDefaultTokenProviders();
 builder.Services.AddDbContext<EcommereceContext>(optionbuilder =>
@@ -175,7 +176,14 @@ app.Use(async (context, next) =>
                 "/Admin/EditProduct",
                 "/Admin/DeletedPrdItem",
                 "/Admin/AddNewPrdItem",
-                "/Product/GetAvailableQuantity"
+                "/Product/GetAvailableQuantity",
+                "/Home/PrivacyPolicy",
+                "/Home/TermsAndConditions",
+                "/About/Index",
+				"/About",
+                "/Home/SubscribeEmail",
+                "/Home/AlreadySubscribed",
+                "/Home/SubscriptionError"
 
             };
 
