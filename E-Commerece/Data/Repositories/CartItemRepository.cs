@@ -63,5 +63,15 @@ namespace E_Commerece.Data.Repositories
             }
             
         }
+        public List<CartItem> GetCartItems()
+        {
+            string userId =  _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
+            return _context.CartItems
+                           .Include(ci => ci.ProductItem)
+                           .Include(x => x.Cart)
+                           .Where(ci => ci.Cart.UserId == userId)
+                           .ToList();
+        }
+
     }
 }

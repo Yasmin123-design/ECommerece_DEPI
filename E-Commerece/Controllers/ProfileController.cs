@@ -1,5 +1,6 @@
 ﻿using E_Commerece.Models;
 using E_Commerece.Services.Interfaces;
+using E_Commerece.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Stripe.Climate;
@@ -18,16 +19,26 @@ namespace E_Commerece.Controllers
         public IActionResult ShowUserInfo()
         {
             var user = this._profileService.GetUserById();
-            return View(user);
+
+            // تجهيز ViewModel من الكائن الحقيقي
+            var model = new EditUserInfoVM
+            {
+                Username = user.UserName,
+                Email = user.Email,
+                Address = user.Address
+            };
+
+            return View(model);
         }
 
+
         [HttpPost]
-        public IActionResult ShowUserInfo(User user)
+        public IActionResult ShowUserInfo(EditUserInfoVM model)
         {
-            this._profileService.EditUserInfo(user);
+            this._profileService.EditUserInfo(model);
             this._profileService.SaveChange();
             ViewBag.Message = "تم حفظ التعديلات بنجاح!";
-            return View(user);
+            return View(model);
         }
 
         public IActionResult ChangePassword()

@@ -1,4 +1,12 @@
-﻿
+﻿ <style>
+    .icon-btn:hover i {
+        color: #007bff !important; /* يتغير لون الأيقونة عند التحويم */
+        transform: scale(1.1); /* تكبير بسيط عند التحويم */
+        transition: all 0.3s ease;
+    }
+ </style>  
+
+
 @model List<Product>
 <div class="product-grid">
     @foreach (var item in Model)
@@ -14,7 +22,7 @@
                 </h3>
                 <p>@item.Description</p>
 
-                <div class="action-buttons">
+               @*  <div class="action-buttons">
                     <form action="Product/QuickView/@item.Id" method="get">
                         <button class="custom-btn details-btn" type="submit">
                             <i class="fas fa-eye"></i> Show Details
@@ -23,12 +31,29 @@
                     <form action="Product/QuickView/@item.Id" method="post">
                         <button class="custom-btn cart-btn" type="submit">
                             <i class="fas fa-shopping-cart"></i> Add To Cart
-                        </button>
+                         </button> 
                     </form>
                     <button class="custom-btn wishlist-btn" onclick="addToWishlist(@item.Id)">
                         <i class="fas fa-heart"></i> Add To Wishlist
                     </button>
 
+                </div> *@
+                <div class="action-buttons" style="display: flex; gap: 15px; justify-content: center; align-items: center;">
+                    <form action="Product/QuickView/@item.Id" method="get" title="Show Details">
+                        <button class="icon-btn" type="submit" style="background: none; border: none; cursor: pointer;">
+                            <i class="fas fa-eye" style="font-size: 20px; color: #555;"></i>
+                        </button>
+                    </form>
+
+                    <form action="Product/QuickView/@item.Id" method="post" title="Add To Cart">
+                        <button class="icon-btn" type="submit" style="background: none; border: none; cursor: pointer;">
+                            <i class="fas fa-shopping-cart" style="font-size: 20px; color: #555;"></i>
+                        </button>
+                    </form>
+
+                    <button class="icon-btn" onclick="addToWishlist(@item.Id)" title="Add To Wishlist" style="background: none; border: none; cursor: pointer;">
+                        <i class="fas fa-heart" style="font-size: 20px; color: #555;"></i>
+                    </button>
                 </div>
 
             </div>

@@ -1,10 +1,11 @@
 ﻿using E_Commerece.Models;
+using E_Commerece.ViewModels;
 
 namespace E_Commerece.Data.Interfaces
 {
     public interface IProfileRepository
     {
         User GetUserById();
-        void EditUserInfo(User user);
+        void EditUserInfo(EditUserInfoVM user);
     }
 }

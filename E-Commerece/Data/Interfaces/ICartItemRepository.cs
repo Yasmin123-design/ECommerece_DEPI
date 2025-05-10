@@ -9,5 +9,6 @@ namespace E_Commerece.Data.Interfaces
         List<CartItem> GetAllItemsByCartId(int cartid);
         void RemoveCartItem(int id);
         void RemoveAllItemsRelatedByCart(int cartid);
+        List<CartItem> GetCartItems();
     }
 }

@@ -10,11 +10,6 @@
         display: inline-block;
     }
 
-    .grid-view .col-md-4 {
-        width: 33.333%;
-        float: left;
-    }
-
     .list-view .col-md-4 {
         width: 100%;
         display: flex;
@@ -43,6 +38,27 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-md-4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .product-body {
+        flex: 1;
     }
 
 </style>
@@ -85,7 +101,7 @@
             <div id="store" class="col-md-9">
                 <!-- store top filter -->
                 <div class="store-filter clearfix">
-                    <div class="store-sort">
+                    @* <div class="store-sort">
                         <label>
                             Sort By:
                             <select class="input-select">
@@ -101,7 +117,7 @@
                                 <option value="1">50</option>
                             </select>
                         </label>
-                    </div>
+                    </div> *@
                     <ul class="store-grid">
                         <li class="active" data-view="grid"><i class="fa fa-th"></i></li>
                         <li data-view="list"><i class="fa fa-th-list"></i></li>
@@ -110,8 +126,15 @@
                 <!-- /store top filter -->
                 <!-- store products -->
                 <div class="row" id="product-list">
+                    @{
+                        int counter = 0;
+                    }
                     @foreach (var product in Model)
                     {
+                        if (counter % 3 == 0)
+                        {
+                            @:<div class="clearfix visible-md visible-lg"></div>
+                        }
                         <div class="col-md-4 col-xs-6">
                             <div class="product">
                                 <div class="product-img">
@@ -130,7 +153,6 @@
                                             <a onclick="deleteProduct(@product.Id)" class="quick-view">
                                                 <i class="fa fa-trash"></i>
                                             </a>
-
                                         }
                                         else
                                         {
@@ -148,9 +170,9 @@
                                 </div>
                             </div>
                         </div>
+                        counter++;
                     }
                 </div>
-                <!-- /store products -->
             </div>
             <!-- /STORE -->
         </div>
@@ -158,7 +180,8 @@
     </div>
     <!-- /custom container -->
 </div>
-<!-- /SECTION -->
+<!-- /SECTION --> 
+<!-- store products -->
 
 <script>
     $(document).ready(function () {

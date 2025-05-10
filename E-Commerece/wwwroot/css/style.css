@@ -2202,14 +2202,9 @@ textarea.input {
         margin: 10px;
     }
 .product-btns a {
-    margin-right: 10px; /* إضافة مسافة بين الأزرار */
-    display: inline-block; /* التأكد من بقاء الأزرار بجانب بعض */
+    margin-right: 10px; 
+    display: inline-block; 
 }
-
-
-
-
-
 
 .product-grid {
     display: grid;
@@ -2256,11 +2251,11 @@ textarea.input {
         font-size: 18px;
     }
 
-.action-buttons {
+/*.action-buttons {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
+}*/
 
 .custom-btn {
     width: 100%;
@@ -2351,15 +2346,15 @@ textarea.input {
     justify-content: flex-end;
 }
 .header-item {
-    margin-left: 15px; /* المسافة بين العناصر */
+    margin-left: 15px; 
 }
 
 .sell-on-electro .sell-btn {
-    background-color: #D10024; /* لون الخلفية أحمر */
-    color: white; /* لون النص أبيض */
-    padding: 10px 15px; /* الحشو الداخلي */
-    border-radius: 5px; /* زوايا دائرية */
-    text-decoration: none; /* إزالة الخط التحتي */
+    background-color: #D10024;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    text-decoration: none;
     display: flex;
     align-items: center;
     height: 40px;
@@ -2367,11 +2362,11 @@ textarea.input {
 }
 
 .sell-on-electro .sell-btn i {
-    margin-right: 5px; /* المسافة بين الأيقونة والنص */
+    margin-right: 5px;
 }
 
     .sell-on-electro .sell-btn:hover {
-        background-color: darkred; /* لون الخلفية عند التمرير */
+        background-color: darkred;
     }
 
 
@@ -2478,6 +2473,9 @@ textarea.input {
 }
 
     .quantity-container .input-group button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 40px;
         height: 40px;
         font-size: 20px;
@@ -2651,18 +2649,20 @@ body {
 .table-container {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin: 20px auto;
-    padding: 20px;
+    padding: 25px;
     max-width: 1200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
     .table-container h2 {
         font-size: 22px;
-        color: #444;
+        color: #333;
         margin-bottom: 20px;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 12px;
+        font-weight: 600;
     }
 
 /* Table Styles */
@@ -2673,33 +2673,35 @@ body {
 }
 
     .table th, .table td {
-        padding: 12px 15px;
+        padding: 14px 16px;
         text-align: left;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #f0f0f0;
     }
 
     .table th {
         background-color: #f8f9fa;
-        font-weight: bold;
+        font-weight: 600;
         color: #555;
-        cursor: pointer;
+        position: sticky;
+        top: 0;
     }
 
     .table tbody tr:hover {
-        background-color: #f1f1f1;
+        background-color: #f9f9f9;
+        transition: background-color 0.2s ease;
     }
 
     .table tbody tr td {
-        font-weight: bold;
+        vertical-align: middle;
     }
+
+
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #fff;
-/*    border-top: 1px solid #eee;
-    margin-top: 40px;*/
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 

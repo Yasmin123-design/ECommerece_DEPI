@@ -54,7 +54,6 @@
 
 <div class="modal-header">
     <h5 class="modal-title">@Model.Product.Name</h5>
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
 </div>
 
 <div class="modal-body">
@@ -94,7 +93,7 @@
 
                 <label class="form-label fw-bold mt-2">الكمية المراد شراؤها</label>
                 <div class="input-group justify-content-center" style="max-width: 200px;">
-                    <button class="btn btn-danger px-3 fw-bold" type="button" onclick="decreaseQuantity()" style="background-color: red; color: white;">−</button>
+                    <button  class="btn btn-danger px-3 fw-bold" type="button" onclick="decreaseQuantity()" style="background-color: red; color: white;">−</button>
                     <input type="text" id="quantity" class="form-control text-center mx-1 fw-bold border" value="1" min="1" readonly>
                     <button class="btn btn-success px-3 fw-bold" type="button" onclick="increaseQuantity()" style="background-color: green; color: white;">+</button>
                 </div>
@@ -116,23 +115,31 @@
     <div class="reviews-section">
         <h5>Reviews</h5>
         <div id="reviews-list">
-            @foreach(var review in Model.Product.Reviews)
+            @if (Model.Product?.Reviews != null && Model.Product.Reviews.Any())
             {
-                <div class="review-item">
-                    <strong>@review.User.Email</strong>
-                    <p>@review.Comment</p>
-                    <span>
-                        @for (int i = 0; i < review.Rating; i++)
-                        {
-                            <i class="fa fa-star text-secondary"></i>                           
-                        }
-                        @for (int i = review.Rating; i < 5; i++)
-                        {
-                            <i class="fa fa-star text-warning"></i>
-                        }
-                    </span>
-                </div>
+                foreach (var review in Model.Product.Reviews)
+                {
+                    <div class="review-item">
+                        <strong>@(review.User?.Email ?? "Unknown User")</strong>
+                        <p>@review.Comment</p>
+                        <span>
+                            @for (int i = 0; i < review.Rating; i++)
+                            {
+                                <i class="fa fa-star text-secondary"></i>
+                            }
+                            @for (int i = review.Rating; i < 5; i++)
+                            {
+                                <i class="fa fa-star text-warning"></i>
+                            }
+                        </span>
+                    </div>
+                }
             }
+            else
+            {
+                <p>No reviews yet.</p>
+            }
+
         </div>
     </div>
 

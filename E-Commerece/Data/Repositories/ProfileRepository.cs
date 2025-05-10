@@ -1,5 +1,6 @@
 ﻿using E_Commerece.Data.Interfaces;
 using E_Commerece.Models;
+using E_Commerece.ViewModels;
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.Security.Claims;
 
@@ -14,10 +15,10 @@ namespace E_Commerece.Data.Repositories
             this._context = context;
         }
 
-        public void EditUserInfo(User user)
+        public void EditUserInfo(EditUserInfoVM user)
         {
             var olduser = GetUserById();
-            olduser.UserName = user.UserName;
+            olduser.UserName = user.Username;
             olduser.Email = user.Email;
             olduser.Address = user.Address;
         }

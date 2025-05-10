@@ -1,20 +1,26 @@
 ﻿<style>
-    .Pendding {
-        color:orange;
+    .Pending {
+        color: orange;
+        font-weight: bold;
     }
 
     .Shipped {
-        color:blue;
+        color: #2196F3;
+        font-weight: bold;
     }
 
     .Delivered {
-        color:green;
+        color: #4CAF50;
+        font-weight: bold;
     }
 
     .Cancelled {
-        color:red;
+        color: #F44336;
+        font-weight: bold;
     }
+
 </style>
+
 <div class="table-container">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <h2>Orders as Customer</h2>
@@ -38,7 +44,7 @@
                 </th>
                 <th data-column="orderdate">
                     <div class="header-content">
-                        <span class="column-name">OrderDate</span>
+                        <span class="column-name">Order Date</span>
                         <div class="sort-arrows">
                             <span class="sort-up" onclick="sortTable('purchasedTable','orderdate', 'asc')">
                                 <i class="fas fa-arrow-up"></i>
@@ -49,14 +55,14 @@
                         </div>
                     </div>
                 </th>
-                <th data-column="delieverydate">
+                <th data-column="deliverydate">
                     <div class="header-content">
-                        <span class="column-name">DeliveryDate</span>
+                        <span class="column-name">Delivery Date</span>
                         <div class="sort-arrows">
-                            <span class="sort-up" onclick="sortTable('purchasedTable','delieverydate', 'asc')">
+                            <span class="sort-up" onclick="sortTable('purchasedTable','deliverydate', 'asc')">
                                 <i class="fas fa-arrow-up"></i>
                             </span>
-                            <span class="sort-down" onclick="sortTable('purchasedTable','delieverydate', 'desc')">
+                            <span class="sort-down" onclick="sortTable('purchasedTable','deliverydate', 'desc')">
                                 <i class="fas fa-arrow-down"></i>
                             </span>
                         </div>
@@ -65,7 +71,6 @@
                 <th data-column="status">
                     <div class="header-content">
                         <span class="column-name">Status</span>
-
                     </div>
                 </th>
             </tr>
@@ -75,14 +80,16 @@
             {
                 <tr>
                     <td>
-                        @foreach (var item in order.Items)
-                        {
-                            <span>@item.ProductItem.Product.Name</span> <br>
-                        }
+                        <div class="product-items">
+                            @foreach (var item in order.Items)
+                            {
+                                <span>@item.ProductItem.Product.Name</span>
+                            }
+                        </div>
                     </td>
-                    <td>@order.OrderDate</td>
-                    <td>@order.ArrivalDate</td>
-                    <td style="font-weight:bold" class="@order.Status">@order.Status</td>
+                    <td>@order.OrderDate.ToString("dd MMM yyyy")</td>
+                    <td>@order.ArrivalDate.ToString("dd MMM yyyy")</td>
+                    <td class="@order.Status">@order.Status</td>
                 </tr>
             }
         </tbody>

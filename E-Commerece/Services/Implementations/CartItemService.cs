@@ -32,5 +32,7 @@ namespace E_Commerece.Services.Implementations
 		{
             _unitOfWork.Save();
         }
-	}
+
+        public List<CartItem> GetCartItems() => this._unitOfWork.CartItems.GetCartItems();
+    }
 }

@@ -13,12 +13,19 @@ namespace E_Commerece.Controllers
 		private readonly ICartService _cartService;
 		private readonly IProductItemService _productItemService;
 		private readonly IConfiguration Configuration;
-		public OrderController(IOrderService orderService , ICartService cartService , IProductItemService productItemService , IConfiguration configuration)
+        private readonly ICartItemService _cartItemService;
+		public OrderController(IOrderService orderService 
+            , ICartService cartService 
+            , IProductItemService productItemService 
+            , IConfiguration configuration
+            , ICartItemService cartItemService
+            )
 		{
 			this._orderService = orderService;
 			this._cartService = cartService;
 			this._productItemService = productItemService;
 			this.Configuration = configuration;
+            this._cartItemService = cartItemService;
 		}
 		public IActionResult CheckOut()
 		{
@@ -50,18 +57,41 @@ namespace E_Commerece.Controllers
 			};
 			return View(Paymentmodel);
 		}
+        //private void ProcessOrderAfterPayment(int orderId)
+        //{
+        //    var order = _orderService.GetOrderById(orderId);
+        //    if (order == null) return;
+
+
+        //    var orderItems = _orderService.GetOrderItemsByOrderId(order.Id);
+        //    foreach (var item in orderItems)
+        //    {
+        //        var productItem = item.ProductItem;
+        //        if (productItem != null && productItem.Quantity >= item.Quantity)
+        //        {
+        //            productItem.Quantity -= item.Quantity;
+        //        }
+        //    }
+
+        //    _cartService.ClearCart(order.UserId);
+        //    _orderService.SaveChange();
+        //}
         private void ProcessOrderAfterPayment(int orderId)
         {
             var order = _orderService.GetOrderById(orderId);
             if (order == null) return;
 
-            //order.Status = E_Commerece.Models.Status.Shipped;
-
             var orderItems = _orderService.GetOrderItemsByOrderId(order.Id);
+            var userCartItems = _cartItemService.GetCartItems(); // هات العناصر الموجودة فعلاً في السلة
+
             foreach (var item in orderItems)
             {
-                var productItem = _productItemService.GetProductItemByProductId(item.ProductItem.Product.Id);
-                if (productItem != null && productItem.Quantity >= item.Quantity)
+                var productItem = item.ProductItem;
+
+                // التأكد إن العنصر موجود في السلة قبل خصم الكمية
+                bool isInCart = userCartItems.Any(ci => ci.ProductItemId == productItem.Id);
+
+                if (productItem != null && isInCart && productItem.Quantity >= item.Quantity)
                 {
                     productItem.Quantity -= item.Quantity;
                 }

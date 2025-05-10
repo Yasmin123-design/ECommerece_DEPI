@@ -4,10 +4,7 @@ using E_Commerece.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using System.Security.Claims;
-using System.Security.Cryptography.Pkcs;
 
 namespace E_Commerece.Controllers
 {
@@ -76,7 +73,11 @@ namespace E_Commerece.Controllers
                 SelectedVariationOptions = product.Items.SelectMany(i => i.VariationOptions).ToList(), // 🔥 الخيارات المختارة
                 SelectedProductItem = selectedProductItem
             };
+            var val = viewModel.SelectedProductItem.Quantity;
+            var val2 = viewModel.SelectedProductItem;
 
+            var count = selectedProductItem.Quantity;
+            Console.WriteLine(count);
             return View(viewModel);
         }
         public IActionResult FilterByCategory(int categoryId)

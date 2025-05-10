@@ -56,13 +56,16 @@
     }
 
     .btn {
-        padding: 6px 12px;
-        border-radius: 4px;
-        font-size: 14px;
         display: inline-flex;
         align-items: center;
-        gap: 5px;
+        justify-content: center;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.5;
+        border-radius: 4px;
+        text-decoration: none;
     }
+
     .btn-primary {
         background-color: #0d6efd;
         border: none;
@@ -136,13 +139,13 @@
                                 <td>@(category.Description.Length > 100 ? category.Description.Substring(0, 100) + "..." : category.Description)</td>
                                 <td>
                                     <div class="action-buttons">
-                                        <a href="/Admin/EditCategory/@category.Id" class="btn btn-primary">
+                                        <a href="/Admin/EditCategory/@category.Id" class="btn btn-info" style="background-color:blue">
                                             <i class="bi bi-pencil"></i> Edit
                                         </a>
-                                       
-                                        <button class="btn btn-danger" onclick="deleteCategory(@category.Id)">
+
+                                        <a href="javascript:void(0);" onclick="deleteCategory(@category.Id)" class="btn btn-danger">
                                             <i class="bi bi-trash"></i> Delete
-                                        </button>
+                                        </a>
 
                                         <a href="/Admin/DetailsCategory/@category.Id" class="btn btn-info">
                                             <i class="bi bi-eye"></i> View

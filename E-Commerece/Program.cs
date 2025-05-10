@@ -183,9 +183,11 @@ app.Use(async (context, next) =>
 				"/About",
                 "/Home/SubscribeEmail",
                 "/Home/AlreadySubscribed",
-                "/Home/SubscriptionError"
+                "/Home/SubscriptionError",
+				"/Profile/ChangePassword",
+				""
 
-            };
+			};
 
             // استثناء المسارات من التوجيه
             if (excludedPaths.Any(p => context.Request.Path.StartsWithSegments(p)))
